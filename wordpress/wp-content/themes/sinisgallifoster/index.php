@@ -17,8 +17,6 @@
 
 get_header(); ?>
 
-<link href="<?php get_stylesheet() ?>" rel="stylesheet">
-
 <div class="wrap">
 	<header class="page-header">
 		<h2 class="page-title">Sinisgalli Foster</h2>
