@@ -18,15 +18,12 @@
 get_header(); ?>
 
 <div class="wrap">
-	<header class="page-header">
+	<div class="sf-header-logo-wrap">
+		<img class="sf-header-logo" src="wp-content/themes/sinisgallifoster/assets/images/sf_logo.png" alt="Sinisgalli Foster Logo" />
+	</div>
+	<header>
 		<h2 class="page-title">Sinisgalli Foster</h2>
 	</header>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-		</main>
-	</div>
-	<?php get_sidebar(); ?>
 </div>
 
 <?php get_footer();

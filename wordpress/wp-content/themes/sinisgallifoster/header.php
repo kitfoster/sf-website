@@ -34,11 +34,11 @@
 			<div class="navigation-top">
 				<div class="wrap">
 					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
+				</div>
+			</div>
 		<?php endif; ?>
 
-	</header><!-- #masthead -->
+	</header>
 
 	<div class="site-content-contain">
 		<div id="content" class="site-content">
