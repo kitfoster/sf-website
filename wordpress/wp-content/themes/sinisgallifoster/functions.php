@@ -55,6 +55,7 @@ function sinisgallifoster_setup() {
 	function sinisgallifoster_scripts() {
 		// Theme stylesheet.
 		wp_enqueue_style( 'style', get_stylesheet_uri() );
+		wp_enqueue_style( 'navbar', get_template_directory(), 'template-parts/navigation');
 	}
 	add_action( 'wp_enqueue_scripts', 'sinisgallifoster_scripts' );
 };

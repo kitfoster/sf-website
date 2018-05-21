@@ -4,53 +4,81 @@ Author: Kit Foster
 Description: Sinisgalli Foster Law Firm
 Version: 0.0.1
 */
+/*--------------------------------------------------------------
+NavBar
+--------------------------------------------------------------*/
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+}
+.navbar-wrapper a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navbar a {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.sf-nav-logo-wrap {
+  width: 100px;
+}
+
+.sf-nav-logo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* global */
+body {
+  font-family: "Montserrat", sans-serif;
+}
 
 /*--------------------------------------------------------------
 Accessibility
 --------------------------------------------------------------*/
-
 /* Text meant only for screen readers. */
-
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	height: 1px;
-	overflow: hidden;
-	position: absolute !important;
-	width: 1px;
-	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	-webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 700;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+  background-color: #f1f1f1;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
 }
 
-/*--------------------------------------------------------------
-Header
---------------------------------------------------------------*/
-
-.sf-header-logo-wrap {
-	width: 100px;
-}
-
-.sf-header-logo {
-	max-width: 100%;
-	max-height: 100%;
-}
+/*# sourceMappingURL=style.css.map */

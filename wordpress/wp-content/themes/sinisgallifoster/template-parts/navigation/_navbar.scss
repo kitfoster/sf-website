@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+NavBar
+--------------------------------------------------------------*/
+.navbar-wrapper {
+	display: flex;
+	justify-content: space-between;
+	height: 100px;
+	align-items: center;
+	a {
+	text-decoration: none;
+	color: black;
+	}
+}
+
+.navbar {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	}
+}
+
+
+.sf-nav-logo-wrap {
+	width: 100px;
+}
+
+.sf-nav-logo {
+	max-width: 100%;
+	max-height: 100%;
+}

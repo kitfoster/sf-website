@@ -18,9 +18,6 @@
 get_header(); ?>
 
 <div class="wrap">
-	<div class="sf-header-logo-wrap">
-		<img class="sf-header-logo" src="wp-content/themes/sinisgallifoster/assets/images/sf_logo.png" alt="Sinisgalli Foster Logo" />
-	</div>
 	<header>
 		<h2 class="page-title">Sinisgalli Foster</h2>
 	</header>
