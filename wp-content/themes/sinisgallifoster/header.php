@@ -29,9 +29,12 @@
 	<header id="masthead" class="site-header" role="banner"></header>
 
 		<div class="navigation-top">
-			<div class="wrap">
-				<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+			<div class="nav-logo-wrapper" >
+				<img class="sf-nav-logo" src="wp-content/themes/sinisgallifoster/assets/images/sf_logo.png" alt="Sinisgalli Foster Logo">
+					<a href="#"></a>
+				</img>
 			</div>
+			<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'custom-nav-class' ) ); ?>
 		</div>
 
 	</header>

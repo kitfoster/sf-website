@@ -1,32 +1,24 @@
-/*--------------------------------------------------------------
-NavBar
---------------------------------------------------------------*/
-.navbar-wrapper {
+.navigation-top {
 	display: flex;
 	justify-content: space-between;
-	height: 100px;
-	align-items: center;
+}
+
+div.custom-nav-class {
+	width: 600px;
+
+	ul {
+		display: flex;
+		list-style: none;
+		justify-content: space-between;
+	}
+
 	a {
-	text-decoration: none;
-	color: black;
+		color: black;
+		text-decoration: none;
 	}
 }
 
-.navbar {
-	display: flex;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-
-	a {
-	padding: 10px 15px;
-	text-transform: uppercase;
-	text-align: center;
-	}
-}
-
-
-.sf-nav-logo-wrap {
+.nav-logo-wrapper {
 	width: 100px;
 }
 
@@ -34,3 +26,4 @@ NavBar
 	max-width: 100%;
 	max-height: 100%;
 }
+
