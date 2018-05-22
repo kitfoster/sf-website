@@ -1,0 +1,13 @@
+{
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kitfoster/sf-website"
+  },
+  "name": "foster-sinisgalli",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-sass": "^4.0.1"
+  }
+}
