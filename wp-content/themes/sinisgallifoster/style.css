@@ -43,26 +43,23 @@ body {
   display: flex;
   justify-content: space-between;
   height: 100px; }
-
-.navbar-items {
-  display: flex;
-  justify-content: space-around;
-  width: 600px;
-  align-self: center;
-  list-style: none; }
-  .navbar-items a {
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase; }
-
-.nav-logo-wrapper {
-  width: 150px;
-  padding: 5px;
-  align-self: center; }
-
-.sf-nav-logo {
-  max-width: 100%;
-  max-height: 100%; }
+  .navigation-top .navbar-items {
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+    align-self: center;
+    list-style: none; }
+    .navigation-top .navbar-items a {
+      color: black;
+      text-decoration: none;
+      text-transform: uppercase; }
+  .navigation-top .nav-logo-wrapper {
+    width: 150px;
+    padding: 5px;
+    align-self: center; }
+  .navigation-top .sf-nav-logo {
+    max-width: 100%;
+    max-height: 100%; }
 
 .homepage-container {
   display: flex;
@@ -79,5 +76,45 @@ body {
   align-items: center;
   width: 100%;
   height: 100vh; }
-  .statement-container h1 {
-    align-self: center; }
+  .statement-container h2 {
+    align-self: center;
+    text-align: center; }
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  max-width: 1025px;
+  margin: 0 auto; }
+  .services-container .service-box {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 400px;
+    padding: 0 20px;
+    text-align: center; }
+  .services-container .service {
+    max-width: 300px; }
+    .services-container .service h3 {
+      text-transform: uppercase; }
+
+.team-page-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1025px;
+  margin: 0 auto;
+  min-height: 100vh;
+  margin-top: 100px; }
+  .team-page-container .bio-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 0 300px;
+    padding: 20px; }
+    .team-page-container .bio-container .photo {
+      height: 300px;
+      width: 300px;
+      background-color: grey; }
+    .team-page-container .bio-container .name {
+      text-transform: uppercase; }

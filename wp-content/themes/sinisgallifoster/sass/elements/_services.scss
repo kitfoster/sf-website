@@ -1,0 +1,25 @@
+.services-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  max-width: $desktopContainerWidth;
+  margin: 0 auto;
+
+  .service-box {
+    display: flex;
+    justify-content: center;
+
+    flex: 1 1 400px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .service {
+    max-width: 300px;
+
+    h3 {
+      text-transform: uppercase;
+    }
+  }
+}

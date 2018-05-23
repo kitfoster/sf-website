@@ -13,6 +13,8 @@ get_header(); ?>
 		<?php include "template-parts/navbar.php" ?>
 		<?php include "template-parts/homepage.php" ?>
 		<?php include "template-parts/statement.php" ?>
+		<?php include "template-parts/services.php" ?>
+		<?php include "template-parts/team_page.php" ?>
 	</div>
 </body>
 
