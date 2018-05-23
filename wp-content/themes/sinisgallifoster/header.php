@@ -1,11 +1,5 @@
 <?php
 /**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
  * @package WordPress
  * @subpackage Sinisgalli_Foster
  * @since 1.0
@@ -22,22 +16,3 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
-
-	<header id="masthead" class="site-header" role="banner"></header>
-
-		<div class="navigation-top">
-			<div class="nav-logo-wrapper" >
-				<img class="sf-nav-logo" src="wp-content/themes/sinisgallifoster/assets/images/sf_logo.png" alt="Sinisgalli Foster Logo">
-					<a href="#"></a>
-				</img>
-			</div>
-			<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'custom-nav-class' ) ); ?>
-		</div>
-
-	</header>
-
-	<div class="site-content-contain">
-		<div id="content" class="site-content">

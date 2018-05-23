@@ -1,0 +1,12 @@
+.homepage-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: calc(100vh - #{$navbarHeight});
+
+  h1 {
+    align-self: center;
+  }
+}
