@@ -1,13 +1,29 @@
 {
   "repository": {
     "type": "git",
-    "url": "https://github.com/kitfoster/sf-website"
+    "url": "git+https://github.com/kitfoster/sf-website.git"
   },
   "name": "foster-sinisgalli",
   "version": "1.0.0",
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "gulp-sass": "^4.0.1"
-  }
+    "autoprefixer": "^8.5.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "description": "Sinisgalli Foster Website",
+  "bugs": {
+    "url": "https://github.com/kitfoster/sf-website/issues"
+  },
+  "homepage": "https://github.com/kitfoster/sf-website#readme",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kit Foster",
+  "license": "ISC"
 }
