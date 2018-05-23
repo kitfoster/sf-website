@@ -4,41 +4,9 @@ Author: Kit Foster
 Description: Sinisgalli Foster Law Firm
 Version: 0.0.1
 */
-.navigation-top {
-  display: flex;
-  justify-content: space-between;
-}
-
-div.custom-nav-class {
-  width: 600px;
-}
-div.custom-nav-class ul {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-}
-div.custom-nav-class a {
-  color: black;
-  text-decoration: none;
-}
-
-.nav-logo-wrapper {
-  width: 100px;
-}
-
-.sf-nav-logo {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-/* global */
 body {
-  font-family: "Montserrat", sans-serif;
-}
+  font-family: 'Montserrat', sans-serif; }
 
-/*--------------------------------------------------------------
-Accessibility
---------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
@@ -47,8 +15,7 @@ Accessibility
   position: absolute !important;
   width: 1px;
   word-wrap: normal !important;
-  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
-}
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */ }
 
 .screen-reader-text:focus {
   background-color: #f1f1f1;
@@ -70,7 +37,25 @@ Accessibility
   top: 5px;
   width: auto;
   z-index: 100000;
-  /* Above WP toolbar. */
-}
+  /* Above WP toolbar. */ }
 
-/*# sourceMappingURL=style.css.map */
+.navigation-top {
+  display: flex;
+  justify-content: space-between; }
+
+div.custom-nav-class {
+  width: 600px; }
+  div.custom-nav-class ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between; }
+  div.custom-nav-class a {
+    color: black;
+    text-decoration: none; }
+
+.nav-logo-wrapper {
+  width: 100px; }
+
+.sf-nav-logo {
+  max-width: 100%;
+  max-height: 100%; }

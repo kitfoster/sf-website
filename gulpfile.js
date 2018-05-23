@@ -8,8 +8,8 @@ var autoprefixer = require('autoprefixer');
 var del = require('del');
 
 var sassFiles = './wp-content/themes/sinisgallifoster/sass/**/*.scss'
-var cssDest = './wp-content/themes/sinisgallifoster/assets/css/';
-var cssFiles = cssDest + 'app.css';
+var cssDest = './wp-content/themes/sinisgallifoster/';
+var cssFiles = cssDest + 'style.css';
 
 gulp.task('delete', function () {
   return del([cssDest + '/**/*']);
