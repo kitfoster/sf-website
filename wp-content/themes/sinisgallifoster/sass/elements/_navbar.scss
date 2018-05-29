@@ -2,24 +2,30 @@
 	display: flex;
 	justify-content: space-between;
 	height: $navbarHeight;
+	top: 0;
+	width: 100%;
+	position: fixed;
 
 	.navbar-items {
 		display: flex;
 		justify-content: space-around;
 
-		width: 600px;
+		width: 500px;
 		align-self: center;
 		list-style: none;
+		padding: 0;
+		margin-right: 30px;
 
 		a {
-			color: black;
+			color: $copper;
 			text-decoration: none;
-			text-transform: uppercase;
+			text-transform: capitalize;
 		}
 	}
 
 	.nav-logo-wrapper {
-		width: 150px;
+		margin-left: 30px;
+		width: 120px;
 		padding: 5px;
 		align-self: center;
 	}

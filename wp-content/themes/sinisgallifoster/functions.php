@@ -13,19 +13,14 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 }
 
 function sinisgallifoster_setup() {
-	load_theme_textdomain( 'twentyseventeen' );
-	add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'title-tag' );
-	add_theme_support( 'post-thumbnails' );
-
 	function sinisgallifoster_scripts() {
 		wp_enqueue_style( 'style', get_stylesheet_uri() );
-		wp_enqueue_style( 'navbar', get_template_directory(), 'template-parts/navigation');
+		// wp_enqueue_style( 'navbar', get_template_directory(), 'template-parts/navigation');
 	}
 	add_action( 'wp_enqueue_scripts', 'sinisgallifoster_scripts' );
 
 	function register_nav() {
-		register_nav_menu('header-menu',__( 'Header Menu' ));
+		// register_nav_menu('header-menu',__( 'Header Menu' ));
 	}
 	add_action( 'init', 'register_nav' );
 

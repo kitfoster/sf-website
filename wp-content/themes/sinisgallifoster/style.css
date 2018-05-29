@@ -5,7 +5,13 @@ Description: Sinisgalli Foster Law Firm
 Version: 0.0.1
 */
 body {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  margin: 0; }
+
+@media only screen and (min-width: 1000px) {
+  .desktop-container {
+    max-width: 1000px;
+    margin: 0 auto; } }
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
@@ -42,33 +48,50 @@ body {
 .navigation-top {
   display: flex;
   justify-content: space-between;
-  height: 100px; }
+  height: 100px;
+  top: 0;
+  width: 100%;
+  position: fixed; }
   .navigation-top .navbar-items {
     display: flex;
     justify-content: space-around;
-    width: 600px;
+    width: 500px;
     align-self: center;
-    list-style: none; }
+    list-style: none;
+    padding: 0;
+    margin-right: 30px; }
     .navigation-top .navbar-items a {
-      color: black;
+      color: #905c32;
       text-decoration: none;
-      text-transform: uppercase; }
+      text-transform: capitalize; }
   .navigation-top .nav-logo-wrapper {
-    width: 150px;
+    margin-left: 30px;
+    width: 120px;
     padding: 5px;
     align-self: center; }
   .navigation-top .sf-nav-logo {
     max-width: 100%;
     max-height: 100%; }
 
-.homepage-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.homepage-background {
   width: 100%;
-  height: calc(100vh - 100px); }
-  .homepage-container h1 {
-    align-self: center; }
+  height: 100vh;
+  max-height: 800px;
+  background-color: #1E1F38;
+  background-image: url("assets/images/lawyers-temp-photo.png");
+  background-size: 900px;
+  background-repeat: no-repeat;
+  background-position-x: center; }
+  .homepage-background .homepage-container {
+    display: flex;
+    align-items: flex-end;
+    height: 100%; }
+  .homepage-background h2 {
+    max-width: 500px;
+    font-family: serif;
+    color: #905c32;
+    font-weight: normal;
+    margin-bottom: 100px; }
 
 .statement-container {
   display: flex;
@@ -84,9 +107,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  min-height: 100vh;
-  max-width: 1025px;
-  margin: 0 auto; }
+  min-height: 100vh; }
   .services-container .service-box {
     display: flex;
     justify-content: center;
@@ -102,7 +123,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1025px;
+  max-width: 1000px;
   margin: 0 auto;
   min-height: 100vh;
   margin-top: 100px; }

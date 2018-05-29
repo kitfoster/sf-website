@@ -1,4 +1,4 @@
-<div class="services-container">
+<div class="services-container desktop-container">
   <?php foreach(["service1", "service2", "service3", "service4", "service5", "service6"]
     as $key=>$value): ?>
     <div class="service-box">

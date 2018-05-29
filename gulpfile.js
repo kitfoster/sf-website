@@ -11,12 +11,8 @@ var sassFiles = './wp-content/themes/sinisgallifoster/sass/**/*.scss'
 var cssDest = './wp-content/themes/sinisgallifoster/';
 var cssFiles = cssDest + 'style.css';
 
-gulp.task('delete', function () {
-  return del([cssDest + '/**/*']);
-});
-
 gulp.task("clean", function () {
-  return del("assets/css/*.cs*");
+  return del(cssFiles);
 });
 
 gulp.task('sass', function () {

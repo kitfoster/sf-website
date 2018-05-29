@@ -13,6 +13,8 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="http://gmpg.org/xfn/11">
+  <!-- for testing in IE vm - 10.0.2.2:8080/-->
+  <link rel="stylesheet" type="text/css" href="wp-content/themes/sinisgallifoster/style.css">
 
   <?php wp_head(); ?>
 </head>

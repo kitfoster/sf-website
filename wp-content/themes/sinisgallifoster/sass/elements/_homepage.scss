@@ -1,12 +1,24 @@
-.homepage-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+.homepage-background {
   width: 100%;
-  height: calc(100vh - #{$navbarHeight});
+  height: 100vh;
+  max-height: 800px;
+  background-color: $navyBlue;
+  background-image: url("assets/images/lawyers-temp-photo.png");
+  background-size: 900px;
+  background-repeat: no-repeat;
+  background-position-x: center;
 
-  h1 {
-    align-self: center;
+  .homepage-container {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+  }
+
+  h2 {
+    max-width: 500px;
+    font-family: serif;
+    color: $copper;
+    font-weight: normal;
+    margin-bottom: 100px;
   }
 }

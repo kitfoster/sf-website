@@ -1,11 +1,7 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Sinisgalli_Foster
- * @since 1.0
- * @version 1.0
+ * Template Name: Homepage
  */
-
 get_header(); ?>
 
 <body>

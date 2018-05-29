@@ -1,4 +1,5 @@
 <div class="navigation-top">
+  <h1 class="screen-reader-text">Sinisgalli Foster</h1>
   <div class="nav-logo-wrapper" >
     <img class="sf-nav-logo" src="wp-content/themes/sinisgallifoster/assets/images/sf_logo.png" alt="Sinisgalli Foster Logo">
       <a href="#"></a>
