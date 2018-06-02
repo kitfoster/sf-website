@@ -7,7 +7,12 @@
   height: 100vh;
 
   h2 {
+    max-width: 700px;
     align-self: center;
     text-align: center;
+    font-family: $serifFont;
+    color: $copper;
+    font-size: 36px;
+    font-weight: 100;
   }
 }
