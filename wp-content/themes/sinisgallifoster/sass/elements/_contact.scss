@@ -1,0 +1,48 @@
+.contact-container {
+  background-color: $beige;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      padding: 80px 0;
+    }
+
+    blockquote {
+      max-width: 600px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 100;
+    }
+
+    .contact-sections {
+      display: flex;
+      flex-direction: row;
+      margin: 80px 0;
+      align-items: flex-start;
+
+      .contact-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 50%;
+        text-align: center;
+        padding: 0 20px;
+
+        h4 {
+          font-size: 18px;
+          font-weight: 100;
+        }
+
+        p {
+          max-width: 250px;
+        }
+
+        .details {
+          color: $copper;
+        }
+      }
+    }
+  }
+}

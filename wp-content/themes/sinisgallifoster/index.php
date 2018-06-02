@@ -11,6 +11,7 @@ get_header(); ?>
 		<?php include "template-parts/statement.php" ?>
 		<?php include "template-parts/services.php" ?>
 		<?php include "template-parts/team_page.php" ?>
+		<?php include "template-parts/contact.php" ?>
 	</div>
 </body>
 

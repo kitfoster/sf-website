@@ -2,11 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  max-width: $desktopContainerWidth;
-  margin: 0 auto;
-  min-height: 100vh;
-  margin-top: 100px;
+  margin: 100px auto;
 
   h3 {
     flex-basis: 100%;
