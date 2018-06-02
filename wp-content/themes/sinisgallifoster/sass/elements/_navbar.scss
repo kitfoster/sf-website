@@ -10,7 +10,7 @@
 		display: flex;
 		justify-content: space-around;
 
-		width: 500px;
+		width: 400px;
 		align-self: center;
 		list-style: none;
 		padding: 0;
@@ -20,11 +20,14 @@
 			color: $copper;
 			text-decoration: none;
 			text-transform: capitalize;
+			font-size: 13px;
+			font-family: $sansSerifFont;
+			font-weight: 400;
 		}
 	}
 
 	.nav-logo-wrapper {
-		margin-left: 30px;
+		margin-left: 40px;
 		width: 120px;
 		padding: 5px;
 		align-self: center;

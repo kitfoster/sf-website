@@ -7,18 +7,36 @@
   background-size: 900px;
   background-repeat: no-repeat;
   background-position-x: center;
+  background-position-y: 50px;
 
   .homepage-container {
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
     height: 100%;
+
+    h2 {
+      max-width: 500px;
+      font-family: $serifFont;
+      color: $copper;
+      font-weight: normal;
+      margin: 50px;
+
+      @media only screen and (min-width: $desktopMediaQuery) {
+        margin-left: 0;
+      }
+    }
+
+    .arrow-down {
+      align-self: center;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+
+      border-top: 15px solid $copper;
+      margin-bottom: 20px;
+    }
   }
 
-  h2 {
-    max-width: 500px;
-    font-family: serif;
-    color: $copper;
-    font-weight: normal;
-    margin-bottom: 100px;
-  }
 }
