@@ -1,10 +1,10 @@
 .homepage-background {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   max-height: 800px;
   background-color: $navyBlue;
   background-image: url("assets/images/lawyers-temp-photo.png");
-  background-size: 900px;
+  background-size: 800px;
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 50px;
@@ -16,27 +16,22 @@
     height: 100%;
 
     h2 {
-      max-width: 500px;
+      max-width: 400px;
       font-family: $serifFont;
       color: $copper;
-      font-weight: normal;
       margin: 50px;
-
-      @media only screen and (min-width: $desktopMediaQuery) {
-        margin-left: 0;
-      }
+      font-size: 20px;
+      font-weight: 200;
     }
 
     .arrow-down {
       align-self: center;
       width: 0;
       height: 0;
-      border-left: 15px solid transparent;
-      border-right: 15px solid transparent;
-
-      border-top: 15px solid $copper;
-      margin-bottom: 20px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 12px solid $copper;
+      margin-bottom: 30px;
     }
   }
-
 }

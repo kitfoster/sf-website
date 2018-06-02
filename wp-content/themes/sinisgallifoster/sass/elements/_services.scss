@@ -4,11 +4,16 @@
   flex-wrap: wrap;
   min-height: 100vh;
 
+  h3 {
+    align-self: center;
+    flex-basis: 100%;
+  }
+
   .service-box {
     display: flex;
     justify-content: center;
 
-    flex: 1 1 400px;
+    flex: 0 1 400px;
     padding: 0 20px;
     text-align: center;
   }
@@ -16,8 +21,17 @@
   .service {
     max-width: 300px;
 
-    h3 {
-      text-transform: uppercase;
+    h4 {
+      text-transform: capitalize;
+      font-size: 18px;
+      font-weight: 100;
+    }
+
+    p {
+      font-family: $sansSerifFont;
+      color: black;
+      font-size: 14px;
+      font-weight: 400;
     }
   }
 }

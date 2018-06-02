@@ -1,8 +1,22 @@
-<div class="team-page-container">
-  <?php foreach(["p1", "p2", "p3", "p4", "p5", "p6"] as $key=>$value): ?>
+<?php
+  class Person {
+    public $name = "first last";
+    public $role = "role title";
+    public function photo() {
+      return get_template_directory_uri() . '/assets/images/test-portrait.jpg';
+    }
+  }
+  $person = new Person();
+?>
+
+
+<div class="team-page-container desktop-container">
+  <h3>Our Team</h3>
+  <?php foreach([$person, $person, $person, $person, $person, $person, $person, $person, $person] as $key=>$value): ?>
     <div class="bio-container">
-      <div class="photo"></div>
-      <div class="name"><?php echo $value; ?></div>
+      <img src=<?php echo $value->photo(); ?> alt="Example Lawyer Photo"></img>
+      <div class="name"><?php echo $value->name; ?></div>
+      <div class="role"><?php echo $value->role; ?></div>
     </div>
   <?php endforeach; ?>
 </div>

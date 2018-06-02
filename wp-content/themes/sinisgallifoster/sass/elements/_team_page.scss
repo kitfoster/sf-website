@@ -8,21 +8,28 @@
   min-height: 100vh;
   margin-top: 100px;
 
+  h3 {
+    flex-basis: 100%;
+  }
+
   .bio-container {
     display: flex;
     align-items: center;
     flex-direction: column;
 
-    flex: 0 0 300px;
+    flex: 0 0 250px;
     padding: 20px;
+    font-family: $sansSerifFont;
+    text-transform: capitalize;
+    font-size: 14px;
 
-    .photo {
-      height: 300px;
-      width: 300px;
-      background-color: grey;
+    img {
+      height: 250px;
+      width: 250px;
+      margin-bottom: 10px;
     }
-    .name {
-      text-transform: uppercase;
+    .role {
+      color: black;
     }
   }
 }

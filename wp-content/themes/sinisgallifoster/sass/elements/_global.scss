@@ -1,6 +1,15 @@
 body {
-	font-family: 'Montserrat', sans-serif;
 	margin: 0;
+
+	font-family: $serifFont;
+	color: $copper;
+}
+
+h3 {
+	font-family: $serifFont;
+	text-align: center;
+	font-size: 28px;
+	font-weight: 100;
 }
 
 .desktop-container {
