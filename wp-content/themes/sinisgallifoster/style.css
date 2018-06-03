@@ -71,7 +71,8 @@ h3 {
   height: 150px;
   top: 0;
   width: 100%;
-  position: fixed; }
+  position: fixed;
+  z-index: 99; }
   .navigation-top .nav-hamburger {
     display: none;
     align-self: center;
@@ -80,7 +81,7 @@ h3 {
     width: 25px;
     height: 60px;
     margin-right: 40px; }
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 500px) {
       .navigation-top .nav-hamburger {
         display: block; } }
   .navigation-top .nav-logo-wrapper {
@@ -99,7 +100,7 @@ h3 {
     list-style: none;
     padding: 0;
     margin-right: 30px; }
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 500px) {
       .navigation-top .navbar-items {
         display: none; } }
     .navigation-top .navbar-items a {
@@ -120,11 +121,17 @@ h3 {
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 50px; }
+  @media only screen and (max-width: 1000px) {
+    .homepage-background {
+      background-size: 500px; } }
   .homepage-background .homepage-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: 100%; }
+    @media only screen and (max-width: 500px) {
+      .homepage-background .homepage-container {
+        display: none; } }
     .homepage-background .homepage-container h2 {
       max-width: 400px;
       font-family: "Lora", serif;
@@ -132,14 +139,46 @@ h3 {
       margin: 50px;
       font-size: 20px;
       font-weight: 200; }
-    .homepage-background .homepage-container .arrow-down {
-      align-self: center;
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 12px solid #905c32;
-      margin-bottom: 30px; }
+  .homepage-background .arrow-down {
+    align-self: center;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 12px solid #905c32;
+    margin-bottom: 30px; }
+  @media only screen and (max-width: 500px) {
+    .homepage-background {
+      height: 100%;
+      max-height: none;
+      background-image: none; } }
+  .homepage-background .homepage-mobile {
+    display: none;
+    flex-direction: column;
+    height: 100%; }
+    @media only screen and (max-width: 500px) {
+      .homepage-background .homepage-mobile {
+        display: flex; } }
+    .homepage-background .homepage-mobile .photo {
+      background-image: url("assets/images/lawyers-temp-photo.png");
+      background-size: 450px;
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: 50px;
+      flex: 1 0 400px;
+      width: 100%;
+      margin-top: 50px; }
+    .homepage-background .homepage-mobile .bottom {
+      display: flex;
+      flex-direction: column;
+      flex: 1 100%; }
+      .homepage-background .homepage-mobile .bottom h2 {
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        padding: 30px 50px;
+        max-width: 300px;
+        line-height: 20px; }
 
 .statement-container {
   display: flex;

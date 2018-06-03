@@ -9,11 +9,20 @@
   background-position-x: center;
   background-position-y: 50px;
 
+
+  @media only screen and (max-width: $desktopMediaQuery) {
+    background-size: 500px;
+  }
+
   .homepage-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: 100%;
+
+    @media only screen and (max-width: $mediumMediaQuery) {
+      display: none;
+    }
 
     h2 {
       max-width: 400px;
@@ -24,14 +33,59 @@
       font-weight: 200;
     }
 
-    .arrow-down {
-      align-self: center;
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 12px solid $copper;
-      margin-bottom: 30px;
+  }
+
+  .arrow-down {
+    align-self: center;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 12px solid $copper;
+    margin-bottom: 30px;
+  }
+
+  // mobile
+  @media only screen and (max-width: $mediumMediaQuery) {
+    height: 100%;
+    max-height: none;
+    background-image: none;
+  }
+
+  .homepage-mobile {
+    display: none;
+
+    flex-direction: column;
+    height: 100%;
+
+    @media only screen and (max-width: $mediumMediaQuery) {
+      display: flex;
+    }
+
+    .photo {
+      background-image: url("assets/images/lawyers-temp-photo.png");
+      background-size: 450px;
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: 50px;
+      flex: 1 0 400px;
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      flex: 1 100%;
+
+      h2 {
+        font-family: $sansSerifFont;
+        font-size: 16px;
+        font-weight: normal;
+        padding: 30px 50px;
+        max-width: 300px;
+        line-height: 20px;
+      }
     }
   }
 }
