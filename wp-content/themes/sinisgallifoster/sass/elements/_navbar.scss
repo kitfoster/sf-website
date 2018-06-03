@@ -16,7 +16,7 @@
 		height: 60px;
 		margin-right: 40px;
 
-		@media only screen and (max-width: $mediumMediaQuery) {
+		@media only screen and (max-width: $desktopMediaQuery) {
 			display: block;
 		}
 	}
@@ -43,7 +43,7 @@
 		padding: 0;
 		margin-right: 30px;
 
-		@media only screen and (max-width: $mediumMediaQuery) {
+		@media only screen and (max-width: $desktopMediaQuery) {
 			display: none;
 		}
 

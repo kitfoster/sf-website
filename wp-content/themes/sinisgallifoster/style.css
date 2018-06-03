@@ -81,7 +81,7 @@ h3 {
     width: 25px;
     height: 60px;
     margin-right: 40px; }
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 1000px) {
       .navigation-top .nav-hamburger {
         display: block; } }
   .navigation-top .nav-logo-wrapper {
@@ -100,7 +100,7 @@ h3 {
     list-style: none;
     padding: 0;
     margin-right: 30px; }
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 1000px) {
       .navigation-top .navbar-items {
         display: none; } }
     .navigation-top .navbar-items a {
@@ -195,7 +195,7 @@ h3 {
     @media only screen and (max-width: 700px) {
       .statement-container h2 {
         flex-basis: calc(100% - 100px);
-        font-size: 28px; } }
+        font-size: 26px; } }
 
 .services-container {
   display: flex;
