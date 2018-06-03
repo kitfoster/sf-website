@@ -1,11 +1,19 @@
 body {
 	margin: 0;
+	padding: 0;
+	width: 100%;
 
 	font-family: $serifFont;
 	color: $copper;
 }
 
 p {
+	font-family: $sansSerifFont;
+	font-size: 14px;
+	color: black;
+}
+
+span {
 	font-family: $sansSerifFont;
 	font-size: 14px;
 	color: black;
