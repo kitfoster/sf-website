@@ -1,4 +1,4 @@
-<div class="contact-container">
+<div class="contact-container" id="contact">
   <div class="desktop-container">
     <h3>Contact</h3>
     <blockquote>Sinisgalli Foster Melbourne Lawyers dolor sit amet, no viderer aliquam vel, fastidii mentitum.</blockquote>

@@ -6,10 +6,10 @@
     </img>
   </div>
   <ul class="navbar-items" id="nav">
-    <li class="active"><a href="#">About</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Our Team</a></li>
-    <li><a href="#">Contact</a></li>
+    <li class="active"><a onclick="scrollToElement('about')">About</a></li>
+    <li><a onclick="scrollToElement('services')">Services</a></li>
+    <li><a onclick="scrollToElement('our_team')">Our Team</a></li>
+    <li><a onclick="scrollToElement('contact')">Contact</a></li>
   </ul>
 
   <!-- mobile -->
@@ -32,5 +32,25 @@ function navToggle() {
     } else {
         x.className = "nav-hamburger";
     }
+}
+
+function closeNav() {
+    var x1 = document.getElementById("nav");
+    var x2 = document.getElementById("nav-symbol");
+    if (x1.className === "navbar-items expand") {
+        x1.className = "navbar-items";
+        x2.className = "nav-hamburger";
+    }
+}
+
+function scrollToElement(id) {
+    var e = document.getElementById(id);
+    console.log(e);
+    e.scrollIntoView({
+        behavior: 'smooth',
+        block: "start",
+        inline: "nearest"
+    });
+    closeNav();
 }
 </script>

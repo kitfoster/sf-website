@@ -19,7 +19,7 @@
 ?>
 
 
-<div class="team-page-container desktop-container">
+<div class="team-page-container desktop-container" id="our_team">
   <h3>Our Team</h3>
 
   <!-- desktop -->

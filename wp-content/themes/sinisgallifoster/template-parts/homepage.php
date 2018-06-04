@@ -1,4 +1,4 @@
-<div class="homepage-background">
+<div class="homepage-background" id="about">
   <div class="homepage-container desktop-container" >
     <h2>
       <?php echo $homepageParagraph ?>
