@@ -76,17 +76,6 @@ h3 {
   width: 100%;
   position: fixed;
   z-index: 99; }
-  .navigation-top .nav-hamburger {
-    display: none;
-    align-self: center;
-    background-image: url("assets/images/menu-hamburger-icon.svg");
-    background-repeat: no-repeat;
-    width: 25px;
-    height: 60px;
-    margin-right: 40px; }
-    @media only screen and (max-width: 1000px) {
-      .navigation-top .nav-hamburger {
-        display: block; } }
   .navigation-top .nav-logo-wrapper {
     margin-left: 40px;
     width: 120px;
@@ -113,6 +102,41 @@ h3 {
       font-size: 13px;
       font-family: "Lato", sans-serif;
       font-weight: 400; }
+    .navigation-top .navbar-items.expand {
+      display: block;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      margin: 0;
+      background-color: #905c32;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .navigation-top .navbar-items.expand li {
+        flex-basis: 60px; }
+      .navigation-top .navbar-items.expand a {
+        color: #1E1F38;
+        font-size: 40px; }
+  .navigation-top .nav-hamburger {
+    display: none;
+    align-self: center;
+    background-image: url("assets/images/menu-hamburger-icon.svg");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 60px;
+    margin-right: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none; }
+    @media only screen and (max-width: 1000px) {
+      .navigation-top .nav-hamburger {
+        display: block; } }
+    .navigation-top .nav-hamburger.nav-close {
+      background-image: url("assets/images/close.svg");
+      z-index: 99; }
 
 .homepage-background {
   width: 100%;
