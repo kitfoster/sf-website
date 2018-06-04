@@ -123,7 +123,7 @@ h3 {
   background-position-y: 50px; }
   @media only screen and (max-width: 1000px) {
     .homepage-background {
-      background-size: 500px; } }
+      background-size: 700px; } }
   .homepage-background .homepage-container {
     display: flex;
     flex-direction: column;
@@ -177,7 +177,7 @@ h3 {
         font-size: 16px;
         font-weight: normal;
         padding: 30px 50px;
-        max-width: 300px;
+        max-width: 380px;
         line-height: 20px; }
 
 .statement-container {
@@ -218,11 +218,24 @@ h3 {
       font-size: 18px;
       font-weight: 100; }
 
+.team-page-container h3 {
+  margin-top: 100px; }
+  @media only screen and (max-width: 700px) {
+    .team-page-container h3 {
+      font-size: 28px; } }
+
+.team-page-container span {
+  font-family: "Lato", sans-serif;
+  text-transform: capitalize;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  color: #905c32; }
+
 .team-page-container .desktop-view {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 100px auto; }
+  justify-content: center; }
   @media only screen and (max-width: 700px) {
     .team-page-container .desktop-view {
       display: none; } }
@@ -233,10 +246,7 @@ h3 {
     align-items: center;
     flex-direction: column;
     flex: 0 0 250px;
-    padding: 20px;
-    font-family: "Lato", sans-serif;
-    text-transform: capitalize;
-    font-size: 14px; }
+    padding: 20px; }
     .team-page-container .desktop-view .bio-container img {
       height: 250px;
       width: 250px;
@@ -246,16 +256,42 @@ h3 {
 
 .team-page-container .mobile-carousel {
   display: none;
+  position: relative;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 100px; }
   @media only screen and (max-width: 700px) {
     .team-page-container .mobile-carousel {
       display: flex; } }
-  .team-page-container .mobile-carousel .carousel {
-    width: 250px;
-    background: none; }
-    .team-page-container .mobile-carousel .carousel .carousel-inner {
-      width: 250px; }
+  .team-page-container .mobile-carousel .carousel-slides {
+    flex-direction: column; }
+    .team-page-container .mobile-carousel .carousel-slides img {
+      width: 250px;
+      height: 250px; }
+    .team-page-container .mobile-carousel .carousel-slides .name {
+      margin-top: 15px; }
+    .team-page-container .mobile-carousel .carousel-slides .role {
+      color: black; }
+  .team-page-container .mobile-carousel .carousel-button {
+    position: absolute;
+    top: calc((250px/2) - 10px); }
+    .team-page-container .mobile-carousel .carousel-button:before {
+      display: block;
+      content: "";
+      width: 0;
+      height: 0;
+      border: none;
+      background: none;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent; }
+    .team-page-container .mobile-carousel .carousel-button.left {
+      margin-left: -150px; }
+      .team-page-container .mobile-carousel .carousel-button.left:before {
+        border-right: 12px solid #905c32; }
+    .team-page-container .mobile-carousel .carousel-button.right {
+      margin-left: 150px; }
+      .team-page-container .mobile-carousel .carousel-button.right:before {
+        border-left: 12px solid #905c32; }
 
 .contact-container {
   background-color: #E9E9EB; }
@@ -271,6 +307,10 @@ h3 {
       font-size: 36px;
       font-weight: 100;
       border: none; }
+      @media only screen and (max-width: 1000px) {
+        .contact-container div blockquote {
+          font-size: 24px;
+          max-width: 350px; } }
     .contact-container div .contact-sections {
       display: flex;
       flex-direction: row;
@@ -314,7 +354,7 @@ h3 {
     align-items: center; }
     @media only screen and (max-width: 1000px) {
       .footer-container .footer-text {
-        flex: 0 300px;
+        flex: 1 100px;
         flex-direction: column;
         align-items: flex-start; }
         .footer-container .footer-text .email {
@@ -329,6 +369,9 @@ h3 {
       line-height: 20px;
       font-size: 12px;
       color: #905c32; }
+      @media only screen and (max-width: 1000px) {
+        .footer-container .footer-text span {
+          padding: 0 20px 0 0; } }
     .footer-container .footer-text .copy {
       text-align: right;
       flex: 1; }
@@ -336,7 +379,7 @@ h3 {
     display: flex; }
     @media only screen and (max-width: 1000px) {
       .footer-container .footer-logo {
-        flex: 0 100px;
+        flex: 1 100px;
         justify-content: flex-end;
         padding-right: 40px; } }
     .footer-container .footer-logo img {
