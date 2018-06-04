@@ -26,6 +26,9 @@ h3 {
   text-align: center;
   font-size: 28px;
   font-weight: 100; }
+  @media only screen and (max-width: 1000px) {
+    h3 {
+      font-size: 24px; } }
 
 @media only screen and (min-width: 1000px) {
   .desktop-container {
@@ -200,19 +203,18 @@ h3 {
 .services-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  min-height: 100vh; }
+  flex-wrap: wrap; }
   .services-container h3 {
     align-self: center;
     flex-basis: 100%; }
   .services-container .service-box {
     display: flex;
     justify-content: center;
-    flex: 0 1 400px;
-    padding: 0 20px;
+    flex: 0 1 350px;
+    padding: 40px 20px;
     text-align: center; }
   .services-container .service {
-    max-width: 300px; }
+    max-width: 280px; }
     .services-container .service h4 {
       text-transform: capitalize;
       font-size: 18px;
@@ -220,9 +222,6 @@ h3 {
 
 .team-page-container h3 {
   margin-top: 100px; }
-  @media only screen and (max-width: 700px) {
-    .team-page-container h3 {
-      font-size: 28px; } }
 
 .team-page-container span {
   font-family: "Lato", sans-serif;
@@ -235,7 +234,8 @@ h3 {
 .team-page-container .desktop-view {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 100px; }
   @media only screen and (max-width: 700px) {
     .team-page-container .desktop-view {
       display: none; } }
@@ -250,7 +250,8 @@ h3 {
     .team-page-container .desktop-view .bio-container img {
       height: 250px;
       width: 250px;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      object-fit: cover; }
     .team-page-container .desktop-view .bio-container .role {
       color: black; }
 
@@ -267,7 +268,8 @@ h3 {
     flex-direction: column; }
     .team-page-container .mobile-carousel .carousel-slides img {
       width: 250px;
-      height: 250px; }
+      height: 250px;
+      object-fit: cover; }
     .team-page-container .mobile-carousel .carousel-slides .name {
       margin-top: 15px; }
     .team-page-container .mobile-carousel .carousel-slides .role {
@@ -300,13 +302,12 @@ h3 {
     flex-direction: column;
     align-items: center; }
     .contact-container div h3 {
-      padding: 80px 0; }
+      padding: 80px 0 40px 0; }
     .contact-container div blockquote {
       max-width: 600px;
       text-align: center;
       font-size: 36px;
-      font-weight: 100;
-      border: none; }
+      font-weight: 100; }
       @media only screen and (max-width: 1000px) {
         .contact-container div blockquote {
           font-size: 24px;
@@ -376,7 +377,8 @@ h3 {
       text-align: right;
       flex: 1; }
   .footer-container .footer-logo {
-    display: flex; }
+    display: flex;
+    box-sizing: border-box; }
     @media only screen and (max-width: 1000px) {
       .footer-container .footer-logo {
         flex: 1 100px;

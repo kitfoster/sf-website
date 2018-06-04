@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  min-height: 100vh;
 
   h3 {
     align-self: center;
@@ -13,13 +12,13 @@
     display: flex;
     justify-content: center;
 
-    flex: 0 1 400px;
-    padding: 0 20px;
+    flex: 0 1 350px;
+    padding: 40px 20px;
     text-align: center;
   }
 
   .service {
-    max-width: 300px;
+    max-width: 280px;
 
     h4 {
       text-transform: capitalize;

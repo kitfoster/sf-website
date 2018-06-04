@@ -1,13 +1,21 @@
 <?php
   class Person {
-    public $name = "first last";
-    public $role = "role title";
+    public $name;
+    public $role;
+    public $imageName;
+
+    public function __construct($name, $role, $imageName) {
+      $this->name = $name;
+      $this->role = $role;
+      $this->imageName = $imageName;
+    }
+
     public function photo() {
-      return get_template_directory_uri() . '/assets/images/test-portrait.jpg';
+      return get_template_directory_uri() . $this->imageName;
     }
   }
-  $person = new Person();
-  $first = true;
+  $person1 = new Person("first last", "role title", "/assets/images/test-portrait.jpg");
+  $person2 = new Person("first last other", "role title other", "/assets/images/test-portrait-2.jpg");
 ?>
 
 
@@ -16,7 +24,7 @@
 
   <!-- desktop -->
   <div class="desktop-view">
-    <?php foreach([$person, $person, $person, $person, $person, $person, $person, $person, $person] as $key=>$value): ?>
+    <?php foreach([$person1, $person2, $person1, $person2, $person1, $person2, $person1, $person2, $person1] as $key=>$value): ?>
       <div class="bio-container">
         <img src=<?php echo $value->photo(); ?> alt="Example Lawyer Photo"></img>
         <span class="name"><?php echo $value->name; ?></span>
@@ -27,7 +35,7 @@
 
   <!-- mobile -->
   <div class="mobile-carousel">
-    <?php foreach([$person, $person, $person, $person, $person, $person, $person, $person, $person] as $key=>$value): ?>
+    <?php foreach([$person1, $person2, $person1, $person2, $person1, $person2, $person1, $person2, $person1] as $key=>$value): ?>
       <div class="carousel-slides">
         <img src=<?php echo $value->photo(); ?> alt="Example Lawyer Photo"></img>
         <span class="name"><?php echo $value->name; ?></span>
