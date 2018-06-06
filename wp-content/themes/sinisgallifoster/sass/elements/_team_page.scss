@@ -78,6 +78,7 @@
       top: calc((250px/2) - 10px);
       background: none;
       border: none;
+      outline: none;
 
       &:before {
         display: block;
@@ -109,15 +110,15 @@
   }
 
   .bio-expanded {
-    display: none;
+    visibility: hidden;
     position: absolute;
-    // display is flex when shown
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    z-index: 100;
 
     // transition
-    transition: opacity 2s;
+    transition: opacity 0.5s;
     opacity: 0;
 
     // transition
@@ -132,11 +133,18 @@
       align-items: center;
       background-color: $paleBlue;
       margin-top: 100px;
-      z-index: 99;
-      // min-height: 700px;
+      z-index: 10;
       flex: 0 0 680px;
       padding-bottom: 100px;
 
+      @media only screen and (max-width: 700px) {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        margin: 0;
+      }
 
       span {
         max-width: 400px;
