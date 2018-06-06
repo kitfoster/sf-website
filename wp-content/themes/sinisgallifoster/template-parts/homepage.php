@@ -1,4 +1,4 @@
-<div class="homepage-background" id="about">
+<div class="homepage-background" id="about" onload="pageLoaded()">
   <div class="homepage-container desktop-container" >
     <h2>
       <?php echo $homepageParagraph ?>
@@ -15,3 +15,12 @@
     </div>
   </div>
 </div>
+
+<script>
+// on page load smooth fade in
+document.body.className += ' fade-out';
+
+window.onload = function(e) {
+  document.body.className = '';
+}
+</script>

@@ -8,23 +8,28 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  font-family: "Lora", serif;
-  color: #905c32; }
+  font-family: "EB Garamond", serif;
+  color: #905c32;
+  opacity: 1;
+  transition: 1s opacity; }
+  body.fade-out {
+    opacity: 0;
+    transition: none; }
 
 p {
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   color: black; }
 
 span {
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   color: black; }
 
 h3 {
-  font-family: "Lora", serif;
+  font-family: "EB Garamond", serif;
   text-align: center;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 100;
   padding-top: 100px;
   margin-top: 0; }
@@ -103,7 +108,7 @@ h3 {
       text-decoration: none;
       text-transform: capitalize;
       font-size: 13px;
-      font-family: "Lato", sans-serif;
+      font-family: "Open Sans", sans-serif;
       font-weight: 400;
       cursor: pointer; }
     .navigation-top .navbar-items.expand {
@@ -165,10 +170,10 @@ h3 {
         display: none; } }
     .homepage-background .homepage-container h2 {
       max-width: 400px;
-      font-family: "Lora", serif;
+      font-family: "EB Garamond", serif;
       color: #905c32;
       margin: 50px;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 200; }
   .homepage-background .arrow-down {
     align-self: center;
@@ -204,7 +209,7 @@ h3 {
       flex-direction: column;
       flex: 1 100%; }
       .homepage-background .homepage-mobile .bottom h2 {
-        font-family: "Lato", sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-size: 14px;
         font-weight: normal;
         padding: 30px 50px;
@@ -222,7 +227,7 @@ h3 {
     text-align: center;
     font-size: 36px;
     font-weight: 100;
-    margin: 150px 0; }
+    padding: 200px 0; }
     @media only screen and (max-width: 700px) {
       .statement-container h2 {
         flex-basis: calc(100% - 100px);
@@ -231,7 +236,8 @@ h3 {
 .services-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding-bottom: 100px; }
   .services-container h3 {
     align-self: center;
     flex-basis: 100%; }
@@ -252,7 +258,7 @@ h3 {
       font-weight: 100; }
 
 .team-page-container span {
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: capitalize;
   font-size: 14px;
   text-align: center;
@@ -273,6 +279,7 @@ h3 {
     display: flex;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
     flex: 0 0 250px;
     padding: 20px; }
     .team-page-container .desktop-view .bio-container img {
@@ -304,7 +311,9 @@ h3 {
       color: black; }
   .team-page-container .mobile-carousel .carousel-button {
     position: absolute;
-    top: calc((250px/2) - 10px); }
+    top: calc((250px/2) - 10px);
+    background: none;
+    border: none; }
     .team-page-container .mobile-carousel .carousel-button:before {
       display: block;
       content: "";
@@ -322,6 +331,72 @@ h3 {
       margin-left: 150px; }
       .team-page-container .mobile-carousel .carousel-button.right:before {
         border-left: 12px solid #905c32; }
+
+.team-page-container .bio-expanded {
+  display: none;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: opacity 2s;
+  opacity: 0; }
+  .team-page-container .bio-expanded.open {
+    opacity: 1; }
+  .team-page-container .bio-expanded .bio-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DDE5F4;
+    margin-top: 100px;
+    z-index: 99;
+    flex: 0 0 680px;
+    padding-bottom: 100px; }
+    .team-page-container .bio-expanded .bio-inner span {
+      max-width: 400px;
+      color: black;
+      margin-bottom: 50px;
+      text-transform: none;
+      font-size: 12px; }
+    .team-page-container .bio-expanded .bio-inner .close-bio {
+      align-self: flex-end;
+      background-image: url("assets/images/close.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 25px;
+      width: 25px;
+      background-color: transparent;
+      border: none;
+      margin: 20px;
+      cursor: pointer;
+      outline: none; }
+    .team-page-container .bio-expanded .bio-inner .name {
+      font-family: "EB Garamond", serif;
+      font-size: 26px;
+      color: #905c32;
+      margin: 40px;
+      text-transform: capitalize; }
+    .team-page-container .bio-expanded .bio-inner .role, .team-page-container .bio-expanded .bio-inner .accreditations {
+      font-family: "EB Garamond", serif;
+      font-size: 18px;
+      text-transform: capitalize; }
+    .team-page-container .bio-expanded .bio-inner .role {
+      margin-bottom: 20px; }
+    .team-page-container .bio-expanded .bio-inner .mobile {
+      margin: 0; }
+    .team-page-container .bio-expanded .bio-inner .email {
+      margin-bottom: 40px; }
+    .team-page-container .bio-expanded .bio-inner .linkedIn {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-family: "Open Sans", sans-serif;
+      color: black;
+      font-size: 12px; }
+      .team-page-container .bio-expanded .bio-inner .linkedIn img {
+        flex-basis: 22px;
+        height: 22px;
+        padding-right: 10px; }
 
 .contact-container {
   background-color: #E9E9EB; }

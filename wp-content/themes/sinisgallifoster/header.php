@@ -13,7 +13,7 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="http://gmpg.org/xfn/11">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Lora" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|EB+Garamond:400,500,600,700" rel="stylesheet">
     <!-- for testing in IE vm - 10.0.2.2:8080/-->
   <link rel="stylesheet" type="text/css" href="wp-content/themes/sinisgallifoster/style.css">
 
