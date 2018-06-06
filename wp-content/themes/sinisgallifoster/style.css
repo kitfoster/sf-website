@@ -258,156 +258,160 @@ h3 {
       font-size: 18px;
       font-weight: 100; }
 
-.team-page-container span {
-  font-family: "Open Sans", sans-serif;
-  text-transform: capitalize;
-  font-size: 14px;
-  text-align: center;
-  display: block;
-  color: #905c32; }
-
-.team-page-container .desktop-view {
+.team-page-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 100px; }
-  @media only screen and (max-width: 700px) {
-    .team-page-container .desktop-view {
-      display: none; } }
-  .team-page-container .desktop-view h3 {
-    flex-basis: 100%; }
-  .team-page-container .desktop-view .bio-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    cursor: pointer;
-    flex: 0 0 250px;
-    padding: 20px; }
-    .team-page-container .desktop-view .bio-container img {
-      height: 250px;
-      width: 250px;
-      margin-bottom: 10px;
-      object-fit: cover; }
-    .team-page-container .desktop-view .bio-container .role {
-      color: black; }
-
-.team-page-container .mobile-carousel {
-  display: none;
   position: relative;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 100px; }
-  @media only screen and (max-width: 700px) {
-    .team-page-container .mobile-carousel {
-      display: flex; } }
-  .team-page-container .mobile-carousel .carousel-slides {
-    flex-direction: column; }
-    .team-page-container .mobile-carousel .carousel-slides img {
-      width: 250px;
-      height: 250px;
-      object-fit: cover; }
-    .team-page-container .mobile-carousel .carousel-slides .name {
-      margin-top: 15px; }
-    .team-page-container .mobile-carousel .carousel-slides .role {
-      color: black; }
-  .team-page-container .mobile-carousel .carousel-button {
-    position: absolute;
-    top: calc((250px/2) - 10px);
-    background: none;
-    border: none;
-    outline: none; }
-    .team-page-container .mobile-carousel .carousel-button:before {
-      display: block;
-      content: "";
-      width: 0;
-      height: 0;
-      border: none;
-      background: none;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent; }
-    .team-page-container .mobile-carousel .carousel-button.left {
-      margin-left: -150px; }
-      .team-page-container .mobile-carousel .carousel-button.left:before {
-        border-right: 12px solid #905c32; }
-    .team-page-container .mobile-carousel .carousel-button.right {
-      margin-left: 150px; }
-      .team-page-container .mobile-carousel .carousel-button.right:before {
-        border-left: 12px solid #905c32; }
-
-.team-page-container .bio-expanded {
-  visibility: hidden;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-  transition: opacity 0.5s;
-  opacity: 0; }
-  .team-page-container .bio-expanded.open {
-    opacity: 1; }
-  .team-page-container .bio-expanded .bio-inner {
-    position: relative;
+  justify-content: center; }
+  .team-page-container span {
+    font-family: "Open Sans", sans-serif;
+    text-transform: capitalize;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    color: #905c32; }
+  .team-page-container .desktop-view {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #DDE5F4;
-    margin-top: 100px;
-    z-index: 10;
-    flex: 0 0 680px;
-    padding-bottom: 100px; }
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px; }
     @media only screen and (max-width: 700px) {
-      .team-page-container .bio-expanded .bio-inner {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        margin: 0; } }
-    .team-page-container .bio-expanded .bio-inner span {
-      max-width: 400px;
-      color: black;
-      margin-bottom: 50px;
-      text-transform: none;
-      font-size: 12px; }
-    .team-page-container .bio-expanded .bio-inner .close-bio {
-      align-self: flex-end;
-      background-image: url("assets/images/close.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 25px;
-      width: 25px;
-      background-color: transparent;
-      border: none;
-      margin: 20px;
-      cursor: pointer;
-      outline: none; }
-    .team-page-container .bio-expanded .bio-inner .name {
-      font-family: "EB Garamond", serif;
-      font-size: 26px;
-      color: #905c32;
-      margin: 40px;
-      text-transform: capitalize; }
-    .team-page-container .bio-expanded .bio-inner .role, .team-page-container .bio-expanded .bio-inner .accreditations {
-      font-family: "EB Garamond", serif;
-      font-size: 18px;
-      text-transform: capitalize; }
-    .team-page-container .bio-expanded .bio-inner .role {
-      margin-bottom: 20px; }
-    .team-page-container .bio-expanded .bio-inner .mobile {
-      margin: 0; }
-    .team-page-container .bio-expanded .bio-inner .email {
-      margin-bottom: 40px; }
-    .team-page-container .bio-expanded .bio-inner .linkedIn {
+      .team-page-container .desktop-view {
+        display: none; } }
+    .team-page-container .desktop-view h3 {
+      flex-basis: 100%; }
+    .team-page-container .desktop-view .bio-container {
       display: flex;
       align-items: center;
-      text-decoration: none;
-      font-family: "Open Sans", sans-serif;
-      color: black;
-      font-size: 12px; }
-      .team-page-container .bio-expanded .bio-inner .linkedIn img {
-        flex-basis: 22px;
-        height: 22px;
-        padding-right: 10px; }
+      flex-direction: column;
+      cursor: pointer;
+      flex: 0 0 250px;
+      padding: 20px; }
+      .team-page-container .desktop-view .bio-container img {
+        height: 250px;
+        width: 250px;
+        margin-bottom: 10px;
+        object-fit: cover; }
+      .team-page-container .desktop-view .bio-container .role {
+        color: black; }
+  .team-page-container .mobile-carousel {
+    display: none;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px; }
+    @media only screen and (max-width: 700px) {
+      .team-page-container .mobile-carousel {
+        display: flex; } }
+    .team-page-container .mobile-carousel .carousel-slides {
+      flex-direction: column; }
+      .team-page-container .mobile-carousel .carousel-slides img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover; }
+      .team-page-container .mobile-carousel .carousel-slides .name {
+        margin-top: 15px; }
+      .team-page-container .mobile-carousel .carousel-slides .role {
+        color: black; }
+    .team-page-container .mobile-carousel .carousel-button {
+      position: absolute;
+      top: calc((250px/2) - 10px);
+      background: none;
+      border: none;
+      outline: none; }
+      .team-page-container .mobile-carousel .carousel-button:before {
+        display: block;
+        content: "";
+        width: 0;
+        height: 0;
+        border: none;
+        background: none;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent; }
+      .team-page-container .mobile-carousel .carousel-button.left {
+        margin-left: -150px; }
+        .team-page-container .mobile-carousel .carousel-button.left:before {
+          border-right: 12px solid #905c32; }
+      .team-page-container .mobile-carousel .carousel-button.right {
+        margin-left: 150px; }
+        .team-page-container .mobile-carousel .carousel-button.right:before {
+          border-left: 12px solid #905c32; }
+  .team-page-container .bio-expanded {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    transition: opacity 0.5s;
+    opacity: 0; }
+    @media only screen and (max-width: 700px) {
+      .team-page-container .bio-expanded {
+        z-index: 100;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        top: 0; } }
+    .team-page-container .bio-expanded.open {
+      opacity: 1; }
+    .team-page-container .bio-expanded .bio-inner {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #DDE5F4;
+      flex: 0 0 680px;
+      padding-bottom: 100px; }
+      @media only screen and (max-width: 700px) {
+        .team-page-container .bio-expanded .bio-inner {
+          max-width: calc(100vw - 20px); } }
+      .team-page-container .bio-expanded .bio-inner span {
+        max-width: 400px;
+        color: black;
+        margin-bottom: 50px;
+        text-transform: none;
+        font-size: 12px; }
+      .team-page-container .bio-expanded .bio-inner .close-bio {
+        align-self: flex-end;
+        background-image: url("assets/images/close.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 25px;
+        width: 25px;
+        background-color: transparent;
+        border: none;
+        margin: 20px;
+        cursor: pointer;
+        outline: none; }
+      .team-page-container .bio-expanded .bio-inner .name {
+        font-family: "EB Garamond", serif;
+        font-size: 26px;
+        color: #905c32;
+        margin: 40px;
+        text-transform: capitalize; }
+      .team-page-container .bio-expanded .bio-inner .role, .team-page-container .bio-expanded .bio-inner .accreditations {
+        font-family: "EB Garamond", serif;
+        font-size: 18px;
+        text-transform: capitalize; }
+      .team-page-container .bio-expanded .bio-inner .role {
+        margin-bottom: 20px; }
+      .team-page-container .bio-expanded .bio-inner .mobile {
+        margin: 0; }
+      .team-page-container .bio-expanded .bio-inner .email {
+        margin-bottom: 40px; }
+      .team-page-container .bio-expanded .bio-inner .linkedIn {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-family: "Open Sans", sans-serif;
+        color: black;
+        font-size: 12px; }
+        .team-page-container .bio-expanded .bio-inner .linkedIn img {
+          flex-basis: 22px;
+          height: 22px;
+          padding-right: 10px; }
 
 .contact-container {
   background-color: #E9E9EB; }

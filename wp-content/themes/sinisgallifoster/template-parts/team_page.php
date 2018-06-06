@@ -38,8 +38,20 @@
     <?php endforeach; ?>
   </div>
 
-  <!-- bios -->
+  <!-- mobile -->
+  <div class="mobile-carousel">
+    <?php foreach([$person1, $person2, $person1, $person2, $person1, $person2, $person1, $person2, $person1] as $key=>$value): ?>
+    <div class="carousel-slides" onclick="toggleBio(<?php echo $key; ?>)">
+      <img src=<?php echo $value->photo(); ?> alt="Example Lawyer Photo"></img>
+      <span class="name"><?php echo $value->name; ?></span>
+      <span class="role"><?php echo $value->role; ?></span>
+    </div>
+    <?php endforeach; ?>
+    <button class="carousel-button left" onclick="plusDivs(-1)"></button>
+    <button class="carousel-button right" onclick="plusDivs(1)"></button>
+  </div>
 
+  <!-- bios -->
   <?php foreach([$person1, $person2, $person1, $person2, $person1, $person2, $person1, $person2, $person1] as $key=>$value): ?>
     <div class="bio-expanded" id=<?php echo "bio-expanded" . $key; ?>>
       <div class="bio-inner">
@@ -54,19 +66,6 @@
       </div>
     </div>
   <?php endforeach; ?>
-
-  <!-- mobile -->
-  <div class="mobile-carousel">
-    <?php foreach([$person1, $person2, $person1, $person2, $person1, $person2, $person1, $person2, $person1] as $key=>$value): ?>
-      <div class="carousel-slides" onclick="toggleBio(<?php echo $key; ?>)">
-        <img src=<?php echo $value->photo(); ?> alt="Example Lawyer Photo"></img>
-        <span class="name"><?php echo $value->name; ?></span>
-        <span class="role"><?php echo $value->role; ?></span>
-      </div>
-    <?php endforeach; ?>
-    <button class="carousel-button left" onclick="plusDivs(-1)"></button>
-    <button class="carousel-button right" onclick="plusDivs(1)"></button>
-  </div>
 </div>
 
 <script>
