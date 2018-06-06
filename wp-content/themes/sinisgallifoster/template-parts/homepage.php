@@ -3,7 +3,7 @@
     <h2>
       <?php echo $homepageParagraph ?>
     </h2>
-    <div class="arrow-down"></div>
+    <a class="arrow-down" onclick="scrollToElement('statement')"></a>
   </div>
   <div class="homepage-mobile">
     <div class="photo"></div>
@@ -11,7 +11,7 @@
       <h2>
         <?php echo $homepageParagraph ?>
       </h2>
-      <div class="arrow-down"></div>
+      <a class="arrow-down" onclick="scrollToElement('statement')"></a>
     </div>
   </div>
 </div>

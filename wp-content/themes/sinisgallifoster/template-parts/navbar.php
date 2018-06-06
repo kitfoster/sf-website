@@ -44,6 +44,7 @@ function closeNav() {
 }
 
 function scrollToElement(id) {
+    console.log(id);
     var e = document.getElementById(id);
     console.log(e);
     e.scrollIntoView({

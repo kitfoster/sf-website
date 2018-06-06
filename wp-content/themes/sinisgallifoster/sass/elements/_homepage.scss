@@ -43,6 +43,11 @@
     border-right: 10px solid transparent;
     border-top: 12px solid $copper;
     margin-bottom: 30px;
+    cursor: pointer;
+
+    &:hover {
+      border-top: 12px solid #633e20;
+    }
   }
 
   // mobile
