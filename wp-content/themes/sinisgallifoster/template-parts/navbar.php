@@ -19,28 +19,24 @@
 
 <script>
 function navToggle() {
-    var x = document.getElementById("nav");
-    if (x.className === "navbar-items") {
-        x.className += " expand";
+    var nav = document.getElementById("nav");
+    var symbol = document.getElementById("nav-symbol");
+    if (nav.className == "navbar-items") {
+        nav.className += " expand";
+        symbol.className += " nav-close";
     } else {
-        x.className = "navbar-items";
-    }
-
-    var x = document.getElementById("nav-symbol");
-    if (x.className === "nav-hamburger") {
-        x.className += " nav-close";
-    } else {
-        x.className = "nav-hamburger";
+        closeNav();
     }
 }
 
 function closeNav() {
     var x1 = document.getElementById("nav");
     var x2 = document.getElementById("nav-symbol");
-    if (x1.className === "navbar-items expand") {
+    x1.className += " fade";
+    x2.className = "nav-hamburger";
+    setTimeout(() => {
         x1.className = "navbar-items";
-        x2.className = "nav-hamburger";
-    }
+    }, 500);
 }
 
 function scrollToElement(id) {
