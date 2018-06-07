@@ -9,12 +9,7 @@ body {
   padding: 0;
   width: 100%;
   font-family: "EB Garamond", serif;
-  color: #905c32;
-  opacity: 1;
-  transition: 1s opacity; }
-  body.fade-out {
-    opacity: 0;
-    transition: none; }
+  color: #905c32; }
 
 p {
   font-family: "Open Sans", sans-serif;
@@ -75,6 +70,25 @@ h3 {
   width: auto;
   z-index: 100000;
   /* Above WP toolbar. */ }
+
+.opening-page-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: #1E1F38;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 2s opacity;
+  opacity: 1; }
+  .opening-page-container.fade-out {
+    opacity: 0; }
+  .opening-page-container .logo {
+    flex-basis: 100px;
+    height: 100px;
+    background-image: url("assets/images/sf-sml-logo.png"); }
 
 .navigation-top {
   display: flex;

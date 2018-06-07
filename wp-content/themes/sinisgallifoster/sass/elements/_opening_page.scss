@@ -1,0 +1,25 @@
+.opening-page-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: $navyBlue;
+  z-index: 101;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 2s opacity;
+  opacity: 1;
+
+  &.fade-out {
+    opacity: 0;
+  }
+
+  .logo {
+    flex-basis: 100px;
+    height: 100px;
+    background-image: url("assets/images/sf-sml-logo.png");
+  }
+}

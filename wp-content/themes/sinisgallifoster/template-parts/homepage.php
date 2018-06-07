@@ -15,12 +15,3 @@
     </div>
   </div>
 </div>
-
-<script>
-// on page load smooth fade in
-document.body.className += ' fade-out';
-
-window.onload = function(e) {
-  document.body.className = '';
-}
-</script>

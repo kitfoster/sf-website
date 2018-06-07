@@ -6,14 +6,13 @@ body {
 	font-family: $serifFont;
 	color: $copper;
 
-	// transition
-	opacity: 1;
-	transition: 1s opacity;
+	// // transition
+	// opacity: 1;
+	// transition: 1s opacity;
 
-	&.fade-out {
-		opacity: 0;
-		transition: none;
-	}
+	// &.fade-out {
+	// 	opacity: 0;
+	// }
 }
 
 p {
