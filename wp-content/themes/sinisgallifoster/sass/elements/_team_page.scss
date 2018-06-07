@@ -85,6 +85,7 @@
       background: none;
       border: none;
       outline: none;
+      cursor: pointer;
 
       &:before {
         display: block;
@@ -110,6 +111,20 @@
 
         &:before {
           border-left: 12px solid $copper;
+        }
+      }
+
+      &:hover {
+        &.left {
+          &:before {
+            border-right: 12px solid #633e20;
+          }
+        }
+
+        &.right {
+          &:before {
+            border-left: 12px solid #633e20;
+          }
         }
       }
     }

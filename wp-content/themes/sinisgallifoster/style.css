@@ -327,7 +327,8 @@ h3 {
       top: calc((250px/2) - 10px);
       background: none;
       border: none;
-      outline: none; }
+      outline: none;
+      cursor: pointer; }
       .team-page-container .mobile-carousel .carousel-button:before {
         display: block;
         content: "";
@@ -345,6 +346,10 @@ h3 {
         margin-left: 150px; }
         .team-page-container .mobile-carousel .carousel-button.right:before {
           border-left: 12px solid #905c32; }
+      .team-page-container .mobile-carousel .carousel-button:hover.left:before {
+        border-right: 12px solid #633e20; }
+      .team-page-container .mobile-carousel .carousel-button:hover.right:before {
+        border-left: 12px solid #633e20; }
   .team-page-container .bio-expanded {
     visibility: hidden;
     position: absolute;
