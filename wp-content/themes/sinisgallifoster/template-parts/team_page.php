@@ -2,25 +2,21 @@
   class Person {
     public $name;
     public $role;
-    public $imageName;
+    public $photo;
     public $accreditations = "Accredited Commmercial</br>Litigation Specialist";
     public $bio = "Lorem Ipsor Dolem imet dolor sit amet, no viderer aliquam vel, fastidii mentitum deseruisse ut mel. Vis nibh veri mazim no. Quo ne aliquam fabellas consetetur.Lorem Ipsor Dolem imet dolor sit amet, no viderer aliquam vel, fastidii mentitum deseruisse ut mel. Vis nibh veri mazim no. Quo ne aliquam fabellas consetetur.Lorem Ipsor Dolem imet dolor sit amet, no viderer aliquam vel, fastidii mentitum deseruisse ut mel.</br></br> Vis nibh veri mazim no. Quo ne aliquam fabellas consetetur.Lorem Ipsor Dolem imet dolor sit amet, no viderer aliquam vel, fastidii mentitum deseruisse ut mel. Vis nibh veri mazim no. Quo ne aliquam fabellas consetetur.Lorem Ipsor Dolem imet dolor sit amet, no viderer aliquam vel, fastidii mentitum deseruisse ut mel. Vis nibh veri mazim no. Quo ne aliquam fabellas consetetur.";
     public $mobile = "0444 444 444";
     public $email = "first@sinisgallifoster.com.au";
     public $linkedIn = "https://www.linkedin.com";
 
-    public function __construct($name, $role, $imageName) {
+    public function __construct($name, $role, $photo) {
       $this->name = $name;
       $this->role = $role;
-      $this->imageName = $imageName;
-    }
-
-    public function photo() {
-      return get_template_directory_uri() . $this->imageName;
+      $this->photo = $photo;
     }
   }
-  $person1 = new Person("first last", "role title", "/assets/images/test-portrait.jpg");
-  $person2 = new Person("first last other", "role title other", "/assets/images/test-portrait-2.jpg");
+  $person1 = new Person("first last", "role title", "wp-content/themes/sinisgallifoster/assets/images/test-portrait.jpg");
+  $person2 = new Person("first last other", "role title other", "wp-content/themes/sinisgallifoster/assets/images/test-portrait-2.jpg");
 ?>
 
 
@@ -31,7 +27,7 @@
   <div class="desktop-view">
     <?php foreach([$person1, $person2, $person1, $person2, $person1, $person2, $person1, $person2, $person1] as $key=>$value): ?>
       <div class="bio-container" onclick="toggleBio(<?php echo $key; ?>)">
-        <img src=<?php echo $value->photo(); ?> alt="Example Lawyer Photo"></img>
+        <img src=<?php echo $value->photo; ?> alt="Example Lawyer Photo"></img>
         <span class="name"><?php echo $value->name; ?></span>
         <span class="role"><?php echo $value->role; ?></span>
       </div>
@@ -42,7 +38,7 @@
   <div class="mobile-carousel">
     <?php foreach([$person1, $person2, $person1, $person2, $person1, $person2, $person1, $person2, $person1] as $key=>$value): ?>
     <div class="carousel-slides" onclick="toggleBio(<?php echo $key; ?>)">
-      <img src=<?php echo $value->photo(); ?> alt="Example Lawyer Photo"></img>
+      <img src=<?php echo $value->photo; ?> alt="Example Lawyer Photo"></img>
       <span class="name"><?php echo $value->name; ?></span>
       <span class="role"><?php echo $value->role; ?></span>
     </div>
@@ -62,7 +58,7 @@
         <span class="bio"><?php echo $value->bio; ?></span>
         <span class="mobile">M / <?php echo $value->mobile; ?></span>
         <span class="email">E / <?php echo $value->email; ?></span>
-        <a class="linkedIn" href=<?php echo $value->linkedIn; ?>><img src=<?php echo get_template_directory_uri() . "/assets/images/linkedin.svg"?> alt="LinkedIn Logo" />visit <?php echo $value->name; ?>'s LinkedIn</a>
+        <a class="linkedIn" href=<?php echo $value->linkedIn; ?>><img src="wp-content/themes/sinisgallifoster/assets/images/linkedin.svg" alt="LinkedIn Logo" />visit <?php echo $value->name; ?>'s LinkedIn</a>
       </div>
     </div>
   <?php endforeach; ?>
@@ -90,18 +86,11 @@ function showDivs(n) {
 function toggleBio(index) {
   var x = document.getElementById(`bio-expanded${index}`);
   if (x.className == "bio-expanded") {
+    console.log('heyeyeyye');
     x.className += " open";
   }
   else {
-    x.className = "bio-expanded";
-  }
-
-
-  var x = document.getElementsByClassName('bio-expanded')[index];
-  if (x.style.visibility == "hidden" || x.style.visibility == "") {
-    x.style.visibility = "visible";
-  }
-  else {
+    x.style.opacity = "0";
     setTimeout(function() {
       closeAllBios();
     }, 500);
@@ -109,9 +98,10 @@ function toggleBio(index) {
 }
 
 function closeAllBios() {
-  var x = document.getElementsByClassName('bio-expanded');
+  var x = document.getElementsByClassName('bio-expanded open');
+  console.log(x);
   for (i = 0; i < x.length; i++) {
-     x[i].style.visibility = "hidden";
+    x[i].className == "bio-expanded";
   }
 }
 

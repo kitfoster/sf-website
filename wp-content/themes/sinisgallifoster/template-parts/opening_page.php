@@ -5,8 +5,9 @@
 <script>
 window.onload = function(e) {
   var page = document.getElementById("opening-page");
+  page.className += " fade-out"
   setTimeout(() => {
-    page.className += " fade-out"
+    page.style.display = "none";
   }, 1000);
 }
 
