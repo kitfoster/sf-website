@@ -44,8 +44,8 @@
 			// transition
 			transition: opacity 0.5s;
 			opacity: 0;
+			display: none;
 		}
-
 
 		&.expand {
 			&.fade {

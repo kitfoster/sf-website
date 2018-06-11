@@ -85,10 +85,8 @@ h3 {
   opacity: 1; }
   .opening-page-container.fade-out {
     opacity: 0; }
-  .opening-page-container .logo {
-    flex-basis: 100px;
-    height: 100px;
-    background-image: url("assets/images/sf-sml-logo.png"); }
+  .opening-page-container img {
+    height: 400px; }
 
 .navigation-top {
   display: flex;
@@ -126,7 +124,8 @@ h3 {
     @media only screen and (max-width: 1000px) {
       .navigation-top .navbar-items {
         transition: opacity 0.5s;
-        opacity: 0; } }
+        opacity: 0;
+        display: none; } }
     .navigation-top .navbar-items.expand {
       opacity: 1;
       visibility: visible;
