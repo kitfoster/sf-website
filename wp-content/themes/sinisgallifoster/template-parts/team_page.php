@@ -65,6 +65,8 @@
 </div>
 
 <script>
+sr.reveal('.bio-container', { scale: 1, distance: '20px' });
+
 // carousel
 var slideIndex = 1;
 showDivs(slideIndex);

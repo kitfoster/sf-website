@@ -14,3 +14,7 @@
     </div>
   <?php endforeach; ?>
 </div>
+
+<script>
+  sr.reveal('.service', {distance: '50px'});
+</script>

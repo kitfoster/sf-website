@@ -1,7 +1,7 @@
 <div class="contact-container" id="contact">
   <div class="desktop-container">
-    <h3>Contact</h3>
-    <blockquote>Sinisgalli Foster Melbourne Lawyers dolor sit amet, no viderer aliquam vel, fastidii mentitum.</blockquote>
+    <h3 class="contact-heading">Contact</h3>
+    <blockquote class="contact-quote">Sinisgalli Foster Melbourne Lawyers dolor sit amet, no viderer aliquam vel, fastidii mentitum.</blockquote>
     <div class="contact-sections">
       <div class="contact-section">
         <h4>Business Enquiry</h4>
@@ -18,3 +18,9 @@
     </div>
   </div>
 </div>
+
+<script>
+  sr.reveal('.contact-heading');
+  sr.reveal('.contact-quote');
+  sr.reveal('.contact-section');
+</script>
