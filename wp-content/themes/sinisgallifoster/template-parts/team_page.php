@@ -26,7 +26,7 @@
   <!-- desktop -->
   <div class="desktop-view">
     <?php foreach([$person1, $person2, $person1, $person2, $person1, $person2, $person1, $person2, $person1] as $key=>$value): ?>
-      <div class="bio-container" onclick="toggleBio(<?php echo $key; ?>)">
+      <div class="bio-container" id=<?php echo "bio-container" . $key; ?> onclick="toggleBio('<?php echo "bio-expanded" . $key; ?>')">
         <img src=<?php echo $value->photo; ?> alt="Example Lawyer Photo"></img>
         <span class="name"><?php echo $value->name; ?></span>
         <span class="role"><?php echo $value->role; ?></span>
@@ -37,7 +37,7 @@
   <!-- mobile -->
   <div class="mobile-carousel">
     <?php foreach([$person1, $person2, $person1, $person2, $person1, $person2, $person1, $person2, $person1] as $key=>$value): ?>
-    <div class="carousel-slides" onclick="toggleBio(<?php echo $key; ?>)">
+    <div class="carousel-slides" id=<?php echo "carousel-slides" . $key; ?> onclick="toggleBio('<?php echo "bio-expanded" . $key; ?>')">
       <img src=<?php echo $value->photo; ?> alt="Example Lawyer Photo"></img>
       <span class="name"><?php echo $value->name; ?></span>
       <span class="role"><?php echo $value->role; ?></span>
@@ -51,7 +51,7 @@
   <?php foreach([$person1, $person2, $person1, $person2, $person1, $person2, $person1, $person2, $person1] as $key=>$value): ?>
     <div class="bio-expanded" id=<?php echo "bio-expanded" . $key; ?>>
       <div class="bio-inner">
-        <button class="close-bio" onclick="toggleBio(<?php echo $key; ?>)"></button>
+        <button class="close-bio" onclick="toggleBio('<?php echo "bio-expanded" . $key; ?>')"></button>
         <span class="name"><?php echo $value->name; ?></span>
         <span class="role"><?php echo $value->role; ?></span>
         <span class="accreditations"><?php echo $value->accreditations; ?></span>
@@ -65,6 +65,7 @@
 </div>
 
 <script>
+// carousel
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -83,11 +84,13 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";
 }
 
-function toggleBio(index) {
-  var x = document.getElementById(`bio-expanded${index}`);
+// bios
+function toggleBio(id) {
+  var x = document.getElementById(id);
   if (x.className == "bio-expanded") {
     x.style.opacity = "1";
     x.className += " open";
+    outsideClick(id);
   }
   else {
     x.style.opacity = "0";
@@ -96,4 +99,51 @@ function toggleBio(index) {
     }, 500);
   }
 }
+
+function outsideClick(id) {
+  // can only click on image once
+  var clicked = false;
+
+  const outsideClickListener = evt => {
+    const bio = document.getElementById(id);
+    const index = id.match(/\d/gm)[0];
+    let targetElement = evt.target; // clicked element
+    console.log(evt.target, bio);
+
+    do {
+      if (targetElement == bio || targetElement.id == `carousel-slides${index}` || targetElement.id == `bio-container${index}`) {
+        // This is a click inside. Do nothing, just return.
+        console.log("inside");
+        if (!clicked) {
+          console.log("!clicked")
+          clicked = true;
+        } else {
+          console.log("clicked")
+          toggleBio(id);
+          removeListener();
+        }
+        return;
+      }
+      if (targetElement.className == "close-bio") {
+        removeListener();
+        return;
+      }
+      // Go up the DOM
+      targetElement = targetElement.parentNode;
+    } while (targetElement);
+
+    // This is a click outside.
+    console.log("outside");
+    toggleBio(id);
+    removeListener();
+  };
+
+  const removeListener = () => {
+    console.log("remove");
+    document.removeEventListener("click", outsideClickListener);
+  }
+  document.addEventListener("click", outsideClickListener);
+}
+
+
 </script>

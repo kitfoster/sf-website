@@ -325,7 +325,8 @@ h3 {
       .team-page-container .mobile-carousel {
         display: flex; } }
     .team-page-container .mobile-carousel .carousel-slides {
-      flex-direction: column; }
+      flex-direction: column;
+      cursor: pointer; }
       .team-page-container .mobile-carousel .carousel-slides img {
         width: 250px;
         height: 250px;
