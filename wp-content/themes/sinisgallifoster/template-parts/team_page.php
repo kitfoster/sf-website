@@ -111,14 +111,16 @@ function outsideClick(id) {
     console.log(evt.target, bio);
 
     do {
-      if (targetElement == bio || targetElement.id == `carousel-slides${index}` || targetElement.id == `bio-container${index}`) {
-        // This is a click inside. Do nothing, just return.
-        console.log("inside");
+      if (targetElement == bio) {
+        console.log('bio');
+        return;
+      }
+      if (targetElement.id == `carousel-slides${index}` || targetElement.id == `bio-container${index}`) {
         if (!clicked) {
-          console.log("!clicked")
+          console.log("!clicked");
           clicked = true;
         } else {
-          console.log("clicked")
+          console.log("clicked");
           toggleBio(id);
           removeListener();
         }
