@@ -16,7 +16,7 @@
     }
   }
   $person1 = new Person("first last", "role title", "wp-content/themes/sinisgallifoster/assets/images/test-portrait.jpg");
-  $person2 = new Person("first last other", "role title other", "wp-content/themes/sinisgallifoster/assets/images/test-portrait-2.jpg");
+  $person2 = new Person("first last other", "role title other", "wp-content/themes/sinisgallifoster/assets/images/corporate_portrait.jpg");
 ?>
 
 
@@ -26,8 +26,8 @@
   <!-- desktop -->
   <div class="desktop-view">
     <?php foreach([$person1, $person2, $person1, $person2, $person1, $person2, $person1, $person2, $person1] as $key=>$value): ?>
-      <div class="bio-container" id=<?php echo "bio-container" . $key; ?> onclick="toggleBio('<?php echo "bio-expanded" . $key; ?>')">
-        <img src=<?php echo $value->photo; ?> alt="Example Lawyer Photo"></img>
+      <div class="bio-container" id=<?php echo "bio-container" . $key; ?> onclick="toggleBio('<?php echo "bio-expanded" . $key; ?>')" onmouseleave="removeImageEffects()">
+        <img class="bio-image" id="<?php echo "bio-image" . $key; ?>" onmouseover="imageEffect('<?php echo "bio-image" . $key; ?>')" src=<?php echo $value->photo; ?> alt="Example Lawyer Photo"></img>
         <span class="name"><?php echo $value->name; ?></span>
         <span class="role"><?php echo $value->role; ?></span>
       </div>
@@ -149,5 +149,36 @@ function outsideClick(id) {
   document.addEventListener("click", outsideClickListener);
 }
 
+// greyscale effect
+function imageEffect(id) {
+  // if a bio is open, keep that image coloured
+  const index = id.match(/\d/gm)[0];
+  var openBio = document.getElementsByClassName("bio-expanded open");
+  if (openBio.length > 0) {
+    return;
+  }
+
+  var hoveredImage = document.getElementById(id);
+  hoveredImage.className = "bio-image";
+
+  var colourImages = Array.from(document.getElementsByClassName("bio-image"));
+  var greyImages = Array.from(document.getElementsByClassName("bio-image greyscale"));
+  var allImages = colourImages.concat(greyImages);
+  for (i = 0; i < allImages.length; i += 1) {
+    currentImage = allImages[i];
+    if (currentImage != hoveredImage) {
+      currentImage.className = "bio-image greyscale";
+    }
+  }
+}
+
+function removeImageEffects() {
+  var colourImages = Array.from(document.getElementsByClassName("bio-image"));
+  var greyImages = Array.from(document.getElementsByClassName("bio-image greyscale"));
+  var allImages = colourImages.concat(greyImages);
+  for (i = 0; i < allImages.length; i += 1) {
+    allImages[i].className = "bio-image";
+  }
+}
 
 </script>
