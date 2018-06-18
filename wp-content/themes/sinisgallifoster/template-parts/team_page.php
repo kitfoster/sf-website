@@ -101,7 +101,7 @@ function toggleBio(id) {
     }, 500);
   }
 }
-
+// close if the user clicks outside the bio
 function outsideClick(id) {
   // can only click on image once
   var clicked = false;

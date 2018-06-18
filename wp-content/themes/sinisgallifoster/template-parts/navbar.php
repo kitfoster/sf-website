@@ -1,4 +1,4 @@
-<div class="navigation-top">
+<div class="navigation-top" id="navbar">
   <h1 class="screen-reader-text">Sinisgalli Foster</h1>
   <div class="nav-logo-wrapper" >
     <img class="sf-nav-logo" src="wp-content/themes/sinisgallifoster/assets/images/sf_logo.png" alt="Sinisgalli Foster Logo">
@@ -50,4 +50,17 @@ function scrollToElement(id) {
     });
     closeNav();
 }
+
+window.onscroll = function changeNav() {
+    var navbar = document.getElementById("navbar");
+    var statementSection = document.getElementById("statement");
+    var statementSectionTop = statementSection.getBoundingClientRect().top;
+
+    if (statementSectionTop <= 0) {
+        navbar.className = "navigation-top minimise";
+    } else {
+        navbar.className = "navigation-top";
+    }
+}
+
 </script>

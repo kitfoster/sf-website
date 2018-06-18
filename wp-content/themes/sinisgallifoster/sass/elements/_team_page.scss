@@ -149,8 +149,9 @@
     @media only screen and (max-width: 700px) {
       z-index: 100;
       position: fixed;
-      height: 100vh;
       width: 100vw;
+      height: 100vh;
+      overflow-y: scroll;
       margin: 0;
       top: 0;
     }
@@ -175,7 +176,10 @@
       padding-bottom: 100px;
 
       @media only screen and (max-width: 700px) {
-        max-width: calc(100vw - 20px);
+        min-height: 100vh;
+        flex: auto;
+        top: 0;
+        padding: 10px;
       }
 
       span {
@@ -184,6 +188,11 @@
         margin-bottom: 50px;
         text-transform: none;
         font-size: 12px;
+
+        @media only screen and (max-width: 700px) {
+          padding: 20px;
+          margin: 0;
+        }
       }
 
       .close-bio {
@@ -191,8 +200,9 @@
         background-image: url("assets/images/close.svg");
         background-position: center;
         background-repeat: no-repeat;
-        height: 25px;
-        width: 25px;
+        min-height: 25px;
+        min-width: 25px;
+        padding: 0;
         background-color: transparent;
         border: none;
         margin: 20px;
@@ -206,16 +216,28 @@
         color: $copper;
         margin: 40px;
         text-transform: capitalize;
+
+        @media only screen and (max-width: 700px) {
+          margin: 0;
+        }
       }
 
       .role, .accreditations {
         font-family: $serifFont;
         font-size: 18px;
         text-transform: capitalize;
+
+        @media only screen and (max-width: 700px) {
+          margin: 0;
+        }
       }
 
       .role {
         margin-bottom: 20px;
+
+        @media only screen and (max-width: 700px) {
+          margin: 0;
+        }
       }
 
       .mobile {
@@ -224,6 +246,10 @@
 
       .email {
         margin-bottom: 40px;
+
+        @media only screen and (max-width: 700px) {
+          margin: 0;
+        }
       }
 
       .linkedIn {
@@ -233,6 +259,10 @@
         font-family: $sansSerifFont;
         color: black;
         font-size: 12px;
+
+        @media only screen and (max-width: 700px) {
+          padding: 20px;
+        }
 
         img {
           flex-basis: 22px;
