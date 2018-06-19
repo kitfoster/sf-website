@@ -19,7 +19,7 @@
     justify-content: center;
     margin-bottom: 100px;
 
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: $BioMediaQuery) {
       display: none;
     }
 
@@ -46,6 +46,7 @@
 
         &.greyscale {
           filter: grayscale(100%);
+          opacity: 0.9;
         }
       }
 
@@ -63,7 +64,7 @@
     align-items: center;
     margin-bottom: 100px;
 
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: $BioMediaQuery) {
       display: flex;
     }
 
@@ -146,12 +147,12 @@
     z-index: 50;
     margin-top: 250px;
 
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: $BioMediaQuery) {
       z-index: 100;
       position: fixed;
       width: 100vw;
       height: 100vh;
-      overflow-y: scroll;
+      overflow: scroll;
       margin: 0;
       top: 0;
     }
@@ -175,11 +176,12 @@
       flex: 0 0 680px;
       padding-bottom: 100px;
 
-      @media only screen and (max-width: 700px) {
-        min-height: 100vh;
-        flex: auto;
+      @media only screen and (max-width: $BioMediaQuery) {
+        position: absolute;
         top: 0;
+        flex: auto;
         padding: 10px;
+        min-height: 100vh;
       }
 
       span {
@@ -189,7 +191,7 @@
         text-transform: none;
         font-size: 12px;
 
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: $BioMediaQuery) {
           padding: 20px;
           margin: 0;
         }
@@ -217,8 +219,9 @@
         margin: 40px;
         text-transform: capitalize;
 
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: $BioMediaQuery) {
           margin: 0;
+          padding: 0;
         }
       }
 
@@ -227,7 +230,7 @@
         font-size: 18px;
         text-transform: capitalize;
 
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: $BioMediaQuery) {
           margin: 0;
         }
       }
@@ -235,7 +238,7 @@
       .role {
         margin-bottom: 20px;
 
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: $BioMediaQuery) {
           margin: 0;
         }
       }
@@ -247,7 +250,7 @@
       .email {
         margin-bottom: 40px;
 
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: $BioMediaQuery) {
           margin: 0;
         }
       }
@@ -260,7 +263,7 @@
         color: black;
         font-size: 12px;
 
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: $BioMediaQuery) {
           padding: 20px;
         }
 

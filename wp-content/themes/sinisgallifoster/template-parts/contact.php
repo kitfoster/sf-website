@@ -22,5 +22,5 @@
 <script>
   sr.reveal('.contact-heading');
   sr.reveal('.contact-quote');
-  sr.reveal('.contact-sections');
+  sr.reveal('.contact-section');
 </script>

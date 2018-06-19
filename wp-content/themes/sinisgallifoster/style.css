@@ -98,18 +98,20 @@ h3 {
   width: 100vw;
   position: fixed;
   z-index: 99; }
-  @media only screen and (max-width: 1000px) {
-    .navigation-top.minimise {
-      height: 70px;
-      background: linear-gradient(white, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), transparent);
-      transition: all 0.5s; }
-      .navigation-top.minimise .nav-logo-wrapper {
-        transition: all 0.5s;
-        margin-left: 10px; }
-      .navigation-top.minimise .nav-hamburger {
-        transition: all 0.5s;
-        margin-right: 10px;
-        margin-bottom: 20px; } }
+  .navigation-top.minimise {
+    height: 70px;
+    background: linear-gradient(white, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+    transition: all 0.5s; }
+    .navigation-top.minimise .nav-logo-wrapper {
+      transition: all 0.5s;
+      margin-left: 10px; }
+    .navigation-top.minimise .nav-hamburger {
+      transition: all 0.5s;
+      margin-right: 10px;
+      margin-bottom: 20px; }
+    .navigation-top.minimise .navbar-items {
+      transition: all 0.5s;
+      margin: 20px 10px; }
   .navigation-top .nav-logo-wrapper {
     transition: margin 0.5s;
     margin-left: 40px;
@@ -126,7 +128,8 @@ h3 {
     list-style: none;
     padding: 0;
     margin-right: 30px;
-    z-index: 99; }
+    z-index: 99;
+    transition: all 0.5s; }
     .navigation-top .navbar-items a {
       color: #905c32;
       text-decoration: none;
@@ -331,7 +334,8 @@ h3 {
         filter: grayscale(0%);
         transition: all 0.5s ease; }
         .team-page-container .desktop-view .bio-container img.greyscale {
-          filter: grayscale(100%); }
+          filter: grayscale(100%);
+          opacity: 0.9; }
       .team-page-container .desktop-view .bio-container .role {
         color: black; }
   .team-page-container .mobile-carousel {
@@ -398,7 +402,7 @@ h3 {
         position: fixed;
         width: 100vw;
         height: 100vh;
-        overflow-y: scroll;
+        overflow: scroll;
         margin: 0;
         top: 0; } }
     .team-page-container .bio-expanded.open {
@@ -414,10 +418,11 @@ h3 {
       padding-bottom: 100px; }
       @media only screen and (max-width: 700px) {
         .team-page-container .bio-expanded .bio-inner {
-          min-height: 100vh;
-          flex: auto;
+          position: absolute;
           top: 0;
-          padding: 10px; } }
+          flex: auto;
+          padding: 10px;
+          min-height: 100vh; } }
       .team-page-container .bio-expanded .bio-inner span {
         max-width: 400px;
         color: black;
@@ -449,7 +454,8 @@ h3 {
         text-transform: capitalize; }
         @media only screen and (max-width: 700px) {
           .team-page-container .bio-expanded .bio-inner .name {
-            margin: 0; } }
+            margin: 0;
+            padding: 0; } }
       .team-page-container .bio-expanded .bio-inner .role, .team-page-container .bio-expanded .bio-inner .accreditations {
         font-family: "EB Garamond", serif;
         font-size: 18px;

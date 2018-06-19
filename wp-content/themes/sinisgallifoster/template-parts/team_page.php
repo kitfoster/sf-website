@@ -103,51 +103,65 @@ function toggleBio(id) {
 }
 // close if the user clicks outside the bio
 function outsideClick(id) {
-  // can only click on image once
-  var clicked = false;
+  var outsideClickListener;
 
-  const outsideClickListener = evt => {
-    const bio = document.getElementById(id);
-    const index = id.match(/\d/gm)[0];
-    let targetElement = evt.target; // clicked element
-    console.log(evt.target, bio);
+  // if on mobile, close if the user clicks the background
+  if (screen.width <= 700) {
+    outsideClickListener = evt => {
+      const bio = document.getElementsByClassName("bio-inner")[0];
+      const index = id.match(/\d/gm)[0];
+      let targetElement = evt.target; // clicked element
 
-    do {
       if (targetElement == bio) {
-        console.log('bio');
-        return;
-      }
-      if (targetElement.id == `carousel-slides${index}` || targetElement.id == `bio-container${index}`) {
-        if (!clicked) {
-          console.log("!clicked");
-          clicked = true;
-        } else {
-          console.log("clicked");
-          toggleBio(id);
-          removeListener();
-        }
-        return;
-      }
-      if (targetElement.className == "close-bio") {
+        // clicked the background
+        toggleBio(id);
         removeListener();
-        return;
       }
-      // Go up the DOM
-      targetElement = targetElement.parentNode;
-    } while (targetElement);
+    };
+  }
 
-    // This is a click outside.
-    console.log("outside");
-    toggleBio(id);
-    removeListener();
-  };
+  else { // desktop
+    // can only click on image once
+    var clicked = false;
+
+    outsideClickListener = evt => {
+      const bio = document.getElementById(id);
+      const index = id.match(/\d/gm)[0];
+      let targetElement = evt.target; // clicked element
+
+      do {
+        if (targetElement == bio) {
+          return;
+        }
+        if (targetElement.id == `carousel-slides${index}` || targetElement.id == `bio-container${index}`) {
+          if (!clicked) {
+            clicked = true;
+          } else {
+            toggleBio(id);
+            removeListener();
+          }
+          return;
+        }
+        if (targetElement.className == "close-bio") {
+          removeListener();
+          return;
+        }
+        // Go up the DOM
+        targetElement = targetElement.parentNode;
+      } while (targetElement);
+
+      // This is a click outside.
+      toggleBio(id);
+      removeListener();
+    };
+  }
 
   const removeListener = () => {
-    console.log("remove");
     document.removeEventListener("click", outsideClickListener);
   }
   document.addEventListener("click", outsideClickListener);
 }
+
 
 // greyscale effect
 function imageEffect(id) {
