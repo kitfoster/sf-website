@@ -98,20 +98,21 @@ h3 {
   width: 100vw;
   position: fixed;
   z-index: 99; }
-  .navigation-top.minimise {
-    height: 70px;
-    background: linear-gradient(white, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
-    transition: all 0.5s; }
-    .navigation-top.minimise .nav-logo-wrapper {
-      transition: all 0.5s;
-      margin-left: 10px; }
-    .navigation-top.minimise .nav-hamburger {
-      transition: all 0.5s;
-      margin-right: 10px;
-      margin-bottom: 20px; }
-    .navigation-top.minimise .navbar-items {
-      transition: all 0.5s;
-      margin: 20px 10px; }
+  @media only screen and (max-width: 500px) {
+    .navigation-top.minimise {
+      background: linear-gradient(white, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+      height: 70px;
+      transition: all 0.5s; }
+      .navigation-top.minimise .nav-logo-wrapper {
+        transition: all 0.5s;
+        margin-left: 10px; }
+      .navigation-top.minimise .nav-hamburger {
+        transition: all 0.5s;
+        margin-right: 10px;
+        margin-bottom: 20px; }
+      .navigation-top.minimise .navbar-items {
+        transition: all 0.5s;
+        margin: 20px 10px; } }
   .navigation-top .nav-logo-wrapper {
     transition: margin 0.5s;
     margin-left: 40px;
@@ -138,7 +139,7 @@ h3 {
       font-family: "Open Sans", sans-serif;
       font-weight: 400;
       cursor: pointer; }
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 1450px) {
       .navigation-top .navbar-items {
         transition: opacity 0.5s;
         opacity: 0;
@@ -178,7 +179,7 @@ h3 {
     cursor: pointer;
     outline: none;
     z-index: 99; }
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 1450px) {
       .navigation-top .nav-hamburger {
         display: block; } }
     .navigation-top .nav-hamburger.nav-close {
