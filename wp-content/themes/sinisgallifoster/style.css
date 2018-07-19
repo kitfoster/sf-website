@@ -190,30 +190,53 @@ h3 {
   height: 80vh;
   max-height: 800px;
   min-height: 600px;
-  background-color: #1E1F38;
-  background-image: url("assets/images/lawyers-temp-photo.png");
-  background-size: 800px;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: 50px; }
-  @media only screen and (max-width: 1000px) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1E1F38; }
+  @media only screen and (max-width: 500px) {
     .homepage-background {
-      background-size: 700px; } }
+      align-items: flex-start;
+      flex-direction: column; } }
+  .homepage-background img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+    @media only screen and (max-width: 500px) {
+      .homepage-background img {
+        margin-top: 130px;
+        height: 400px; } }
   .homepage-background .homepage-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 100%; }
+    width: 100%;
+    position: absolute;
+    height: 80vh;
+    max-height: 800px;
+    min-height: 600px; }
     @media only screen and (max-width: 500px) {
       .homepage-background .homepage-container {
-        display: none; } }
+        position: relative;
+        height: auto;
+        min-height: auto; } }
     .homepage-background .homepage-container h2 {
       max-width: 400px;
       font-family: "EB Garamond", serif;
       color: #905c32;
       margin: 50px;
       font-size: 24px;
-      font-weight: 200; }
+      font-weight: 200;
+      z-index: 1; }
+      @media only screen and (max-width: 500px) {
+        .homepage-background .homepage-container h2 {
+          font-family: "Open Sans", sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          padding: 30px 50px;
+          max-width: 380px;
+          line-height: 20px;
+          margin: 20px 50px 20px 0; } }
   .homepage-background .arrow-down {
     align-self: center;
     width: 0;
@@ -246,17 +269,6 @@ h3 {
       flex: 1 0 400px;
       width: 100%;
       margin-top: 50px; }
-    .homepage-background .homepage-mobile .bottom {
-      display: flex;
-      flex-direction: column;
-      flex: 1 100%; }
-      .homepage-background .homepage-mobile .bottom h2 {
-        font-family: "Open Sans", sans-serif;
-        font-size: 14px;
-        font-weight: normal;
-        padding: 30px 50px;
-        max-width: 380px;
-        line-height: 20px; }
 
 .statement-container {
   display: flex;

@@ -3,26 +3,41 @@
   height: $homepageHeight;
   max-height: 800px;
   min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $navyBlue;
-  background-image: url("assets/images/lawyers-temp-photo.png");
-  background-size: 800px;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: 50px;
 
+  @media only screen and (max-width: $mediumMediaQuery) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 
-  @media only screen and (max-width: $desktopMediaQuery) {
-    background-size: 700px;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    @media only screen and (max-width: $mediumMediaQuery) {
+      margin-top: 130px;
+      height: 400px;
+    }
   }
 
   .homepage-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 100%;
+    width: 100%;
+    position: absolute;
+    height: $homepageHeight;
+    max-height: 800px;
+    min-height: 600px;
 
     @media only screen and (max-width: $mediumMediaQuery) {
-      display: none;
+      position: relative;
+      height: auto;
+      min-height: auto;
     }
 
     h2 {
@@ -32,6 +47,17 @@
       margin: 50px;
       font-size: 24px;
       font-weight: 200;
+      z-index: 1;
+
+      @media only screen and (max-width: $mediumMediaQuery) {
+        font-family: $sansSerifFont;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 30px 50px;
+        max-width: 380px;
+        line-height: 20px;
+        margin: 20px 50px 20px 0;
+      }
     }
 
   }
@@ -77,21 +103,6 @@
       flex: 1 0 400px;
       width: 100%;
       margin-top: 50px;
-    }
-
-    .bottom {
-      display: flex;
-      flex-direction: column;
-      flex: 1 100%;
-
-      h2 {
-        font-family: $sansSerifFont;
-        font-size: 14px;
-        font-weight: normal;
-        padding: 30px 50px;
-        max-width: 380px;
-        line-height: 20px;
-      }
     }
   }
 }
