@@ -6,6 +6,7 @@ get_header(); ?>
 
 <body>
 	<?php include "details.php" ?>
+	<?php include "wp_posts.php" ?>
 
 	<?php include "template-parts/opening_page.php" ?>
 
