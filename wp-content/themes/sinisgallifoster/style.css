@@ -248,27 +248,6 @@ h3 {
     cursor: pointer; }
     .homepage-background .arrow-down:hover {
       border-top: 12px solid #633e20; }
-  @media only screen and (max-width: 500px) {
-    .homepage-background {
-      height: 100%;
-      max-height: none;
-      background-image: none; } }
-  .homepage-background .homepage-mobile {
-    display: none;
-    flex-direction: column;
-    height: 100%; }
-    @media only screen and (max-width: 500px) {
-      .homepage-background .homepage-mobile {
-        display: flex; } }
-    .homepage-background .homepage-mobile .photo {
-      background-image: url("assets/images/lawyers-temp-photo.png");
-      background-size: 450px;
-      background-repeat: no-repeat;
-      background-position-x: center;
-      background-position-y: 50px;
-      flex: 1 0 400px;
-      width: 100%;
-      margin-top: 50px; }
 
 .statement-container {
   display: flex;

@@ -76,33 +76,4 @@
       border-top: 12px solid #633e20;
     }
   }
-
-  // mobile
-  @media only screen and (max-width: $mediumMediaQuery) {
-    height: 100%;
-    max-height: none;
-    background-image: none;
-  }
-
-  .homepage-mobile {
-    display: none;
-
-    flex-direction: column;
-    height: 100%;
-
-    @media only screen and (max-width: $mediumMediaQuery) {
-      display: flex;
-    }
-
-    .photo {
-      background-image: url("assets/images/lawyers-temp-photo.png");
-      background-size: 450px;
-      background-repeat: no-repeat;
-      background-position-x: center;
-      background-position-y: 50px;
-      flex: 1 0 400px;
-      width: 100%;
-      margin-top: 50px;
-    }
-  }
 }
