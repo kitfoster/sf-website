@@ -24,17 +24,28 @@
   $team = array();
   while ( have_posts() ) :
     the_post();
-    $name = get_field("name");
-    $role = get_field("role");
-    $photo = get_field("photo");
-    $accreditations = get_field("accreditations");
-    $bio = get_field("bio");
-    $contact_number = get_field("contact_number");
-    $email = get_field("email");
-    $linked_in = get_field("linked_in");
 
-    $employee = new Person($name, $role, $photo, $accreditations, $bio, $contact_number, $email, $linked_in);
-    array_push($team, $employee);
+    $isEmployeePost = false;
+    foreach((get_the_category()) as $category){
+      if($category->name == "Employee") {
+        $isEmployeePost = true;
+      }
+    }
+
+    if ($isEmployeePost) {
+      $name = get_field("name");
+      $role = get_field("role");
+      $photo = get_field("photo");
+      $accreditations = get_field("accreditations");
+      $bio = get_field("bio");
+      $contact_number = get_field("contact_number");
+      $email = get_field("email");
+      $linked_in = get_field("linked_in");
+
+      $employee = new Person($name, $role, $photo, $accreditations, $bio, $contact_number, $email, $linked_in);
+      array_push($team, $employee);
+    }
+
   endwhile;
 ?>
 
