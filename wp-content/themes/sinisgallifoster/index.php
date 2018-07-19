@@ -8,7 +8,6 @@ get_header(); ?>
 	<?php include "wp_posts.php" ?>
 
 	<?php include "template-parts/opening_page.php" ?>
-
 	<?php include "template-parts/navbar.php" ?>
 	<?php include "template-parts/homepage.php" ?>
 	<?php include "template-parts/statement.php" ?>
