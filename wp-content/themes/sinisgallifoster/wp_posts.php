@@ -21,12 +21,6 @@
     }
   }
 
-  // The variables
-  $team = array();
-  $homepageParagraph;
-  $homepageImage;
-  $statementText;
-
   function newEmployee() {
     $name = get_field("name");
     $role = get_field("role");
@@ -41,6 +35,31 @@
     return $employee;
   }
 
+  class Service {
+    public $title;
+    public $description;
+
+    public function __construct($title, $description) {
+      $this->title = $title;
+      $this->description = $description;
+    }
+  }
+
+  function newService() {
+    $title = get_field("service_title");
+    $description = get_field("service_description");
+
+    $service = new Service($title, $description);
+    return $service;
+  }
+
+  // The variables
+  $team = array();
+  $services = array();
+  $homepageParagraph;
+  $homepageImage;
+  $statementText;
+
   while ( have_posts() ) :
     the_post();
 
@@ -48,6 +67,10 @@
       if ($category->name == "Employee") {
         $employee = newEmployee();
         array_push($team, $employee);
+      }
+      elseif ($category->name == "Service") {
+        $service = newService();
+        array_push($services, $service);
       }
       elseif ($category->name == "Homepage") {
         $homepageParagraph = get_field("homepage_text");
