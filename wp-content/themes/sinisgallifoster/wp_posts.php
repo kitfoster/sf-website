@@ -53,12 +53,50 @@
     return $service;
   }
 
+  class Contact {
+    public $contactQuote;
+    public $businessQuote;
+    public $employmentQuote;
+    public $businessEmail;
+    public $employmentEmail;
+    public $phone;
+    public $addressLine1;
+    public $addressLine2;
+
+    public function __construct($contactQuote, $businessQuote, $employmentQuote, $businessEmail, $employmentEmail, $phone, $addressLine1, $addressLine2) {
+      $this->contactQuote = $contactQuote;
+      $this->businessQuote = $businessQuote;
+      $this->employmentQuote = $employmentQuote;
+      $this->businessEmail = $businessEmail;
+      $this->employmentEmail = $employmentEmail;
+      $this->phone = $phone;
+      $this->addressLine1 = $addressLine1;
+      $this->addressLine2 = $addressLine2;
+    }
+  }
+
+  function newContact() {
+    $contactQuote = get_field("contact_quote");
+    $businessQuote = get_field("business_enquiry_text");
+    $employmentQuote = get_field("employment_text");
+    $businessEmail = get_field("business_enquiry_email");
+    $employmentEmail = get_field("employment_enquiry_email");
+    $phone = get_field("phone");
+    $addressLine1 = get_field("address_line_1");
+    $addressLine2 = get_field("address_line_2");
+
+
+    $contact = new Contact($contactQuote, $businessQuote, $employmentQuote, $businessEmail, $employmentEmail, $phone, $addressLine1, $addressLine2);
+    return $contact;
+  }
+
   // The variables
   $team = array();
   $services = array();
   $homepageParagraph;
   $homepageImage;
   $statementText;
+  $contact;
 
   while ( have_posts() ) :
     the_post();
@@ -78,6 +116,9 @@
       }
       elseif ($category->name == "Statement") {
         $statementText = get_field("statement_text");
+      }
+      elseif ($category->name == "Contact") {
+        $contact = newContact();
       }
     }
   endwhile;
