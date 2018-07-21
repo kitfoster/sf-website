@@ -98,8 +98,15 @@
   $statementText;
   $contact;
 
-  while ( have_posts() ) :
-    the_post();
+  $args = array(
+    'orderby' => 'menu_order',
+    'order' => 'ASC',
+    'posts_per_page' => -1,
+  );
+  $wp_query = new WP_Query($args);
+
+  while ( $wp_query->have_posts() ) :
+    $wp_query->the_post();
 
     foreach((get_the_category()) as $category) {
       if ($category->name == "Employee") {
