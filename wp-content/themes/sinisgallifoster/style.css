@@ -103,7 +103,10 @@ h3 {
       height: 70px; }
       .navigation-top.minimise .nav-hamburger {
         transition: all 0.5s;
-        margin-bottom: 20px; } }
+        margin-bottom: 20px; }
+      .navigation-top.minimise .navbar-items {
+        transition: all 0.5s;
+        padding-top: 60px; } }
   .navigation-top .nav-logo-wrapper {
     transition: margin 0.5s;
     margin-left: 40px;
@@ -114,67 +117,75 @@ h3 {
     max-height: 100%;
     z-index: 99; }
   .navigation-top .navbar-items {
-    display: flex;
-    justify-content: space-around;
-    width: 300px;
     list-style: none;
-    padding: 0;
-    margin-right: 30px;
     z-index: 99;
-    transition: all 0.5s; }
+    position: absolute;
+    width: 150px;
+    top: 0;
+    margin: 0;
+    right: 0;
+    padding: 75px 35px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    opacity: 0;
+    visibility: hidden; }
     .navigation-top .navbar-items a {
       color: #905c32;
       text-decoration: none;
       text-transform: capitalize;
-      font-size: 13px;
+      font-size: 20px;
       font-family: "Open Sans", sans-serif;
       font-weight: 400;
       cursor: pointer; }
-    @media only screen and (max-width: 1450px) {
+    .navigation-top .navbar-items li {
+      flex: 0 0 35px; }
+    @media only screen and (max-width: 500px) {
       .navigation-top .navbar-items {
-        transition: opacity 0.5s;
-        opacity: 0;
-        display: none; } }
+        background-color: #1E1F38;
+        width: 100vw; } }
     .navigation-top .navbar-items.expand {
+      transition: all 0.5s;
       opacity: 1;
-      visibility: visible;
-      position: absolute;
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      margin: 0;
-      background-color: #905c32;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      .navigation-top .navbar-items.expand.fade {
+      visibility: visible; }
+      .navigation-top .navbar-items.expand.fade_out {
         transition: opacity 0.5s;
         opacity: 0; }
-      .navigation-top .navbar-items.expand li {
-        flex-basis: 60px; }
-      .navigation-top .navbar-items.expand a {
-        color: #1E1F38;
-        font-size: 40px; }
   .navigation-top .nav-hamburger {
-    display: none;
-    background-image: url("assets/images/menu-hamburger-icon.svg");
-    background-repeat: no-repeat;
-    width: 25px;
-    height: 20px;
+    display: block;
+    width: 40px;
+    height: 40px;
     transition: margin 0.5s;
     margin-bottom: 40px;
-    margin-right: 40px;
+    margin-right: 25px;
     background-color: transparent;
     border: none;
     cursor: pointer;
     outline: none;
     z-index: 99; }
-    @media only screen and (max-width: 1450px) {
-      .navigation-top .nav-hamburger {
-        display: block; } }
-    .navigation-top .nav-hamburger.nav-close {
-      background-image: url("assets/images/close.svg"); }
+    .navigation-top .nav-hamburger::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background-color: #905c32;
+      transition: all 0.5s ease; }
+    .navigation-top .nav-hamburger::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      margin-top: 6px;
+      background-color: #905c32;
+      transition: transform 0.5s ease; }
+    .navigation-top .nav-hamburger.nav-close::before {
+      transform: rotate(45deg); }
+    .navigation-top .nav-hamburger.nav-close::after {
+      transform: rotate(-45deg);
+      margin: 0; }
 
 .homepage-background {
   width: 100%;

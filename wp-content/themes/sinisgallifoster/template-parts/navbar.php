@@ -12,7 +12,6 @@
     <li><a onclick="scrollToElement('contact')">Contact</a></li>
   </ul>
 
-  <!-- mobile -->
   <button class="nav-hamburger" id="nav-symbol" onclick="navToggle()">
   </button>
 </div>
@@ -22,8 +21,11 @@ function navToggle() {
     var nav = document.getElementById("nav");
     var symbol = document.getElementById("nav-symbol");
     if (nav.className == "navbar-items") {
-        nav.className += " expand";
+        nav.className += " expand fade_out";
         symbol.className += " nav-close";
+        setTimeout(() => {
+            nav.className = "navbar-items expand";
+        }, 1);
     } else {
         closeNav();
     }
@@ -32,7 +34,7 @@ function navToggle() {
 function closeNav() {
     var x1 = document.getElementById("nav");
     var x2 = document.getElementById("nav-symbol");
-    x1.className += " fade";
+    x1.className = "navbar-items expand fade_out";
     x2.className = "nav-hamburger";
     setTimeout(() => {
         x1.className = "navbar-items";
