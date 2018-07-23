@@ -71,6 +71,7 @@
     .carousel-slider {
       align-items: flex-start;
       overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
       display: flex;
 
       .carousel-slides {

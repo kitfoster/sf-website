@@ -348,6 +348,7 @@ h3 {
     .team-page-container .mobile-carousel .carousel-slider {
       align-items: flex-start;
       overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
       display: flex; }
       .team-page-container .mobile-carousel .carousel-slider .carousel-slides {
         display: flex;
