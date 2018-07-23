@@ -38,10 +38,18 @@
         <span class="name"><?php echo $value->name; ?></span>
         <span class="role"><?php echo $value->role; ?></span>
         <span class="accreditations"><?php echo $value->accreditations; ?></span>
-        <span class="bio"><?php echo $value->bio; ?></span>
-        <span class="contact_number">P / <?php echo $value->contact_number; ?></span>
-        <span class="email">E / <?php echo $value->email; ?></span>
-        <a class="linkedIn" href=<?php echo $value->linkedIn; ?>><img src="wp-content/themes/sinisgallifoster/assets/images/linkedin.svg" alt="LinkedIn Logo" />Visit <?php echo $value->name; ?>'s LinkedIn</a>
+        <?php if ($value->bio): ?>
+          <span class="bio"><?php echo $value->bio; ?></span>
+        <?php endif; ?>
+        <?php if ($value->contact_number): ?>
+          <span class="contact_number">P / <a href="tel:<?php echo $value->contact_number ?>"><?php echo $value->contact_number; ?></a></span>
+        <?php endif; ?>
+        <?php if ($value->email): ?>
+          <span class="email">E / <a href="mailto:<?php echo $value->email; ?>"><?php echo $value->email; ?></a></span>
+        <?php endif; ?>
+        <?php if ($value->linked_in): ?>
+          <a class="linkedIn" href=<?php echo $value->linked_in; ?> target="_blank"><img src="wp-content/themes/sinisgallifoster/assets/images/linkedin.svg" alt="LinkedIn Logo" />Visit <?php echo $value->name; ?>'s LinkedIn</a>
+        <?php endif; ?>
       </div>
     </div>
   <?php endforeach; ?>

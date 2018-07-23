@@ -16,6 +16,11 @@
     flex: 1 100%;
     align-items: center;
 
+    a {
+      text-decoration: none;
+      color: $copper;
+    }
+
     @media only screen and (max-width: $desktopMediaQuery) {
       flex: 1 100px;
       flex-direction: column;

@@ -5,15 +5,15 @@
     <div class="contact-sections">
       <div class="contact-section">
         <h4>Business Enquiry</h4>
-        <span><?php echo $contact->businessQuote ?></p>
-        <span class="details"><?php echo $contact->businessEmail ?></p>
-        <span class="details"><?php echo $contact->phone ?></p>
-        <span class="details"><?php echo $contact->addressLine1 ?><br/><?php echo $contact->addressLine2 ?></p>
+        <span><?php echo $contact->businessQuote ?></span>
+        <span class="details"><a href="mailto:<?php echo $contact->businessEmail ?>"><?php echo $contact->businessEmail ?></a></span>
+        <span class="details"><a href="tel:<?php echo $contact->phone ?>"><?php echo $contact->phone ?></a></span>
+        <span class="details"><?php echo $contact->addressLine1 ?><br/><?php echo $contact->addressLine2 ?></span>
       </div>
       <div class="contact-section">
         <h4 class="employment">Employment</h4>
-        <span><?php echo $contact->employmentQuote ?></p>
-        <span class="details"><?php echo $contact->employmentEmail ?></>
+        <span><?php echo $contact->employmentQuote ?></span>
+        <span class="details"><a href="mailto:<?php echo $contact->employmentEmail ?>"><?php echo $contact->employmentEmail ?></a></span>
       </div>
     </div>
   </div>

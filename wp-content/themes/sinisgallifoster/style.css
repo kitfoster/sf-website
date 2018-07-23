@@ -479,6 +479,9 @@ h3 {
         @media only screen and (max-width: 700px) {
           .team-page-container .bio-expanded .bio-inner .email {
             margin: 0; } }
+      .team-page-container .bio-expanded .bio-inner a {
+        text-decoration: none;
+        color: black; }
       .team-page-container .bio-expanded .bio-inner .linkedIn {
         display: flex;
         align-items: center;
@@ -519,6 +522,9 @@ h3 {
       @media only screen and (max-width: 1000px) {
         .contact-container div .contact-sections {
           flex-direction: column; } }
+      .contact-container div .contact-sections a {
+        text-decoration: none;
+        color: #905c32; }
       .contact-container div .contact-sections .contact-section {
         display: flex;
         flex-direction: column;
@@ -533,7 +539,8 @@ h3 {
           font-size: 18px;
           font-weight: 100; }
         .contact-container div .contact-sections .contact-section span {
-          max-width: 250px; }
+          max-width: 250px;
+          margin: 10px 0; }
         .contact-container div .contact-sections .contact-section .details {
           color: #905c32; }
 
@@ -552,6 +559,9 @@ h3 {
     display: flex;
     flex: 1 100%;
     align-items: center; }
+    .footer-container .footer-text a {
+      text-decoration: none;
+      color: #905c32; }
     @media only screen and (max-width: 1000px) {
       .footer-container .footer-text {
         flex: 1 100px;
