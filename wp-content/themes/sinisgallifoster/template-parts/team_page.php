@@ -28,8 +28,6 @@
         <div class="carousel-dot" id=<?php echo "carousel-dot" . $key; ?>></div>
       <?php endforeach; ?>
     </div>
-    <button class="carousel-button left" onclick="carouselLeft(<?php echo count($team) ?>)"></button>
-    <button class="carousel-button right" onclick="carouselRight(<?php echo count($team) ?>)"></button>
   </div>
 
   <!-- bios -->
@@ -66,30 +64,6 @@ function carouselFunction(numberOfSlides) {
 
     if (rect.x + (window.innerWidth*(i+1) - window.innerWidth/2) >= window.innerWidth*i && rect.x <= window.innerWidth/2) {
       dot.className += " active";
-    }
-  }
-}
-
-function carouselRight(numberOfSlides) {
-  const slider = document.getElementById("carousel-slider");
-  for (i = 0; i < numberOfSlides; i++) {
-    const slide = document.getElementById(`carousel-slides${i}`);
-    var rect = slide.getBoundingClientRect();
-    // slide is in view
-    if (rect.x + (window.innerWidth*(i+1) - window.innerWidth/2) >= window.innerWidth*i && rect.x <= window.innerWidth/2) {
-      slider.scrollLeft = window.innerWidth*(i+1);
-    }
-  }
-}
-
-function carouselLeft(numberOfSlides) {
-  const slider = document.getElementById("carousel-slider");
-  for (i = 0; i < numberOfSlides; i++) {
-    const slide = document.getElementById(`carousel-slides${i}`);
-    var rect = slide.getBoundingClientRect();
-    // slide is in view
-    if (rect.x + (window.innerWidth*(i+1) - window.innerWidth/2) >= window.innerWidth*i && rect.x <= window.innerWidth/2) {
-      slider.scrollLeft = window.innerWidth*(i-1);
     }
   }
 }
