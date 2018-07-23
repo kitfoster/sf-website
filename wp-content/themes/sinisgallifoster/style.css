@@ -373,12 +373,21 @@ h3 {
       display: flex;
       padding: 20px 0; }
       .team-page-container .mobile-carousel .carousel-dots .carousel-dot {
-        margin: 0 5px;
-        height: 6px;
-        width: 6px;
-        border-radius: 4px;
-        border: 1px solid #905c32; }
-        .team-page-container .mobile-carousel .carousel-dots .carousel-dot.active {
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .team-page-container .mobile-carousel .carousel-dots .carousel-dot::before {
+          content: '';
+          display: block;
+          height: 6px;
+          width: 6px;
+          border-radius: 4px;
+          border: 1px solid #905c32; }
+        .team-page-container .mobile-carousel .carousel-dots .carousel-dot.active::before {
           background-color: #905c32; }
   .team-page-container .bio-expanded {
     visibility: hidden;

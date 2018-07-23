@@ -107,14 +107,27 @@
       padding: 20px 0;
 
       .carousel-dot {
-        margin: 0 5px;
-        height: 6px;
-        width: 6px;
-        border-radius: 4px;
-        border: 1px solid $copper;
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+          content: '';
+          display: block;
+          height: 6px;
+          width: 6px;
+          border-radius: 4px;
+          border: 1px solid $copper;
+        }
 
         &.active {
-          background-color: $copper;
+          &::before {
+            background-color: $copper;
+          }
         }
       }
     }
