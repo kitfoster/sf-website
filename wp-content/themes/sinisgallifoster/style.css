@@ -348,7 +348,7 @@ h3 {
     .team-page-container .mobile-carousel .carousel-slider {
       align-items: flex-start;
       overflow-x: scroll;
-      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
       display: flex; }
       .team-page-container .mobile-carousel .carousel-slider .carousel-slides {
         display: flex;
@@ -380,6 +380,38 @@ h3 {
         border: 1px solid #905c32; }
         .team-page-container .mobile-carousel .carousel-dots .carousel-dot.active {
           background-color: #905c32; }
+    .team-page-container .mobile-carousel .carousel-button {
+      position: absolute;
+      height: 250px;
+      width: calc(50vw - 125px);
+      padding-left: calc((50vw - 155px)/2);
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      outline: none; }
+      .team-page-container .mobile-carousel .carousel-button::before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        bottom: 135px;
+        background-color: #905c32;
+        transform: rotate(-45deg);
+        position: absolute; }
+      .team-page-container .mobile-carousel .carousel-button::after {
+        content: '';
+        bottom: 115px;
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: #905c32;
+        transform: rotate(45deg);
+        position: absolute; }
+      .team-page-container .mobile-carousel .carousel-button.left {
+        left: 0; }
+      .team-page-container .mobile-carousel .carousel-button.right {
+        transform: rotate(180deg);
+        right: 0; }
   .team-page-container .bio-expanded {
     visibility: hidden;
     position: absolute;

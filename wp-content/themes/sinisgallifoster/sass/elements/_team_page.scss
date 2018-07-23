@@ -71,7 +71,7 @@
     .carousel-slider {
       align-items: flex-start;
       overflow-x: scroll;
-      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
       display: flex;
 
       .carousel-slides {
@@ -116,6 +116,48 @@
         &.active {
           background-color: $copper;
         }
+      }
+    }
+
+    .carousel-button {
+      position: absolute;
+      height: 250px;
+      width: calc(50vw - 125px);
+      padding-left: calc((50vw - 155px)/2);
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      outline: none;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        bottom: 135px;
+        background-color: $copper;
+        transform: rotate(-45deg);
+        position: absolute;
+      }
+
+      &::after {
+        content: '';
+        bottom: 115px;
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: $copper;
+        transform: rotate(45deg);
+        position: absolute;
+      }
+
+      &.left {
+        left: 0;
+      }
+
+      &.right {
+        transform: rotate(180deg);
+        right: 0;
       }
     }
   }
