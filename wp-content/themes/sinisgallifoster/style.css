@@ -420,7 +420,8 @@ h3 {
           top: 0;
           flex: auto;
           padding: 10px;
-          min-height: 100vh; } }
+          min-height: 100vh;
+          width: 100vw; } }
       .team-page-container .bio-expanded .bio-inner span {
         max-width: 400px;
         color: black;
