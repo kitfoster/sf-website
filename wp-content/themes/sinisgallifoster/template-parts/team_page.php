@@ -25,7 +25,7 @@
     </div>
     <div class="carousel-dots">
       <?php foreach($team as $key=>$value): ?>
-        <div class="carousel-dot" id=<?php echo "carousel-dot" . $key; ?>></div>
+        <div class="carousel-dot" id=<?php echo "carousel-dot" . $key; ?> onclick="scrollToSlide(<?php echo $key ?>)"></div>
       <?php endforeach; ?>
     </div>
   </div>
@@ -66,6 +66,11 @@ function carouselFunction(numberOfSlides) {
       dot.className += " active";
     }
   }
+}
+
+function scrollToSlide(id) {
+  const slider = document.getElementById("carousel-slider");
+  slider.scrollLeft = window.innerWidth*(id);
 }
 
 // bios
