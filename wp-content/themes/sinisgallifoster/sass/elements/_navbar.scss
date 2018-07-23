@@ -11,23 +11,11 @@
 
 	&.minimise {
 		@media only screen and (max-width: $mediumMediaQuery) {
-			background: linear-gradient(white, rgba(255,255,255, 0.75), rgba(255,255,255, 0.5), rgba(255,255,255, 0.25), rgba(255,255,255, 0));
-			height: 70px;
-			// transtion
-			transition: all 0.5s;
+			height: $smallNavbarHeight;
 
-			.nav-logo-wrapper {
-				transition: all 0.5s;
-				margin-left: 10px;
-			}
 			.nav-hamburger {
 				transition: all 0.5s;
-				margin-right: 10px;
 				margin-bottom: 20px;
-			}
-			.navbar-items {
-				transition: all 0.5s;
-				margin: 20px 10px;
 			}
 		}
 	}

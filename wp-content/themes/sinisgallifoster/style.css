@@ -100,19 +100,10 @@ h3 {
   z-index: 99; }
   @media only screen and (max-width: 500px) {
     .navigation-top.minimise {
-      background: linear-gradient(white, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
-      height: 70px;
-      transition: all 0.5s; }
-      .navigation-top.minimise .nav-logo-wrapper {
-        transition: all 0.5s;
-        margin-left: 10px; }
+      height: 70px; }
       .navigation-top.minimise .nav-hamburger {
         transition: all 0.5s;
-        margin-right: 10px;
-        margin-bottom: 20px; }
-      .navigation-top.minimise .navbar-items {
-        transition: all 0.5s;
-        margin: 20px 10px; } }
+        margin-bottom: 20px; } }
   .navigation-top .nav-logo-wrapper {
     transition: margin 0.5s;
     margin-left: 40px;
@@ -187,9 +178,7 @@ h3 {
 
 .homepage-background {
   width: 100%;
-  height: 80vh;
-  max-height: 800px;
-  min-height: 600px;
+  height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,7 +186,9 @@ h3 {
   @media only screen and (max-width: 500px) {
     .homepage-background {
       align-items: flex-start;
-      flex-direction: column; } }
+      flex-direction: column;
+      height: 100%;
+      min-height: 730px; } }
   .homepage-background img {
     height: 100%;
     width: 100%;
@@ -212,7 +203,7 @@ h3 {
     justify-content: flex-end;
     width: 100%;
     position: absolute;
-    height: 80vh;
+    height: 800px;
     max-height: 800px;
     min-height: 600px; }
     @media only screen and (max-width: 500px) {
@@ -233,10 +224,10 @@ h3 {
           font-family: "Open Sans", sans-serif;
           font-size: 14px;
           font-weight: normal;
-          padding: 30px 50px;
           max-width: 380px;
           line-height: 20px;
-          margin: 20px 50px 20px 0; } }
+          margin: 20px 50px 0 0;
+          padding: 20px 30px; } }
   .homepage-background .arrow-down {
     align-self: center;
     width: 0;
@@ -248,6 +239,9 @@ h3 {
     cursor: pointer; }
     .homepage-background .arrow-down:hover {
       border-top: 12px solid #633e20; }
+    @media only screen and (max-width: 500px) {
+      .homepage-background .arrow-down {
+        margin-top: 20px; } }
 
 .statement-container {
   display: flex;

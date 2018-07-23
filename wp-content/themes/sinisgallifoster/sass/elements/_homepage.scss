@@ -1,8 +1,6 @@
 .homepage-background {
   width: 100%;
   height: $homepageHeight;
-  max-height: 800px;
-  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,6 +9,8 @@
   @media only screen and (max-width: $mediumMediaQuery) {
     align-items: flex-start;
     flex-direction: column;
+    height: 100%;
+    min-height: 730px;
   }
 
   img {
@@ -53,10 +53,10 @@
         font-family: $sansSerifFont;
         font-size: 14px;
         font-weight: normal;
-        padding: 30px 50px;
         max-width: 380px;
         line-height: 20px;
-        margin: 20px 50px 20px 0;
+        margin: 20px 50px 0 0;
+        padding: 20px 30px;
       }
     }
 
@@ -74,6 +74,10 @@
 
     &:hover {
       border-top: 12px solid #633e20;
+    }
+
+    @media only screen and (max-width: $mediumMediaQuery) {
+      margin-top: 20px;
     }
   }
 }
