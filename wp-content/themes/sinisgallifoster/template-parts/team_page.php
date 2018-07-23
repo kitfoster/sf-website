@@ -14,15 +14,20 @@
 
   <!-- mobile -->
   <div class="mobile-carousel">
-    <?php foreach($team as $key=>$value): ?>
-    <div class="carousel-slides" id=<?php echo "carousel-slides" . $key; ?> onclick="toggleBio('<?php echo "bio-expanded" . $key; ?>')">
-      <img src=<?php echo $value->photo; ?> alt="Example Lawyer Photo"></img>
-      <span class="name"><?php echo $value->name; ?></span>
-      <span class="role"><?php echo $value->role; ?></span>
+    <div class="carousel-slider" id="carousel-slider" onscroll="carouselFunction(<?php echo count($team) ?>)">
+      <?php foreach($team as $key=>$value): ?>
+        <div class="carousel-slides" id=<?php echo "carousel-slides" . $key; ?> onclick="toggleBio('<?php echo "bio-expanded" . $key; ?>')">
+          <img src=<?php echo $value->photo; ?> alt="Example Lawyer Photo"></img>
+          <span class="name"><?php echo $value->name; ?></span>
+          <span class="role"><?php echo $value->role; ?></span>
+        </div>
+      <?php endforeach; ?>
     </div>
-    <?php endforeach; ?>
-    <button class="carousel-button left" onclick="plusDivs(-1)"></button>
-    <button class="carousel-button right" onclick="plusDivs(1)"></button>
+    <div class="carousel-dots">
+      <?php foreach($team as $key=>$value): ?>
+        <div class="carousel-dot" id=<?php echo "carousel-dot" . $key; ?>></div>
+      <?php endforeach; ?>
+    </div>
   </div>
 
   <!-- bios -->
@@ -46,22 +51,21 @@
 sr.reveal('.bio-container', { scale: 1, distance: '20px' });
 
 // carousel
-var slideIndex = 1;
-showDivs(slideIndex);
+const dot = document.getElementById(`carousel-dot0`);
+dot.className += " active";
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+function carouselFunction(numberOfSlides) {
+  for (i = 0; i < numberOfSlides; i++) {
+    const slide = document.getElementById(`carousel-slides${i}`);
+    var rect = slide.getBoundingClientRect();
+    const dot = document.getElementById(`carousel-dot${i}`);
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("carousel-slides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
+    dot.className = "carousel-dot";
+
+    if (rect.x + (window.innerWidth*(i+1) - window.innerWidth/2) >= window.innerWidth*i && rect.x <= window.innerWidth/2) {
+      dot.className += " active";
+    }
   }
-  x[slideIndex-1].style.display = "block";
 }
 
 // bios

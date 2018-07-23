@@ -60,79 +60,60 @@
   .mobile-carousel {
     display: none;
     position: relative;
-    flex-direction: column;
-    align-items: center;
     margin-bottom: 100px;
+    width: 100vw;
+    flex-direction: column;
 
     @media only screen and (max-width: $bioMediaQuery) {
       display: flex;
     }
 
-    .carousel-slides {
-      flex-direction: column;
-      cursor: pointer;
+    .carousel-slider {
+      align-items: flex-start;
+      overflow-x: scroll;
+      display: flex;
 
-      img {
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-      }
+      .carousel-slides {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 100vw;
+        cursor: pointer;
+        padding-bottom: 20px;
 
-      .name {
-        margin-top: 15px;
-      }
+        img {
+          width: 250px;
+          height: 250px;
+          object-fit: cover;
+          align-self: center;
+        }
 
-      .role {
-        color: black;
+        .name {
+          margin-top: 15px;
+        }
+
+        .role {
+          color: black;
+        }
       }
     }
 
-    .carousel-button {
-      position: absolute;
-      top: calc((250px/2) - 10px);
-      background: none;
-      border: none;
-      outline: none;
-      cursor: pointer;
+    .carousel-dots {
+      width: 100vw;
+      height: 50px;
+      top: 330px;
+      justify-content: center;
+      display: flex;
+      padding: 20px 0;
 
-      &:before {
-        display: block;
-        content: "";
-        width: 0;
-        height: 0;
-        border: none;
-        background: none;
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-      }
+      .carousel-dot {
+        margin: 0 5px;
+        height: 6px;
+        width: 6px;
+        border-radius: 4px;
+        border: 1px solid $copper;
 
-      &.left {
-        margin-left: -150px;
-
-        &:before {
-          border-right: 12px solid $copper;
-        }
-      }
-
-      &.right {
-        margin-left: 150px;
-
-        &:before {
-          border-left: 12px solid $copper;
-        }
-      }
-
-      &:hover {
-        &.left {
-          &:before {
-            border-right: 12px solid #633e20;
-          }
-        }
-
-        &.right {
-          &:before {
-            border-left: 12px solid #633e20;
-          }
+        &.active {
+          background-color: $copper;
         }
       }
     }

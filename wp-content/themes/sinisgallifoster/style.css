@@ -339,51 +339,46 @@ h3 {
   .team-page-container .mobile-carousel {
     display: none;
     position: relative;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 100px; }
+    margin-bottom: 100px;
+    width: 100vw;
+    flex-direction: column; }
     @media only screen and (max-width: 700px) {
       .team-page-container .mobile-carousel {
         display: flex; } }
-    .team-page-container .mobile-carousel .carousel-slides {
-      flex-direction: column;
-      cursor: pointer; }
-      .team-page-container .mobile-carousel .carousel-slides img {
-        width: 250px;
-        height: 250px;
-        object-fit: cover; }
-      .team-page-container .mobile-carousel .carousel-slides .name {
-        margin-top: 15px; }
-      .team-page-container .mobile-carousel .carousel-slides .role {
-        color: black; }
-    .team-page-container .mobile-carousel .carousel-button {
-      position: absolute;
-      top: calc((250px/2) - 10px);
-      background: none;
-      border: none;
-      outline: none;
-      cursor: pointer; }
-      .team-page-container .mobile-carousel .carousel-button:before {
-        display: block;
-        content: "";
-        width: 0;
-        height: 0;
-        border: none;
-        background: none;
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent; }
-      .team-page-container .mobile-carousel .carousel-button.left {
-        margin-left: -150px; }
-        .team-page-container .mobile-carousel .carousel-button.left:before {
-          border-right: 12px solid #905c32; }
-      .team-page-container .mobile-carousel .carousel-button.right {
-        margin-left: 150px; }
-        .team-page-container .mobile-carousel .carousel-button.right:before {
-          border-left: 12px solid #905c32; }
-      .team-page-container .mobile-carousel .carousel-button:hover.left:before {
-        border-right: 12px solid #633e20; }
-      .team-page-container .mobile-carousel .carousel-button:hover.right:before {
-        border-left: 12px solid #633e20; }
+    .team-page-container .mobile-carousel .carousel-slider {
+      align-items: flex-start;
+      overflow-x: scroll;
+      display: flex; }
+      .team-page-container .mobile-carousel .carousel-slider .carousel-slides {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 100vw;
+        cursor: pointer;
+        padding-bottom: 20px; }
+        .team-page-container .mobile-carousel .carousel-slider .carousel-slides img {
+          width: 250px;
+          height: 250px;
+          object-fit: cover;
+          align-self: center; }
+        .team-page-container .mobile-carousel .carousel-slider .carousel-slides .name {
+          margin-top: 15px; }
+        .team-page-container .mobile-carousel .carousel-slider .carousel-slides .role {
+          color: black; }
+    .team-page-container .mobile-carousel .carousel-dots {
+      width: 100vw;
+      height: 50px;
+      top: 330px;
+      justify-content: center;
+      display: flex;
+      padding: 20px 0; }
+      .team-page-container .mobile-carousel .carousel-dots .carousel-dot {
+        margin: 0 5px;
+        height: 6px;
+        width: 6px;
+        border-radius: 4px;
+        border: 1px solid #905c32; }
+        .team-page-container .mobile-carousel .carousel-dots .carousel-dot.active {
+          background-color: #905c32; }
   .team-page-container .bio-expanded {
     visibility: hidden;
     position: absolute;
