@@ -180,7 +180,7 @@ h3 {
       height: 2px;
       margin-top: 6px;
       background-color: #905c32;
-      transition: transform 0.5s ease; }
+      transition: all 0.5s ease; }
     .navigation-top .nav-hamburger.nav-close::before {
       transform: rotate(45deg); }
     .navigation-top .nav-hamburger.nav-close::after {
