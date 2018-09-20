@@ -4,7 +4,7 @@
   <!-- desktop -->
   <div class="desktop-view">
     <?php foreach($team as $key=>$value): ?>
-      <div class="bio-container" id=<?php echo "bio-container" . $key; ?> onclick="toggleBio('<?php echo "bio-expanded" . $key; ?>')" onmouseleave="removeImageEffects()">
+      <div class="bio-container" id="<?php echo "bio-container" . $key; ?>"" onclick="toggleBio('<?php echo "bio-expanded" . $key; ?>')" onmouseleave="removeImageEffects()">
         <img class="bio-image" id="<?php echo "bio-image" . $key; ?>" onmouseover="imageEffect('<?php echo "bio-image" . $key; ?>')" src=<?php echo $value->photo; ?> alt="Example Lawyer Photo"></img>
         <span class="name"><?php echo $value->name; ?></span>
         <span class="role"><?php echo $value->role; ?></span>
@@ -96,6 +96,7 @@ function toggleBio(id) {
     }, 500);
   }
 }
+
 // close if the user clicks outside the bio
 function outsideClick(id) {
   var outsideClickListener;
@@ -148,6 +149,20 @@ function outsideClick(id) {
       // This is a click outside.
       toggleBio(id);
       removeListener();
+    };
+
+    document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      var isEscape = false;
+      if ("key" in evt) {
+        isEscape = (evt.key == "Escape" || evt.key == "Esc");
+      } else {
+          isEscape = (evt.keyCode == 27);
+      }
+      if (isEscape) {
+        toggleBio(id);
+        removeListener();
+      }
     };
   }
 
