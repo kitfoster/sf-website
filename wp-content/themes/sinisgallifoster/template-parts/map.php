@@ -1,4 +1,6 @@
-<div id="googleMap" style="width:100%;height:500px;"></div>
+<div id="contact">
+  <div id="googleMap" style="width:100%;height:500px;"></div>
+</div>
 
 <script>
 

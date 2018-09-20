@@ -13,7 +13,6 @@ get_header(); ?>
 	<?php include "template-parts/statement.php" ?>
 	<?php include "template-parts/services.php" ?>
 	<?php include "template-parts/team_page.php" ?>
-	<?php include "template-parts/contact.php" ?>
 	<?php include "template-parts/map.php" ?>
 	<?php include "template-parts/footer.php" ?>
 </body>
