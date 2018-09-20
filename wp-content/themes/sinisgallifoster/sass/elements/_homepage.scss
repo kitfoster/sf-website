@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: flex-end;
     width: 100%;
     position: absolute;
     height: $homepageHeight;
@@ -48,6 +49,7 @@
       font-size: 24px;
       font-weight: 200;
       z-index: 1;
+      text-align: right;
 
       @media only screen and (max-width: $mediumMediaQuery) {
         font-family: $sansSerifFont;

@@ -6,12 +6,18 @@
   width: 100%;
 
   h2 {
-    flex-basis: 700px;
+    flex-basis: 500px;
     align-self: center;
     text-align: center;
-    font-size: 36px;
+    font-size: 50px;
     font-weight: 100;
-    padding: 200px 0;
+
+    padding: 50px 0;
+    margin: 200px 0;
+    line-height: 80px;
+    border-left: 15px solid $beige;
+    border-right: 15px solid $beige;
+    color: $copper;
 
     @media only screen and (max-width: 700px) {
       flex-basis: calc(100% - 100px);
