@@ -2,7 +2,7 @@
   <img src="wp-content/themes/sinisgallifoster/assets/images/sf-logo.gif" alt="Sinisgalli Foster Logo"/>
 </div>
 
-
+<script type="text/javascript" src="../../../modernizr.js"></script>
 <script>
 
 var windowOnload = window.onload || function() {

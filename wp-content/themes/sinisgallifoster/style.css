@@ -194,6 +194,11 @@ h3 {
   align-items: center;
   justify-content: center;
   background-color: #1E1F38; }
+  .homepage-background.compat-object-fit {
+    background-size: cover;
+    background-position: center center; }
+    .homepage-background.compat-object-fit img {
+      opacity: 0; }
   @media only screen and (max-width: 500px) {
     .homepage-background {
       align-items: flex-start;

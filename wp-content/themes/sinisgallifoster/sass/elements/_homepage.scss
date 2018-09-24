@@ -6,6 +6,15 @@
   justify-content: center;
   background-color: $navyBlue;
 
+  &.compat-object-fit {
+    background-size: cover;
+    background-position: center center;
+
+    img { // hide image if object fit is not supported - opacity to 0 for the link area
+      opacity: 0;
+    }
+  }
+
   @media only screen and (max-width: $mediumMediaQuery) {
     align-items: flex-start;
     flex-direction: column;
