@@ -5,40 +5,45 @@
   align-items: center;
   background-color: $beige;
 
-  @media only screen and (max-width: $mediumMediaQuery) {
-    padding-bottom: 50px;
-  }
-
-  .inner-container {
+  .contact-section {
+    flex-basis: 50%;
+    text-align: center;
     display: flex;
-    width: 800px;
-    justify-content: space-evenly;
-    padding-top: 50px;
+    flex-direction: column;
 
     @media only screen and (max-width: $mediumMediaQuery) {
-      flex-direction: column;
-      width: calc(100% - 40px);
-      padding: 20px;
+      width: 100vw;
     }
 
-    .contact-section {
-      flex-basis: 50%;
-      text-align: center;
+    .detail-section {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      width: 400px;
 
-      h4 {
-        font-size: 18px;
-        font-weight: 100;
+      @media only screen and (max-width: $mediumMediaQuery) {
+        width: 100%;
       }
 
-      .copy {
-        padding-bottom: 20px;
+      .description {
+        flex-basis: 20%;
+        padding-left: 30%;
+        text-align: left;
+
+        @media only screen and (max-width: $mediumMediaQuery) {
+          flex-basis: 20%;
+          padding-left: 20%;
+        }
       }
 
       .details {
         padding-bottom: 15px;
         color: $copper;
+        text-align: left;
+        flex-basis: 50%;
+
+        @media only screen and (max-width: $mediumMediaQuery) {
+          flex-basis: 60%;
+        }
 
         a {
           text-decoration: none;
@@ -47,17 +52,5 @@
       }
     }
 
-    .image {
-      flex-basis: 50%;
-      height: 250px;
-
-      @media only screen and (max-width: $mediumMediaQuery) {
-        width: 100%;
-        height: inherit;
-        align-self: center;
-        padding-top: 50px;
-      }
-    }
   }
-
 }

@@ -59,15 +59,13 @@
     public $addressLine1;
     public $addressLine2;
     public $enquiriesText;
-    public $contactImage;
 
-    public function __construct($businessEmail, $phone, $addressLine1, $addressLine2, $enquiriesText, $contactImage) {
+    public function __construct($businessEmail, $phone, $addressLine1, $addressLine2, $enquiriesText) {
       $this->businessEmail = $businessEmail;
       $this->phone = $phone;
       $this->addressLine1 = $addressLine1;
       $this->addressLine2 = $addressLine2;
       $this->enquiriesText = $enquiriesText;
-      $this->contactImage = $contactImage;
     }
   }
 
@@ -77,9 +75,8 @@
     $addressLine1 = get_field("address_line_1");
     $addressLine2 = get_field("address_line_2");
     $enquiriesText = get_field("enquiries_text");
-    $contactImage = get_field("contact_image");
 
-    $contact = new Contact($businessEmail, $phone, $addressLine1, $addressLine2, $enquiriesText, $contactImage);
+    $contact = new Contact($businessEmail, $phone, $addressLine1, $addressLine2, $enquiriesText);
     return $contact;
   }
 

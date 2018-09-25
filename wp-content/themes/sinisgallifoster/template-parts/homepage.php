@@ -8,6 +8,7 @@
   </div>
 </div>
 
+<script type="text/javascript" src="../../../modernizr.js"></script>
 <script>
 if ( Modernizr.objectfit != true ) {
   console.log('Modernizr', Modernizr);
