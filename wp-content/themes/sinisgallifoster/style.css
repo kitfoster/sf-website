@@ -284,32 +284,38 @@ h3 {
     @media only screen and (max-width: 700px) {
       .statement-container h2 {
         flex-basis: calc(100% - 100px);
-        font-size: 26px; } }
+        font-size: 26px;
+        margin: 60px 0 0 0; } }
 
 .services-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-bottom: 100px; }
-  .services-container h3 {
-    align-self: center;
-    flex-basis: 100%;
-    padding-top: 0; }
-  .services-container .service-box {
+  padding-bottom: 50px; }
+  @media only screen and (max-width: 1000px) {
+    .services-container {
+      padding-bottom: 20px; } }
+  .services-container .inner {
     display: flex;
     justify-content: center;
-    flex: 0 1 350px;
-    padding: 40px 20px;
-    text-align: center; }
-    @media only screen and (max-width: 1000px) {
-      .services-container .service-box {
-        padding: 20px; } }
-  .services-container .service {
-    max-width: 280px; }
-    .services-container .service h4 {
-      text-transform: capitalize;
-      font-size: 18px;
-      font-weight: 100; }
+    flex-wrap: wrap;
+    width: 100%; }
+    .services-container .inner h3 {
+      align-self: center;
+      flex-basis: 100%;
+      padding-top: 50px; }
+    .services-container .inner .service-box {
+      display: flex;
+      justify-content: center;
+      flex: 0 1 350px;
+      padding: 40px 20px;
+      text-align: center; }
+      @media only screen and (max-width: 1000px) {
+        .services-container .inner .service-box {
+          padding: 20px; } }
+    .services-container .inner .service {
+      max-width: 280px; }
+      .services-container .inner .service h4 {
+        text-transform: capitalize;
+        font-size: 18px;
+        font-weight: 100; }
 
 .contact-container {
   display: flex;
@@ -317,6 +323,9 @@ h3 {
   padding-bottom: 100px;
   align-items: center;
   background-color: #E9E9EB; }
+  @media only screen and (max-width: 1000px) {
+    .contact-container {
+      padding-bottom: 50px; } }
   .contact-container .contact-section {
     flex-basis: 50%;
     text-align: center;
@@ -351,6 +360,21 @@ h3 {
         .contact-container .contact-section .detail-section .details a {
           text-decoration: none;
           color: #905c32; }
+
+.safe-custody-container {
+  width: 100%;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (max-width: 500px) {
+    .safe-custody-container {
+      padding-bottom: 20px; } }
+  .safe-custody-container .safe-custody-body {
+    padding: 50px 100px;
+    line-height: 23px; }
+    @media only screen and (max-width: 500px) {
+      .safe-custody-container .safe-custody-body {
+        padding: 20px; } }
 
 .team-page-container {
   display: flex;
@@ -396,7 +420,6 @@ h3 {
   .team-page-container .mobile-carousel {
     display: none;
     position: relative;
-    margin-bottom: 100px;
     width: 100vw;
     flex-direction: column; }
     @media only screen and (max-width: 700px) {

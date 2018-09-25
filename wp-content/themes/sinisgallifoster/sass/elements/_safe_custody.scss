@@ -1,0 +1,19 @@
+.safe-custody-container {
+  width: 100%;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: $mediumMediaQuery) {
+    padding-bottom: 20px;
+  }
+
+  .safe-custody-body {
+    padding: 50px 100px;
+    line-height: 23px;
+
+    @media only screen and (max-width: $mediumMediaQuery) {
+      padding: 20px;
+    }
+  }
+}

@@ -8,7 +8,7 @@
   </div>
 </div>
 
-<script type="text/javascript" src="../../../modernizr.js"></script>
+<script type="text/javascript" src="/wp-content/themes/sinisgallifoster/modernizr.js"></script>
 <script>
 if ( Modernizr.objectfit != true ) {
   console.log('Modernizr', Modernizr);

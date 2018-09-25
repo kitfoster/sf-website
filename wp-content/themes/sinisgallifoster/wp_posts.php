@@ -58,14 +58,12 @@
     public $phone;
     public $addressLine1;
     public $addressLine2;
-    public $enquiriesText;
 
-    public function __construct($businessEmail, $phone, $addressLine1, $addressLine2, $enquiriesText) {
+    public function __construct($businessEmail, $phone, $addressLine1, $addressLine2) {
       $this->businessEmail = $businessEmail;
       $this->phone = $phone;
       $this->addressLine1 = $addressLine1;
       $this->addressLine2 = $addressLine2;
-      $this->enquiriesText = $enquiriesText;
     }
   }
 
@@ -74,10 +72,24 @@
     $phone = get_field("phone");
     $addressLine1 = get_field("address_line_1");
     $addressLine2 = get_field("address_line_2");
-    $enquiriesText = get_field("enquiries_text");
 
-    $contact = new Contact($businessEmail, $phone, $addressLine1, $addressLine2, $enquiriesText);
+    $contact = new Contact($businessEmail, $phone, $addressLine1, $addressLine2);
     return $contact;
+  }
+
+  class SafeCustody {
+    public $text;
+
+    public function __construct($text) {
+      $this->text = $text;
+    }
+  }
+
+  function newSafeCustody() {
+    $text = get_field("safe_custody_text");
+
+    $safeCustody = new SafeCustody($text);
+    return $safeCustody;
   }
 
   // The variables
@@ -87,6 +99,7 @@
   $homepageImage;
   $statementText;
   $contact;
+  $safeCustody;
 
   $args = array(
     'orderby' => 'menu_order',
@@ -116,6 +129,9 @@
       }
       elseif ($category->name == "Contact") {
         $contact = newContact();
+      }
+      elseif ($category->name == "Safe Custody") {
+        $safeCustody = newSafeCustody();
       }
     }
   endwhile;

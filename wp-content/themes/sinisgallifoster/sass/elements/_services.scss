@@ -1,35 +1,44 @@
 .services-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 
-  h3 {
-    align-self: center;
-    flex-basis: 100%;
-    padding-top: 0;
+  @media only screen and (max-width: $desktopMediaQuery) {
+    padding-bottom: 20px;
   }
 
-  .service-box {
+  .inner {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 
-    flex: 0 1 350px;
-    padding: 40px 20px;
-    text-align: center;
+    h3 {
+      align-self: center;
+      flex-basis: 100%;
+      padding-top: 50px;
+    }
 
-    @media only screen and (max-width: $desktopMediaQuery) {
-			padding: 20px;
-		}
-  }
+    .service-box {
+      display: flex;
+      justify-content: center;
 
-  .service {
-    max-width: 280px;
+      flex: 0 1 350px;
+      padding: 40px 20px;
+      text-align: center;
 
-    h4 {
-      text-transform: capitalize;
-      font-size: 18px;
-      font-weight: 100;
+      @media only screen and (max-width: $desktopMediaQuery) {
+        padding: 20px;
+      }
+    }
+
+    .service {
+      max-width: 280px;
+
+      h4 {
+        text-transform: capitalize;
+        font-size: 18px;
+        font-weight: 100;
+      }
     }
   }
+
 }

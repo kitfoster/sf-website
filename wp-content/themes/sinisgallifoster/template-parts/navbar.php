@@ -9,6 +9,7 @@
     <li class="active"><a onclick="scrollToElement('about')">About</a></li>
     <li><a onclick="scrollToElement('services')">Services</a></li>
     <li><a onclick="scrollToElement('our_team')">Our Team</a></li>
+    <li><a onclick="scrollToElement('safe-custody')">Safe Custody</a></li>
     <li><a onclick="scrollToElement('contact')">Contact</a></li>
   </ul>
 
