@@ -7,6 +7,7 @@
   h3 {
     align-self: center;
     flex-basis: 100%;
+    padding-top: 0;
   }
 
   .service-box {
@@ -32,8 +33,7 @@
     }
 
     p {
-      text-align: justify;
-      text-justify: inter-word;
+      text-align: left;
     }
   }
 }

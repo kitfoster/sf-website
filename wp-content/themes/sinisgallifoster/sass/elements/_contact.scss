@@ -1,0 +1,63 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  align-items: center;
+  background-color: $beige;
+
+  @media only screen and (max-width: $mediumMediaQuery) {
+    padding-bottom: 50px;
+  }
+
+  .inner-container {
+    display: flex;
+    width: 800px;
+    justify-content: space-evenly;
+    padding-top: 50px;
+
+    @media only screen and (max-width: $mediumMediaQuery) {
+      flex-direction: column;
+      width: calc(100% - 40px);
+      padding: 20px;
+    }
+
+    .contact-section {
+      flex-basis: 50%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        font-size: 18px;
+        font-weight: 100;
+      }
+
+      .copy {
+        padding-bottom: 20px;
+      }
+
+      .details {
+        padding-bottom: 15px;
+        color: $copper;
+
+        a {
+          text-decoration: none;
+          color: $copper;
+        }
+      }
+    }
+
+    .image {
+      flex-basis: 50%;
+      height: 250px;
+
+      @media only screen and (max-width: $mediumMediaQuery) {
+        width: 100%;
+        height: inherit;
+        align-self: center;
+        padding-top: 50px;
+      }
+    }
+  }
+
+}
