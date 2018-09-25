@@ -18,6 +18,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 100px;
+    width: 100%;
 
     @media only screen and (max-width: $bioMediaQuery) {
       display: none;

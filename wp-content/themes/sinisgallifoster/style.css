@@ -224,7 +224,8 @@ h3 {
     position: absolute;
     height: 800px;
     max-height: 800px;
-    min-height: 600px; }
+    min-height: 600px;
+    top: 0px; }
     @media only screen and (max-width: 500px) {
       .homepage-background .homepage-container {
         position: relative;
@@ -390,7 +391,8 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 100px; }
+    margin-bottom: 100px;
+    width: 100%; }
     @media only screen and (max-width: 700px) {
       .team-page-container .desktop-view {
         display: none; } }
