@@ -1,5 +1,5 @@
 <div class="homepage-background" id="about">
-  <img clas="image" src=<?php echo $homepageImage ?> id="background-image"></img>
+  <img clas="image" src=<?php echo $homepageImage ?> id="background-image" />
   <div class="homepage-container">
     <h2>
       <?php echo $homepageParagraph ?>
@@ -11,14 +11,13 @@
 <script type="text/javascript" src="/wp-content/themes/sinisgallifoster/modernizr.js"></script>
 <script>
 if ( Modernizr.objectfit != true ) {
-  console.log('Modernizr', Modernizr);
   let background = document.getElementById("about");
   const backgroundImage = document.getElementById("background-image");
   const imageUrl = backgroundImage.src;
 
   if (imageUrl) {
     background.className += " compat-object-fit";
-    background.style.backgroundImage = `url("${imageUrl}")`;
+    background.style.backgroundImage = "url(" + imageUrl + ")";
   }
 }
 </script>

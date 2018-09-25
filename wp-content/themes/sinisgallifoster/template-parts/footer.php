@@ -1,6 +1,6 @@
 <div class="footer-container">
   <div class="footer-logo">
-    <img class="sf-footer-logo" src="wp-content/themes/sinisgallifoster/assets/images/sf-sml-logo.png" alt="Sinisgalli Foster Logo"></img>
+    <img class="sf-footer-logo" src="wp-content/themes/sinisgallifoster/assets/images/sf-sml-logo.png" alt="Sinisgalli Foster Logo" />
   </div>
   <div class="footer-text">
     <span class="phone">P / <a href="tel:<?php echo $contact->phone ?>"><?php echo $contact->phone ?></a></span>

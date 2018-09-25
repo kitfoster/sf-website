@@ -1,9 +1,9 @@
 <div class="navigation-top" id="navbar">
   <h1 class="screen-reader-text">Sinisgalli Foster</h1>
   <div class="nav-logo-wrapper" >
-    <img class="sf-nav-logo" src="wp-content/themes/sinisgallifoster/assets/images/sf_logo.png" alt="Sinisgalli Foster Logo">
-      <a href="#"></a>
-    </img>
+    <a href="">
+      <img class="sf-nav-logo" src="wp-content/themes/sinisgallifoster/assets/images/sf_logo.png" alt="Sinisgalli Foster Logo" />
+    </a>
   </div>
   <ul class="navbar-items" id="nav">
     <li class="active"><a onclick="scrollToElement('about')">About</a></li>
@@ -24,7 +24,7 @@ function navToggle() {
     if (nav.className == "navbar-items") {
         nav.className += " expand fade_out";
         symbol.className += " nav-close";
-        setTimeout(() => {
+        window.setTimeout(function() {
             nav.className = "navbar-items expand";
         }, 1);
     } else {
@@ -37,7 +37,7 @@ function closeNav() {
     var x2 = document.getElementById("nav-symbol");
     x1.className = "navbar-items expand fade_out";
     x2.className = "nav-hamburger";
-    setTimeout(() => {
+    window.setTimeout(function() {
         x1.className = "navbar-items";
     }, 500);
 }

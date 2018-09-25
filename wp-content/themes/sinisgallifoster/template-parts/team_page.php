@@ -4,8 +4,8 @@
   <!-- desktop -->
   <div class="desktop-view">
     <?php foreach($team as $key=>$value): ?>
-      <div class="bio-container" id="<?php echo "bio-container" . $key; ?>"" onclick="toggleBio('<?php echo "bio-expanded" . $key; ?>')" onmouseleave="removeImageEffects()">
-        <img class="bio-image" id="<?php echo "bio-image" . $key; ?>" onmouseover="imageEffect('<?php echo "bio-image" . $key; ?>')" src=<?php echo $value->photo; ?> alt="<?php echo $value->name; ?>"></img>
+      <div class="bio-container" id="<?php echo "bio-container" . $key; ?>" onclick="toggleBio('<?php echo 'bio-expanded' . $key; ?>')" onmouseleave="removeImageEffects()">
+        <img class="bio-image" id="<?php echo "bio-image" . $key; ?>" onmouseover="imageEffect('<?php echo 'bio-image' . $key; ?>')" src="<?php echo $value->photo; ?>" alt="<?php echo $value->name; ?>" />
         <span class="name"><?php echo $value->name; ?></span>
         <span class="role"><?php echo $value->role; ?></span>
       </div>
@@ -16,8 +16,8 @@
   <div class="mobile-carousel">
     <div class="carousel-slider" id="carousel-slider" onscroll="carouselFunction(<?php echo count($team) ?>)">
       <?php foreach($team as $key=>$value): ?>
-        <div class="carousel-slides" id=<?php echo "carousel-slides" . $key; ?> onclick="toggleBio('<?php echo "bio-expanded" . $key; ?>')">
-          <img src=<?php echo $value->photo; ?> alt="Example Lawyer Photo"></img>
+        <div class="carousel-slides" id=<?php echo "carousel-slides" . $key; ?> onclick="toggleBio('<?php echo 'bio-expanded' . $key; ?>')">
+          <img src=<?php echo $value->photo; ?> alt="Example Lawyer Photo" />
           <span class="name"><?php echo $value->name; ?></span>
           <span class="role"><?php echo $value->role; ?></span>
         </div>
@@ -34,7 +34,7 @@
   <?php foreach($team as $key=>$value): ?>
     <div class="bio-expanded" id=<?php echo "bio-expanded" . $key; ?>>
       <div class="bio-inner">
-        <button class="close-bio" onclick="toggleBio('<?php echo "bio-expanded" . $key; ?>')"></button>
+        <button class="close-bio" onclick="toggleBio('<?php echo 'bio-expanded' . $key; ?>')"></button>
         <span class="name"><?php echo $value->name; ?></span>
         <span class="role"><?php echo $value->role; ?></span>
         <span class="accreditations"><?php echo $value->accreditations; ?></span>
@@ -59,14 +59,14 @@
 sr.reveal('.bio-container', { scale: 1, distance: '20px' });
 
 // carousel
-const dot = document.getElementById(`carousel-dot0`);
+const dot = document.getElementById("carousel-dot0");
 dot.className += " active";
 
 function carouselFunction(numberOfSlides) {
   for (i = 0; i < numberOfSlides; i++) {
-    const slide = document.getElementById(`carousel-slides${i}`);
+    const slide = document.getElementById("carousel-slides" + i);
     var rect = slide.getBoundingClientRect();
-    const dot = document.getElementById(`carousel-dot${i}`);
+    const dot = document.getElementById("carousel-dot" + i);
 
     dot.className = "carousel-dot";
 
@@ -91,7 +91,7 @@ function toggleBio(id) {
   }
   else {
     x.style.opacity = "0";
-    setTimeout(function() {
+    window.setTimeout(function() {
       x.className = "bio-expanded";
     }, 500);
   }
@@ -129,7 +129,7 @@ function outsideClick(id) {
         if (targetElement == bio) {
           return;
         }
-        if (targetElement.id == `carousel-slides${index}` || targetElement.id == `bio-container${index}`) {
+        if (targetElement.id == "carousel-slides" + index || targetElement.id == "bio-container" + index) {
           if (!clicked) {
             clicked = true;
           } else {
@@ -166,7 +166,7 @@ function outsideClick(id) {
     };
   }
 
-  const removeListener = () => {
+  const removeListener = function() {
     document.removeEventListener("click", outsideClickListener);
   }
   document.addEventListener("click", outsideClickListener);

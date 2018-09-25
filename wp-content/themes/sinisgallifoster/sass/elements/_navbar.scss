@@ -1,6 +1,5 @@
 .navigation-top {
 	display: flex;
-	justify-content: space-between;
 	align-items: flex-end;
 	height: $navbarHeight;
 	transition: height 0.5s;
@@ -15,7 +14,7 @@
 
 			.nav-hamburger {
 				transition: all 0.5s;
-				margin-bottom: 20px;
+				margin: 0 25px 20px auto;
 			}
 
 			.navbar-items {
@@ -94,8 +93,7 @@
 		width: 40px;
     height: 40px;
 		transition: margin 0.5s;
-		margin-bottom: 40px;
-		margin-right: 25px;
+		margin: 0 25px 40px auto;
 		background-color: transparent;
 		border: none;
 		cursor: pointer;
