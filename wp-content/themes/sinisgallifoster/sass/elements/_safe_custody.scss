@@ -13,6 +13,8 @@
     line-height: 23px;
 
     @media only screen and (max-width: $mediumMediaQuery) {
+      line-height: inherit;
+      font-size: 12px;
       padding: 20px;
     }
   }

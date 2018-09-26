@@ -10,7 +10,6 @@
   }
 
   .contact-section {
-    flex-basis: 50%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -19,42 +18,18 @@
       width: 100vw;
     }
 
-    .detail-section {
-      display: flex;
-      justify-content: center;
-      width: 400px;
+    .details {
+      padding-bottom: 15px;
+      color: $copper;
 
-      @media only screen and (max-width: $mediumMediaQuery) {
-        width: 100%;
-      }
-
-      .description {
-        flex-basis: 20%;
-        padding-left: 30%;
-        text-align: left;
-
-        @media only screen and (max-width: $mediumMediaQuery) {
-          flex-basis: 20%;
-          padding-left: 20%;
-        }
-      }
-
-      .details {
-        padding-bottom: 15px;
+      a {
+        text-decoration: none;
         color: $copper;
-        text-align: left;
-        flex-basis: 50%;
+      }
 
-        @media only screen and (max-width: $mediumMediaQuery) {
-          flex-basis: 60%;
-        }
-
-        a {
-          text-decoration: none;
-          color: $copper;
-        }
+      &.copy {
+        color: black;
       }
     }
-
   }
 }
