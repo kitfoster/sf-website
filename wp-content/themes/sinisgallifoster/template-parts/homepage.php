@@ -10,6 +10,7 @@
 
 <script type="text/javascript" src="/wp-content/themes/sinisgallifoster/modernizr.js"></script>
 <script>
+// background image on IE
 if ( Modernizr.objectfit != true ) {
   let background = document.getElementById("about");
   const backgroundImage = document.getElementById("background-image");

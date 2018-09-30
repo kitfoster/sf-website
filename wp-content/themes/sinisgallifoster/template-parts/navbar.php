@@ -1,5 +1,5 @@
 <div class="navigation-top" id="navbar">
-  <h1 class="screen-reader-text">Sinisgalli Foster</h1>
+  <h1 class="screen-reader-text">Sinisgalli Foster Melbourne Law Firm</h1>
   <div class="nav-logo-wrapper" >
     <a href="">
       <img class="sf-nav-logo" src="wp-content/themes/sinisgallifoster/assets/images/sf_logo.png" alt="Sinisgalli Foster Logo" />

@@ -9,8 +9,3 @@
     </div>
   </div>
 </div>
-
-<script>
-  sr.reveal('.contact-heading');
-  sr.reveal('.contact-section');
-</script>
