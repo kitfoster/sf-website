@@ -4,13 +4,12 @@
 
 <script>
 
-var windowOnload = window.onload || function() {
-  var page = document.getElementById("opening-page");
+var page = document.getElementById("opening-page");
+setTimeout(function() {
   page.className += " fade-out"
-  setTimeout(function() {
-    page.style.display = "none";
-  }, 1000);
-};
-window.onload = function() {windowOnload(); };
+}, 2000);
+setTimeout(function() {
+  page.style.display = "none";
+}, 3000);
 
 </script>

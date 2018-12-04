@@ -1,4 +1,4 @@
-<script type="text/javascript" src="wp-content/themes/sinisgallifoster/functions/team_page.js"></script>
+<script src="wp-content/themes/sinisgallifoster/functions/team_page.js"></script>
 <div class="team-page-container desktop-container" id="our_team">
   <h3>Our Team</h3>
 
@@ -43,7 +43,7 @@
           <span class="bio"><?php echo $value->bio; ?></span>
         <?php endif; ?>
         <?php if ($value->contact_number): ?>
-          <span class="contact_number">P / <a href="tel:<?php echo $value->contact_number ?>"><?php echo $value->contact_number; ?></a></span>
+          <span class="contact_number">P / <a href="tel:<?php echo str_replace(' ', '', $value->contact_number) ?>"><?php echo $value->contact_number; ?></a></span>
         <?php endif; ?>
         <?php if ($value->email): ?>
           <span class="email">E / <a href="mailto:<?php echo $value->email; ?>"><?php echo $value->email; ?></a></span>

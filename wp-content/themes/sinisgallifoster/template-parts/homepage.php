@@ -1,5 +1,5 @@
 <div class="homepage-background" id="about">
-  <img clas="image" src=<?php echo $homepageImage ?> id="background-image" />
+  <img class="image" src=<?php echo $homepageImage ?> id="background-image" alt="John Sinisgalli and Alan Foster"/>
   <div class="homepage-container">
     <h2>
       <?php echo $homepageParagraph ?>
@@ -8,7 +8,7 @@
   </div>
 </div>
 
-<script type="text/javascript" src="/wp-content/themes/sinisgallifoster/modernizr.js"></script>
+<script src="/wp-content/themes/sinisgallifoster/modernizr.js"></script>
 <script>
 // background image on IE
 if ( Modernizr.objectfit != true ) {

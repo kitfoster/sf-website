@@ -10,7 +10,8 @@
     background-size: cover;
     background-position: center center;
 
-    img { // hide image if object fit is not supported - opacity to 0 for the link area
+    img {
+      // hide image if object fit is not supported - opacity to 0 for the link area
       opacity: 0;
     }
   }
@@ -28,8 +29,7 @@
     object-fit: cover;
 
     @media only screen and (max-width: $mediumMediaQuery) {
-      margin-top: 130px;
-      height: 400px;
+      display: none;
     }
   }
 
@@ -70,7 +70,6 @@
         padding: 20px 30px;
       }
     }
-
   }
 
   .arrow-down {

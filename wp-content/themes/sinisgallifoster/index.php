@@ -1,8 +1,4 @@
-<?php
-/**
- * Template Name: Homepage
- */
-get_header(); ?>
+<?php get_header(); ?>
 
 <body>
 	<?php include "wp_posts.php" ?>
@@ -19,4 +15,4 @@ get_header(); ?>
 	<?php include "template-parts/footer.php" ?>
 </body>
 
-<?php get_footer();
+</html>

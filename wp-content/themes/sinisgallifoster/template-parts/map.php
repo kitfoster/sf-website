@@ -192,7 +192,7 @@ function myMap() {
     ]
   );
 
-  var latLng = new google.maps.LatLng(-37.816887, 144.963291);
+  var latLng = new google.maps.LatLng(-37.813202, 144.960162);
   var mapProp= {
     center: latLng,
     zoom: 14,

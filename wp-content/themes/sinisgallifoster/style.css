@@ -213,8 +213,7 @@ h3 {
     object-fit: cover; }
     @media only screen and (max-width: 500px) {
       .homepage-background img {
-        margin-top: 130px;
-        height: 400px; } }
+        display: none; } }
   .homepage-background .homepage-container {
     display: flex;
     flex-direction: column;
