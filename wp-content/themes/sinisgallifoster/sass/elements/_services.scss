@@ -1,7 +1,7 @@
 .services-container {
   padding-bottom: 50px;
 
-  @media only screen and (max-width: $desktopMediaQuery) {
+  @media only screen and (max-width: $mediumMediaQuery) {
     padding-bottom: 20px;
   }
 
@@ -25,9 +25,13 @@
       padding: 40px 20px;
       text-align: center;
 
-      @media only screen and (max-width: $desktopMediaQuery) {
+      @media only screen and (max-width: $mediumMediaQuery) {
         padding: 20px;
       }
+    }
+
+    p {
+      font-size: 12px;
     }
 
     .service {
@@ -40,5 +44,4 @@
       }
     }
   }
-
 }

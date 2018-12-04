@@ -4,6 +4,6 @@
 </div>
 
 <script>
-  sr.reveal('.safe-custody-heading');
-  sr.reveal('.safe-custody-body');
+  sr.reveal('.safe-custody-heading', {distance: '50px'});
+  sr.reveal('.safe-custody-body', {distance: '50px'});
 </script>

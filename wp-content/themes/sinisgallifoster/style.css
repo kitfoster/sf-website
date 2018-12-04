@@ -99,7 +99,9 @@ h3 {
   z-index: 99; }
   @media only screen and (max-width: 500px) {
     .navigation-top.minimise {
-      height: 70px; }
+      height: 70px;
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid white; }
       .navigation-top.minimise .nav-hamburger {
         transition: all 0.5s;
         margin: 0 25px 20px auto; }
@@ -167,7 +169,7 @@ h3 {
     outline: none;
     z-index: 99; }
     .navigation-top .nav-hamburger::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       width: 24px;
@@ -175,7 +177,7 @@ h3 {
       background-color: #905c32;
       transition: all 0.5s ease; }
     .navigation-top .nav-hamburger::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       width: 24px;
@@ -205,8 +207,9 @@ h3 {
     .homepage-background {
       align-items: flex-start;
       flex-direction: column;
-      height: 100%;
-      min-height: 730px; } }
+      justify-content: flex-end;
+      height: auto;
+      padding-top: 100px; } }
   .homepage-background img {
     height: 100%;
     width: 100%;
@@ -240,13 +243,11 @@ h3 {
       z-index: 1; }
       @media only screen and (max-width: 500px) {
         .homepage-background .homepage-container h2 {
-          font-family: "Open Sans", sans-serif;
-          font-size: 14px;
+          font-size: 20px;
           font-weight: normal;
           max-width: 380px;
-          line-height: 20px;
-          margin: 20px 50px 0 0;
-          padding: 20px 30px; } }
+          margin: 20px 40px 0 0;
+          padding: 20px; } }
   .homepage-background .arrow-down {
     align-self: center;
     width: 0;
@@ -279,8 +280,8 @@ h3 {
     width: 500px; }
     @media only screen and (max-width: 700px) {
       .statement-container .border {
-        width: 80vw;
-        min-width: 300px; } }
+        width: 70vw;
+        min-width: 250px; } }
   .statement-container h2 {
     align-self: center;
     text-align: center;
@@ -291,13 +292,14 @@ h3 {
     color: #905c32; }
     @media only screen and (max-width: 700px) {
       .statement-container h2 {
+        line-height: 60px;
         flex-basis: calc(100% - 100px);
         font-size: 26px;
         margin: 30px 0; } }
 
 .services-container {
   padding-bottom: 50px; }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 500px) {
     .services-container {
       padding-bottom: 20px; } }
   .services-container .inner {
@@ -315,9 +317,11 @@ h3 {
       flex: 0 1 350px;
       padding: 40px 20px;
       text-align: center; }
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: 500px) {
         .services-container .inner .service-box {
           padding: 20px; } }
+    .services-container .inner p {
+      font-size: 12px; }
     .services-container .inner .service {
       max-width: 280px; }
       .services-container .inner .service h4 {
@@ -365,7 +369,7 @@ h3 {
       .safe-custody-container .safe-custody-body {
         line-height: inherit;
         font-size: 12px;
-        padding: 20px; } }
+        padding: 30px; } }
 
 .team-page-container {
   display: flex;
