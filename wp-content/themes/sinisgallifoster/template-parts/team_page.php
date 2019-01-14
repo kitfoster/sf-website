@@ -60,5 +60,5 @@
 const dot = document.getElementById("carousel-dot0");
 dot.className += " active";
 
-  sr.reveal('.bio-container', {distance: '50px'});
+sr.reveal('.bio-container', {distance: '50px'});
 </script>

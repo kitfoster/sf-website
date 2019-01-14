@@ -2,9 +2,9 @@
   width: 100%;
   height: $homepageHeight;
   display: flex;
-  align-items: center;
   justify-content: center;
   background-color: $navyBlue;
+  overflow: hidden;
 
   &.compat-object-fit {
     background-size: cover;
@@ -25,7 +25,7 @@
   }
 
   img {
-    height: 100%;
+    height: 930px;
     width: 100%;
     object-fit: cover;
 
@@ -39,7 +39,7 @@
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1530px;
     position: absolute;
     height: $homepageHeight;
     max-height: 800px;
@@ -53,17 +53,16 @@
     }
 
     h2 {
-      max-width: 400px;
+      max-width: 380px;
       font-family: $serifFont;
       color: $copper;
       margin: 50px;
+      font-weight: normal;
       font-size: 24px;
-      font-weight: 200;
       z-index: 1;
 
       @media only screen and (max-width: $mediumMediaQuery) {
         font-size: 20px;
-        font-weight: normal;
         max-width: 380px;
         margin: 20px 40px 0 0;
         padding: 20px;
