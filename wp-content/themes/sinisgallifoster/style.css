@@ -106,7 +106,7 @@ h3 {
       z-index: 99; }
   .navigation-top .menu-button {
     display: none;
-    margin-right: 47px;
+    margin-right: 27px;
     padding: 15px;
     background-color: transparent;
     border: none;
@@ -123,7 +123,7 @@ h3 {
       top: 0;
       right: 0;
       margin-top: 48px;
-      margin-right: 50px; }
+      margin-right: 30px; }
     .navigation-top .menu-button::after {
       content: "";
       display: block;
@@ -135,7 +135,7 @@ h3 {
       top: 0;
       right: 0;
       margin-top: 52px;
-      margin-right: 50px; }
+      margin-right: 30px; }
     .navigation-top .menu-button.nav-open::before {
       margin-top: 50px;
       transform: rotate(45deg); }
@@ -163,6 +163,7 @@ h3 {
       flex-direction: column;
       align-items: flex-end;
       right: 12px;
+      padding: 0 18px;
       top: 53px;
       line-height: 30px;
       transition: all 0.3s;
@@ -206,7 +207,6 @@ h3 {
   height: 800px;
   display: flex;
   justify-content: center;
-  background-color: #1e1f38;
   overflow: hidden; }
   .homepage-background.compat-object-fit {
     background-size: cover;
@@ -218,19 +218,28 @@ h3 {
       align-items: flex-start;
       flex-direction: column;
       justify-content: flex-end;
-      height: auto;
-      padding-top: 100px; } }
-  .homepage-background img {
+      height: 720px; } }
+  @media only screen and (max-width: 500px) {
+    .homepage-background .image-wrapper {
+      position: absolute;
+      overflow: hidden;
+      height: 500px;
+      top: 0;
+      width: 100%; } }
+  .homepage-background .image-wrapper img {
     height: 930px;
     width: 100%;
     object-fit: cover; }
     @media only screen and (max-width: 500px) {
-      .homepage-background img {
-        display: none; } }
+      .homepage-background .image-wrapper img {
+        height: 600px;
+        position: absolute;
+        top: 0; } }
   .homepage-background .homepage-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
     width: 100%;
     max-width: 1530px;
     position: absolute;
@@ -255,8 +264,9 @@ h3 {
         .homepage-background .homepage-container h2 {
           font-size: 20px;
           max-width: 380px;
-          margin: 20px 40px 0 0;
-          padding: 20px; } }
+          margin: 0;
+          padding: 20px;
+          text-align: center; } }
   .homepage-background .arrow-down {
     align-self: center;
     width: 0;
@@ -270,7 +280,7 @@ h3 {
       border-top: 12px solid #633e20; }
     @media only screen and (max-width: 500px) {
       .homepage-background .arrow-down {
-        margin-top: 20px; } }
+        display: none; } }
 
 .statement-container {
   display: flex;

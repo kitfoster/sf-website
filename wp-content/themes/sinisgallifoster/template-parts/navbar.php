@@ -35,7 +35,8 @@ function navToggle() {
 
 function closeNav() {
     var navbar = document.getElementById("navbar");
-    if (navbar.className == "navigation-top") {
+    var width = window.innerWidth || document.body.clientWidth
+    if (navbar.className == "navigation-top" && width > 700) {
         return;
     }
 

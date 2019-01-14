@@ -3,7 +3,6 @@
   height: $homepageHeight;
   display: flex;
   justify-content: center;
-  background-color: $navyBlue;
   overflow: hidden;
 
   &.compat-object-fit {
@@ -20,17 +19,28 @@
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-end;
-    height: auto;
-    padding-top: 100px;
+    height: 720px;
   }
 
-  img {
-    height: 930px;
-    width: 100%;
-    object-fit: cover;
-
+  .image-wrapper {
     @media only screen and (max-width: $mediumMediaQuery) {
-      display: none;
+      position: absolute;
+      overflow: hidden;
+      height: 500px;
+      top: 0;
+      width: 100%;
+    }
+
+    img {
+      height: 930px;
+      width: 100%;
+      object-fit: cover;
+
+      @media only screen and (max-width: $mediumMediaQuery) {
+        height: 600px;
+        position: absolute;
+        top: 0;
+      }
     }
   }
 
@@ -38,6 +48,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
     width: 100%;
     max-width: 1530px;
     position: absolute;
@@ -64,8 +75,9 @@
       @media only screen and (max-width: $mediumMediaQuery) {
         font-size: 20px;
         max-width: 380px;
-        margin: 20px 40px 0 0;
+        margin: 0;
         padding: 20px;
+        text-align: center;
       }
     }
   }
@@ -85,7 +97,7 @@
     }
 
     @media only screen and (max-width: $mediumMediaQuery) {
-      margin-top: 20px;
+      display: none;
     }
   }
 }
