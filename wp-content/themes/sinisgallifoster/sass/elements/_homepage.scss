@@ -48,7 +48,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
     width: 100%;
     max-width: 1530px;
     position: absolute;
@@ -58,6 +57,7 @@
     top: 0px;
 
     @media only screen and (max-width: $mediumMediaQuery) {
+      align-items: center;
       position: relative;
       height: auto;
       min-height: auto;
