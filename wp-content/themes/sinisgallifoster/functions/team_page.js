@@ -47,7 +47,6 @@ function outsideClick(id) {
   if (screen.width <= 700) {
     outsideClickListener = evt => {
       const bio = document.getElementsByClassName("bio-inner")[0];
-      const index = id.match(/\d/gm)[0];
       let targetElement = evt.target; // clicked element
 
       if (targetElement == bio) {
@@ -67,7 +66,7 @@ function outsideClick(id) {
       let targetElement = evt.target; // clicked element
 
       do {
-        if (targetElement == bio) {
+        if (targetElement.className == "bio-inner") {
           return;
         }
         if (

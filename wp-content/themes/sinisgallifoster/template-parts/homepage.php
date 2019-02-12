@@ -2,6 +2,7 @@
   <div class="image-wrapper">
     <img class="image" src=<?php echo $homepageImage ?> id="background-image" alt="John Sinisgalli and Alan Foster"/>
   </div>
+  <div class="homepage-image-overlay"></div>
   <div class="homepage-container">
     <h2>
       <?php echo $homepageParagraph ?>

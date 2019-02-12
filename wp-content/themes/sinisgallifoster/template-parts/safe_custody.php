@@ -1,13 +1,13 @@
 <div class="safe-custody-container desktop-container" id="safe-custody">
-  <div class="heading_wrapper">
-    <h3 class="safe-custody-heading" id="safe-custody-heading" onclick="safeCustodyToggle()">Safe Custody</h3>
-    <a class="arrow-down" onclick="safeCustodyToggle()"></a>
+  <div class="heading_wrapper" onclick="safeCustodyToggle()">
+    <h3 class="safe-custody-heading" id="safe-custody-heading">Safe Custody</h3>
+    <a class="arrow-down"></a>
   </div>
   <p class="safe-custody-body" onclick="safeCustodyToggle()"><?php echo $safeCustody->text; ?></p>
 </div>
 
 <script>
-  sr.reveal('.heading_wrapper', {distance: '50px'});
+  sr.reveal('.heading_wrapper');
 
   function safeCustodyToggle() {
     var sc_div = document.getElementById("safe-custody");
