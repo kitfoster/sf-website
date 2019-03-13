@@ -1,5 +1,5 @@
 <div class="homepage-background" id="about">
-  <div class="image-wrapper">
+  <div class="image-wrapper" id="homepage-image">
     <img class="image" src=<?php echo $homepageImage ?> id="background-image" alt="John Sinisgalli and Alan Foster"/>
   </div>
   <div class="homepage-image-overlay"></div>

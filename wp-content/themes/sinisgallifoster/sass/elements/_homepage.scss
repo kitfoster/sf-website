@@ -1,6 +1,7 @@
 .homepage-background {
   width: 100%;
-  height: 65vh;
+  height: 80vh;
+  max-height: 900px;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -32,7 +33,8 @@
     }
 
     img {
-      height: 76vh;
+      height: 95vh;
+      max-height: 1070px;
       width: 100%;
       object-fit: cover;
 
@@ -47,12 +49,20 @@
   .homepage-image-overlay {
     position: absolute;
     width: 100%;
-    height: 65vh;
+    top: 0;
+    height: 80vh;
+    max-height: 900px;
     background: linear-gradient(
-      to bottom left,
-      rgba(0, 0, 0, 0.5) 0%,
+      to top right,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.3) 50%,
       rgba(33, 33, 33, 0) 100%
     );
+
+    @media only screen and (max-width: $mediumMediaQuery) {
+      height: 500px;
+      top: 0;
+    }
   }
 
   .homepage-container {
@@ -63,7 +73,8 @@
     max-width: 1530px;
     position: absolute;
     top: 0px;
-    height: 65vh;
+    height: 80vh;
+    max-height: 900px;
 
     @media only screen and (max-width: $mediumMediaQuery) {
       align-items: center;
@@ -73,17 +84,22 @@
     }
 
     h2 {
-      max-width: 380px;
+      max-width: 365px;
       font-family: $serifFont;
       color: $copper;
       margin: 50px;
       font-weight: normal;
-      font-size: 24px;
+      font-size: 26px;
+      line-height: 38px;
       z-index: 1;
+
+      @media only screen and (max-width: 1000px) {
+        margin: 30px 50px;
+        max-width: 500px;
+      }
 
       @media only screen and (max-width: $mediumMediaQuery) {
         font-size: 20px;
-        max-width: 380px;
         margin: 0;
         padding: 20px 10vw;
         text-align: center;

@@ -212,6 +212,14 @@ function myMap() {
     title: 'Sinisgalli Foster',
     icon: '/wp-content/themes/sinisgallifoster/assets/images/sf-map-marker.png',
   });
+
+  map.addListener('center_changed', function() {
+    // 3 seconds after the center of the map has changed, pan back to the
+    // marker.
+    window.setTimeout(function() {
+      map.panTo(marker.getPosition());
+    }, 3000);
+  });
 }
 </script>
 

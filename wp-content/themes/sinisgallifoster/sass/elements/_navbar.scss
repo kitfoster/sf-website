@@ -12,6 +12,12 @@
     width: 160px;
     height: 80px;
 
+    @media only screen and (max-width: $mediaQuery700) {
+      width: 140px;
+      height: 70px;
+      margin-left: 15px;
+    }
+
     .sf-nav-logo {
       max-width: 100%;
       max-height: 100%;
@@ -28,6 +34,11 @@
     cursor: pointer;
     outline: none;
 
+    @media only screen and (max-width: $mediaQuery700) {
+      display: block;
+      margin-right: 17px;
+    }
+
     &::before {
       content: "";
       display: block;
@@ -40,6 +51,10 @@
       right: 0;
       margin-top: 48px;
       margin-right: 30px;
+
+      @media only screen and (max-width: $mediaQuery700) {
+        margin-right: 20px;
+      }
     }
 
     &::after {
@@ -54,6 +69,10 @@
       right: 0;
       margin-top: 52px;
       margin-right: 30px;
+
+      @media only screen and (max-width: $mediaQuery700) {
+        margin-right: 20px;
+      }
     }
 
     &.nav-open {
@@ -76,6 +95,10 @@
     flex: 0 1 400px;
     justify-content: space-between;
     padding: 0 40px;
+
+    @media only screen and (max-width: $mediaQuery700) {
+      display: none;
+    }
 
     a {
       color: $copper;
@@ -100,6 +123,10 @@
       line-height: 30px;
       transition: all 0.3s;
       opacity: 1;
+
+      @media only screen and (max-width: $mediaQuery700) {
+        display: flex;
+      }
 
       a {
         font-size: 18px;
@@ -135,31 +162,55 @@
     }
   }
 
-  // on small screens, show the small stick nav always
   @media only screen and (max-width: $mediaQuery700) {
-    position: fixed;
     height: 100px;
+    transition: all 0.1s;
 
-    // when small screen and past landing
     &.sticky {
       background: rgba(255, 255, 255, 0.9);
-      border-bottom: 1px solid white;
-    }
+      height: 80px;
 
-    .nav-logo-wrapper {
-      width: 140px;
-      height: 70px;
-    }
+      &.grey {
+        background: rgba(233, 233, 235, 0.9);
+      }
 
-    .menu-button {
-      display: block;
-    }
+      &.clear {
+        background: none;
+      }
 
-    .navbar-items {
-      display: none;
+      .nav-logo-wrapper {
+        width: 100px;
+        height: 50px;
+      }
 
-      &.expand {
-        display: flex;
+      .menu-button {
+        display: block;
+
+        &::before {
+          margin-top: 36px;
+        }
+
+        &::after {
+          margin-top: 40px;
+        }
+
+        &.nav-open {
+          &::before {
+            margin-top: 38px;
+          }
+
+          &::after {
+            margin-top: 38px;
+          }
+        }
+      }
+
+      .navbar-items {
+        display: none;
+
+        &.expand {
+          display: flex;
+        }
       }
     }
   }

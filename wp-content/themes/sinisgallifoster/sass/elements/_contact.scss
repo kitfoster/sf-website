@@ -31,5 +31,19 @@
         color: black;
       }
     }
+
+    .address {
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        position: absolute;
+        margin-left: 175px;
+        margin-top: 5px;
+        width: 10px;
+        height: 10px;
+      }
+    }
   }
 }

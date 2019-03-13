@@ -3,8 +3,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 150px 0 100px 0;
+  padding: 15vh 0 100px 0;
   width: 100%;
+  margin-top: 1px; // for the arrow button
+
+  @media only screen and (max-width: 1000px) {
+    padding: 100px 0;
+  }
 
   @media only screen and (max-width: 700px) {
     padding: 70px 0 50px 0;
@@ -16,8 +21,8 @@
     border-bottom: 1px solid $copper;
     width: 500px;
 
-    @media only screen and (max-width: 700px) {
-      width: 70vw;
+    @media only screen and (max-width: 1000px) {
+      width: 50vw;
       min-width: 250px;
     }
   }
@@ -31,6 +36,12 @@
     margin: 50px 0;
     line-height: 80px;
     color: $copper;
+
+    @media only screen and (max-width: 1000px) {
+      font-size: 40px;
+      line-height: 70px;
+      margin: 40px 0;
+    }
 
     @media only screen and (max-width: 700px) {
       line-height: 60px;

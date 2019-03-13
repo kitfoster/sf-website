@@ -61,11 +61,22 @@ function scrollToElement(id) {
 
 window.onscroll = function changeNav() {
     var navbar = document.getElementById("navbar");
-    var statementSection = document.getElementById("statement");
-    var statementSectionTop = statementSection.getBoundingClientRect().top;
 
-    if (statementSectionTop <= 0) {
-        navbar.className = "navigation-top sticky";
+    var homepageSection = document.getElementById("homepage-image");
+    var homepageSectionBottom = homepageSection.getBoundingClientRect().bottom;
+
+    var contactSection = document.getElementById("contact-section");
+    var contactSectionTop = contactSection.getBoundingClientRect().top;
+
+    var mapSection = document.getElementById("googleMap");
+    var mapSectionTop = mapSection.getBoundingClientRect().top;
+
+    if (mapSectionTop <= 80) {
+        navbar.className = "navigation-top sticky clear";
+    } else if (contactSectionTop <= 80) {
+        navbar.className = "navigation-top sticky grey";
+    } else if (homepageSectionBottom <= 0) {
+        navbar.className = "navigation-top sticky"
     } else {
         navbar.className = "navigation-top";
     }
