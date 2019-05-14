@@ -1,4 +1,4 @@
-<div class="safe-custody-container desktop-container" id="safe-custody">
+<div class="safe-custody-container desktop-container" id="safe_custody">
   <div class="heading_wrapper" onclick="safeCustodyToggle()">
     <h3 class="safe-custody-heading" id="safe-custody-heading">Safe Custody</h3>
     <a class="arrow-down"></a>
@@ -10,7 +10,7 @@
   sr.reveal('.heading_wrapper');
 
   function safeCustodyToggle() {
-    var sc_div = document.getElementById("safe-custody");
+    var sc_div = document.getElementById("safe_custody");
     var sc_heading = document.getElementById("safe-custody-heading");
     if (sc_div.className.includes("open")) {
       sc_div.className = "safe-custody-container desktop-container";

@@ -1,5 +1,5 @@
 <div class="opening-page-container" id="opening-page">
-  <img src="wp-content/themes/sinisgallifoster/assets/images/sf-logo.gif" alt="Sinisgalli Foster Logo"/>
+  <img src="/wp-content/themes/sinisgallifoster/assets/images/sf-logo.gif" alt="Sinisgalli Foster Logo"/>
 </div>
 
 <script>

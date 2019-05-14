@@ -3,7 +3,7 @@
 
   <div class="nav-logo-wrapper" >
     <a href="">
-      <img class="sf-nav-logo" src="wp-content/themes/sinisgallifoster/assets/images/sf_logo.png" alt="Sinisgalli Foster Logo" />
+      <img class="sf-nav-logo" src="/wp-content/themes/sinisgallifoster/assets/images/sf_logo.png" alt="Sinisgalli Foster Logo" />
     </a>
   </div>
 
@@ -13,7 +13,7 @@
   <ul class="navbar-items" id="nav">
     <li><a onclick="scrollToElement('services')">Services</a></li>
     <li><a onclick="scrollToElement('our_team')">Our Team</a></li>
-    <li><a onclick="scrollToElement('safe-custody')">Safe Custody</a></li>
+    <li><a onclick="scrollToElement('safe_custody')">Safe Custody</a></li>
     <li><a onclick="scrollToElement('contact')">Contact</a></li>
   </ul>
 </div>
