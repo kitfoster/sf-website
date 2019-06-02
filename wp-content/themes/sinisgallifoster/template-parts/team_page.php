@@ -1,15 +1,15 @@
-<script src="wp-content/themes/sinisgallifoster/functions/team_page.js"></script>
+<script src="/wp-content/themes/sinisgallifoster/functions/team_page.js"></script>
 <div class="team-page-container desktop-container" id="our_team">
   <h3>Our Team</h3>
 
   <!-- desktop -->
   <div class="desktop-view">
     <?php foreach($team as $key=>$value): ?>
-      <div class="bio-container" id="<?php echo "bio-container" . $key; ?>" onclick="toggleBio('<?php echo 'bio-expanded' . $key; ?>')" onmouseleave="removeImageEffects()">
-        <img class="bio-image" id="<?php echo "bio-image" . $key; ?>" onmouseover="imageEffect('<?php echo 'bio-image' . $key; ?>')" src="<?php echo $value->photo; ?>" alt="<?php echo $value->name; ?>" />
-        <span class="name"><?php echo $value->name; ?></span>
-        <span class="role"><?php echo $value->role; ?></span>
-      </div>
+        <div class="bio-container" id="<?php echo "bio-container" . $key; ?>" onclick="toggleBio('<?php echo 'bio-expanded' . $key; ?>')" onmouseleave="removeImageEffects()">
+          <img class="bio-image" id="<?php echo "bio-image" . $key; ?>" onmouseover="imageEffect('<?php echo 'bio-image' . $key; ?>')" src="<?php echo $value->photo; ?>" alt="<?php echo $value->name; ?>" />
+          <span class="name"><?php echo $value->name; ?></span>
+          <span class="role"><?php echo $value->role; ?></span>
+        </div>
     <?php endforeach; ?>
   </div>
 
@@ -18,7 +18,7 @@
     <div class="carousel-slider" id="carousel-slider" onscroll="carouselFunction(<?php echo count($team) ?>)">
       <?php foreach($team as $key=>$value): ?>
         <div class="carousel-slides" id=<?php echo "carousel-slides" . $key; ?> onclick="toggleBio('<?php echo 'bio-expanded' . $key; ?>')">
-          <img src=<?php echo $value->photo; ?> alt="Example Lawyer Photo" />
+          <img src=<?php echo $value->photo; ?> alt=<?php echo $value->name; ?>/>
           <span class="name"><?php echo $value->name; ?></span>
           <span class="role"><?php echo $value->role; ?></span>
         </div>
@@ -49,7 +49,7 @@
           <span class="email">E / <a href="mailto:<?php echo $value->email; ?>"><?php echo $value->email; ?></a></span>
         <?php endif; ?>
         <?php if ($value->linked_in): ?>
-          <a class="linkedIn" href=<?php echo $value->linked_in; ?> target="_blank"><img src="wp-content/themes/sinisgallifoster/assets/images/linkedin.svg" alt="LinkedIn Logo" />Visit <?php echo $value->name; ?>'s LinkedIn</a>
+          <a class="linkedIn" href=<?php echo $value->linked_in; ?> target="_blank"><img src="/wp-content/themes/sinisgallifoster/assets/images/linkedin.svg" alt="LinkedIn Logo" />Visit <?php echo $value->name; ?>'s LinkedIn</a>
         <?php endif; ?>
       </div>
     </div>

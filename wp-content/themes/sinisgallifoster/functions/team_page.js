@@ -4,7 +4,7 @@ sr.reveal(".bio-container", { scale: 1, distance: "20px" });
 function carouselFunction(numberOfSlides) {
   for (i = 0; i < numberOfSlides; i++) {
     const slide = document.getElementById("carousel-slides" + i);
-    var rect = slide.getBoundingClientRect();
+    let rect = slide.getBoundingClientRect();
     const dot = document.getElementById("carousel-dot" + i);
 
     dot.className = "carousel-dot";
@@ -26,7 +26,7 @@ function scrollToSlide(id) {
 
 // bios
 function toggleBio(id) {
-  var x = document.getElementById(id);
+  let x = document.getElementById(id);
   if (x.className == "bio-expanded") {
     x.style.opacity = "1";
     x.className += " open";
@@ -41,7 +41,7 @@ function toggleBio(id) {
 
 // close if the user clicks outside the bio
 function outsideClick(id) {
-  var outsideClickListener;
+  let outsideClickListener;
 
   // if on mobile, close if the user clicks the background
   if (screen.width <= 700) {
@@ -58,7 +58,7 @@ function outsideClick(id) {
   } else {
     // desktop
     // can only click on image once
-    var clicked = false;
+    let clicked = false;
 
     outsideClickListener = evt => {
       const bio = document.getElementById(id);
@@ -96,7 +96,7 @@ function outsideClick(id) {
 
     document.onkeydown = function(evt) {
       evt = evt || window.event;
-      var isEscape = false;
+      let isEscape = false;
       if ("key" in evt) {
         isEscape = evt.key == "Escape" || evt.key == "Esc";
       } else {
@@ -119,19 +119,19 @@ function outsideClick(id) {
 function imageEffect(id) {
   // if a bio is open, keep that image coloured
   const index = id.match(/\d/gm)[0];
-  var openBio = document.getElementsByClassName("bio-expanded open");
+  let openBio = document.getElementsByClassName("bio-expanded open");
   if (openBio.length > 0) {
     return;
   }
 
-  var hoveredImage = document.getElementById(id);
+  let hoveredImage = document.getElementById(id);
   hoveredImage.className = "bio-image";
 
-  var colourImages = Array.from(document.getElementsByClassName("bio-image"));
-  var greyImages = Array.from(
+  let colourImages = Array.from(document.getElementsByClassName("bio-image"));
+  let greyImages = Array.from(
     document.getElementsByClassName("bio-image greyscale")
   );
-  var allImages = colourImages.concat(greyImages);
+  let allImages = colourImages.concat(greyImages);
   for (i = 0; i < allImages.length; i += 1) {
     currentImage = allImages[i];
     if (currentImage != hoveredImage) {
@@ -141,11 +141,11 @@ function imageEffect(id) {
 }
 
 function removeImageEffects() {
-  var colourImages = Array.from(document.getElementsByClassName("bio-image"));
-  var greyImages = Array.from(
+  let colourImages = Array.from(document.getElementsByClassName("bio-image"));
+  let greyImages = Array.from(
     document.getElementsByClassName("bio-image greyscale")
   );
-  var allImages = colourImages.concat(greyImages);
+  let allImages = colourImages.concat(greyImages);
   for (i = 0; i < allImages.length; i += 1) {
     allImages[i].className = "bio-image";
   }
