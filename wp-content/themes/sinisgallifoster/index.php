@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-<!-- maybe put this in the header if SEO not great -->
-<!-- <meta name="keywords" content="sinisgalli,foster,legal,advice,lawyer,melbourne,attorney"> -->
 
 <body>
 	<?php include "wp_posts.php" ?>
