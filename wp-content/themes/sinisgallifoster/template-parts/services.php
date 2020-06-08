@@ -3,6 +3,9 @@
     <h3>Services</h3>
     <?php foreach($services as $key=>$value): ?>
       <div class="service-box">
+        <?php if ($value->icon): ?>
+          <image class="service-icon" src="<?php echo $value->icon ?>"/>
+        <?php endif; ?>
         <div class="service">
           <h4><?php echo $value->title ?></h4>
           <p><?php echo $value->description ?></p>

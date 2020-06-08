@@ -437,7 +437,10 @@ h3 {
       .services-container .inner .service h4 {
         text-transform: capitalize;
         font-size: 18px;
-        font-weight: 100; }
+    .services-container .inner .service-icon {
+      width: 64px;
+      height: 64px;
+      padding: 15px; }
 
 .contact-container {
   display: flex;

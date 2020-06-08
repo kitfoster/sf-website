@@ -38,18 +38,21 @@
   class Service {
     public $title;
     public $description;
+    public $icon;
 
-    public function __construct($title, $description) {
+    public function __construct($title, $description, $icon) {
       $this->title = $title;
       $this->description = $description;
+      $this->icon = $icon;
     }
   }
 
   function newService() {
     $title = get_field("service_title");
     $description = get_field("service_description");
+    $icon = get_field("service_icon");
 
-    $service = new Service($title, $description);
+    $service = new Service($title, $description, $icon);
     return $service;
   }
 
