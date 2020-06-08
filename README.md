@@ -1,9 +1,14 @@
 # sf-website
 
-`docker-compose up` & `gulp watch`
+To build image and run
+```
+docker-compose up & gulp watch
+```
 
-`docker-compose stop`
+Website is now available at http://localhost:8080/
+Admin is http://localhost:8080/wp-admin
 
-Don't use docker-compose down as it deletes the image and stuff
-
-http://localhost:8080/
+To setup:
+1. Export xml from https://sinisgallifoster.com.au/wp-admin
+1. Active Advanced Custom Fields and Post Types Order plugins
+1. Import xml

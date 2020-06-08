@@ -103,6 +103,7 @@
   $statementText;
   $contact;
   $safeCustody;
+  $pageForEmployee;
 
   $args = array(
     'orderby' => 'menu_order',
@@ -138,4 +139,12 @@
       }
     }
   endwhile;
+
+  $page = preg_replace("/[^a-zA-Z0-9]/", "", $_SERVER['REQUEST_URI']);
+  foreach($team as $employee) {
+    $employeePage = strtolower(preg_replace("/[^a-zA-Z0-9]/", "", $employee->name));
+    if (strcmp($page, $employeePage) === 0) {
+      $pageForEmployee = $employee;
+    }
+  };
 ?>

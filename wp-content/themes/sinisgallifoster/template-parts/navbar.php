@@ -1,5 +1,8 @@
 <div class="navigation-top" id="navbar">
   <h1 class="screen-reader-text">Sinisgalli Foster Melbourne Law Firm</h1>
+  <?php if ($pageForEmployee): ?>
+    <h2 class="screen-reader-text" id="page-for-employee"><?php echo $pageForEmployee->name . " Lawyer"; ?></h2>
+  <?php endif; ?>
 
   <div class="nav-logo-wrapper" >
     <a href="">
@@ -18,45 +21,20 @@
   </ul>
 </div>
 
+<script src="/wp-content/themes/sinisgallifoster/functions/navbar.js"></script>
 <script>
-function navToggle() {
-    var nav = document.getElementById("nav");
-    var symbol = document.getElementById("nav-symbol");
-    if (nav.className == "navbar-items") {
-        nav.className += " expand fade";
-        symbol.className += " nav-open";
-        window.setTimeout(function() {
-            nav.className = "navbar-items expand";
-        }, 1);
-    } else {
-        closeNav();
-    }
-}
-
-function closeNav() {
-    var navbar = document.getElementById("navbar");
-    var width = window.innerWidth || document.body.clientWidth
-    if (navbar.className == "navigation-top" && width > 700) {
-        return;
-    }
-
-    var x1 = document.getElementById("nav");
-    var x2 = document.getElementById("nav-symbol");
-    x1.className = "navbar-items expand fade";
-    x2.className = "menu-button";
-    window.setTimeout(function() {
-        x1.className = "navbar-items";
-    }, 300);
-}
-
-function scrollToElement(id) {
-    var e = document.getElementById(id);
-    e.scrollIntoView({
-        behavior: 'smooth',
-        block: "start",
-        inline: "nearest"
-    });
-    closeNav();
+var pageForEmployee = "<?php if ($pageForEmployee) {echo $pageForEmployee->name;}; ?>";
+if (pageForEmployee) {
+  setTimeout(function() {
+      scrollToElement('our_team');
+      setTimeout(function() {
+        var bioId = "bio-name " + pageForEmployee;
+        var bio =  document.getElementById(bioId);
+        if (bio) {
+          bio.click();
+        }
+      }, 700)
+  }, 3000);
 }
 
 window.onscroll = function changeNav() {
@@ -81,6 +59,4 @@ window.onscroll = function changeNav() {
         navbar.className = "navigation-top";
     }
 }
-
-
 </script>

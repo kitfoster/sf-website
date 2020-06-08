@@ -1,4 +1,3 @@
-<script src="/wp-content/themes/sinisgallifoster/functions/team_page.js"></script>
 <div class="team-page-container desktop-container" id="our_team">
   <h3>Our Team</h3>
 
@@ -7,7 +6,7 @@
     <?php foreach($team as $key=>$value): ?>
         <div class="bio-container" id="<?php echo "bio-container" . $key; ?>" onclick="toggleBio('<?php echo 'bio-expanded' . $key; ?>')" onmouseleave="removeImageEffects()">
           <img class="bio-image" id="<?php echo "bio-image" . $key; ?>" onmouseover="imageEffect('<?php echo 'bio-image' . $key; ?>')" src="<?php echo $value->photo; ?>" alt="<?php echo $value->name; ?>" />
-          <span class="name"><?php echo $value->name; ?></span>
+          <span class="name" id="<?php echo "bio-name " . $value->name; ?>"><?php echo $value->name; ?></span>
           <span class="role"><?php echo $value->role; ?></span>
         </div>
     <?php endforeach; ?>
@@ -56,9 +55,9 @@
   <?php endforeach; ?>
 </div>
 
+<script src="/wp-content/themes/sinisgallifoster/functions/team_page.js"></script>
 <script>
-const dot = document.getElementById("carousel-dot0");
-dot.className += " active";
-
-sr.reveal('.bio-container', {distance: '50px'});
+  const dot = document.getElementById("carousel-dot0");
+  dot.className += " active";
+  sr.reveal('.bio-container', { distance: '50px' });
 </script>

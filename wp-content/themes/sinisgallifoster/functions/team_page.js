@@ -1,5 +1,3 @@
-sr.reveal(".bio-container", { scale: 1, distance: "20px" });
-
 // carousel
 function carouselFunction(numberOfSlides) {
   for (i = 0; i < numberOfSlides; i++) {
