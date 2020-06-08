@@ -422,8 +422,7 @@ h3 {
       display: flex;
       justify-content: center;
       flex: 0 1 350px;
-      padding: 40px 20px;
-      text-align: center; }
+      padding: 10px 20px; }
       @media only screen and (max-width: 1000px) {
         .services-container .inner .service-box {
           padding: 20px 10px; } }
@@ -437,7 +436,8 @@ h3 {
       .services-container .inner .service h4 {
         text-transform: capitalize;
         font-size: 18px;
-        font-weight: 100; }
+        font-weight: 100;
+        margin: 10px 0; }
 
 .contact-container {
   display: flex;

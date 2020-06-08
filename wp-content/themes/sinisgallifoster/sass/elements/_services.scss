@@ -22,8 +22,7 @@
       justify-content: center;
 
       flex: 0 1 350px;
-      padding: 40px 20px;
-      text-align: center;
+      padding: 10px 20px;
 
       @media only screen and (max-width: $desktopMediaQuery) {
         padding: 20px 10px;
@@ -45,6 +44,7 @@
         text-transform: capitalize;
         font-size: 18px;
         font-weight: 100;
+        margin: 10px 0;
       }
     }
   }
