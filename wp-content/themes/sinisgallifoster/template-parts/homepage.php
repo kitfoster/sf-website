@@ -7,7 +7,7 @@
     <h2>
       <?php echo $homepageParagraph ?>
     </h2>
-    <a class="arrow-down" onclick="scrollToElement('statement')"></a>
+    <a title="See more" class="arrow-down" onclick="scrollToElement('statement')"><span></span></a>
   </div>
 </div>
 

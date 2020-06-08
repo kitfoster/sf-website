@@ -2,7 +2,10 @@
 
 To build image and run
 ```
-docker-compose up & gulp watch
+docker-compose up
+```
+```
+gulp watch
 ```
 
 Website is now available at http://localhost:8080/
