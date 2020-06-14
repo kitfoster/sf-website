@@ -95,9 +95,40 @@
     return $safeCustody;
   }
 
+  class NewsArticle {
+    public $title;
+    public $date;
+    public $service;
+    public $blurb;
+    public $link;
+    public $image;
+
+    public function __construct($title, $date, $service, $blurb, $link, $image) {
+      $this->title = $title;
+      $this->date = $date;
+      $this->service = $service;
+      $this->blurb = $blurb;
+      $this->link = $link;
+      $this->image = $image;
+    }
+  }
+
+  function newNewsArticle() {
+    $title = get_field("news_article_title");
+    $date = get_field("news_article_date");
+    $service = get_field("news_article_service");
+    $blurb = get_field("news_blurb");
+    $link = get_field("news_article_link");
+    $image = get_field("news_article_image");
+
+    $newsArticle = new NewsArticle($title, $date, $service, $blurb, $link, $image);
+    return $newsArticle;
+  }
+
   // The variables
   $team = array();
   $services = array();
+  $newsArticles = array();
   $homepageParagraph;
   $homepageImage;
   $statementText;
@@ -136,6 +167,10 @@
       }
       elseif ($category->name == "Safe Custody") {
         $safeCustody = newSafeCustody();
+      }
+      elseif ($category->name == "News") {
+        $newsArticle = newNewsArticle();
+        array_push($newsArticles, $newsArticle);
       }
     }
   endwhile;
