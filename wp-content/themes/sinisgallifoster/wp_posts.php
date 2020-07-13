@@ -168,7 +168,7 @@
       elseif ($category->name == "Safe Custody") {
         $safeCustody = newSafeCustody();
       }
-      elseif ($category->name == "News") {
+      elseif ($category->name == "News Article") {
         $newsArticle = newNewsArticle();
         array_push($newsArticles, $newsArticle);
       }

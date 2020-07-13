@@ -1,5 +1,4 @@
-<div class="news-insights-container">
-  <h1>News and Insights</h1>
+<div class="news-articles">
   <?php foreach($newsArticles as $key=>$value): ?>
     <span><?php echo $value->title; ?></span>
   <?php endforeach; ?>

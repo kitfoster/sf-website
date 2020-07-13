@@ -1,0 +1,21 @@
+.news-insights-top-banner {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  background-image: url('assets/images/news-articles-banner.jpeg');
+  background-size: cover;
+  background-position: center;
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 500px;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(33, 33, 33, 0) 100%
+    );
+  }
+}

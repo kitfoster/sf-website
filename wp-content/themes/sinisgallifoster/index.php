@@ -12,7 +12,8 @@
 
 	<?php if (isset($newsInsightsPage[0])): ?>
 		<!-- News and Insights page -->
-		<?php include "template-parts/news_insights.php" ?>
+		<?php include "template-parts/news-insights/top_banner.php" ?>
+		<?php include "template-parts/news-insights/articles.php" ?>
 	<?php else: ?>
 		<!-- All other pages -->
 		<?php include "template-parts/opening_page.php" ?>
