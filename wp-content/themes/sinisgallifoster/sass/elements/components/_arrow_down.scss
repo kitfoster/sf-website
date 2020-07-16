@@ -1,0 +1,48 @@
+.moving-up-down {
+  display: block;
+  width: 20px;
+  height: 34px;
+  border: 2px solid $copper;
+  bottom: 40px;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 0;
+  transition: border 0.35s ease;
+  -webkit-transition: border 0.35s ease;
+  align-self: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+  z-index: 1;
+
+  & span {
+    background-color: $copper;
+    display: inline-block;
+    position: relative;
+    margin: 5px 0;
+    width: 2px;
+    height: 6px;
+    border-radius: 8px;
+    -webkit-animation-name: downup;
+    animation-name: downup;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    transition: border 0.35s ease;
+    -webkit-transition: border 0.35s ease;
+  }
+
+  @media only screen and (max-width: $mediumMediaQuery) {
+    display: none;
+    & span {
+      display: none;
+    }
+  }
+
+  &:hover {
+    border: 2px solid #633e20;
+    & span {
+      background-color: #633e20;
+    }
+  }
+}

@@ -5,7 +5,7 @@
   <?php endif; ?>
 
   <div class="nav-logo-wrapper" >
-    <a href="">
+    <a href="/">
       <img class="sf-nav-logo" src="/wp-content/themes/sinisgallifoster/assets/images/sf_logo.png" alt="Sinisgalli Foster Logo" />
     </a>
   </div>
@@ -40,20 +40,20 @@ if (pageForEmployee) {
 window.onscroll = function changeNav() {
     var navbar = document.getElementById("navbar");
 
-    var homepageSection = document.getElementById("homepage-image");
-    var homepageSectionBottom = homepageSection.getBoundingClientRect().bottom;
+    var topBannerSection = document.getElementById("top-banner");
+    var topBannerSectionBottom = topBannerSection && topBannerSection.getBoundingClientRect().bottom;
 
     var contactSection = document.getElementById("contact-section");
-    var contactSectionTop = contactSection.getBoundingClientRect().top;
+    var contactSectionTop = contactSection && contactSection.getBoundingClientRect().top;
 
     var mapSection = document.getElementById("googleMap");
-    var mapSectionTop = mapSection.getBoundingClientRect().top;
+    var mapSectionTop = mapSection && mapSection.getBoundingClientRect().top;
 
-    if (mapSectionTop <= 80) {
+    if (mapSectionTop && mapSectionTop <= 80) {
         navbar.className = "navigation-top sticky clear";
-    } else if (contactSectionTop <= 80) {
+    } else if (contactSectionTop && contactSectionTop <= 80) {
         navbar.className = "navigation-top sticky grey";
-    } else if (homepageSectionBottom <= 0) {
+    } else if (topBannerSectionBottom && topBannerSectionBottom <= 0) {
         navbar.className = "navigation-top sticky"
     } else {
         navbar.className = "navigation-top";

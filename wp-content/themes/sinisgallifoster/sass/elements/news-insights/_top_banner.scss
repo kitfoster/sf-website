@@ -1,21 +1,47 @@
 .news-insights-top-banner {
   display: flex;
-  height: 500px;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
   width: 100%;
-  background-image: url('assets/images/news-articles-banner.jpeg');
+  background-image: url('assets/images/melbourne-skyrises.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: 0% 70%;
+
+  @media only screen and (max-width: $mediaQuery700) {
+    height: 500px;
+    align-items: center;
+  }
 
   .overlay {
     position: absolute;
     width: 100%;
     top: 0;
-    height: 500px;
+    height: 100vh;
     background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.5) 10%,
+      to bottom,
+      rgba(0, 0, 0, 0.7) 10%,
       rgba(0, 0, 0, 0.3) 50%,
-      rgba(33, 33, 33, 0) 100%
+      rgba(0, 0, 0, 0.7) 100%
     );
+
+    @media only screen and (max-width: $mediaQuery700) {
+      height: 500px;
+    }
+  }
+
+  .title {
+    padding: 20px;
+    z-index: 1;
+
+    h1 {
+      font-size: 70px;
+      font-weight: 100;
+      margin: 0;
+
+      @media only screen and (max-width: $mediaQuery700) {
+        font-size: 45px;
+      }
+    }
   }
 }
