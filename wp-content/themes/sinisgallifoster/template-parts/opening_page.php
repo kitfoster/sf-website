@@ -5,11 +5,17 @@
 <script>
 
 var page = document.getElementById("opening-page");
-setTimeout(function() {
-  page.className += " fade-out"
-}, 2000);
-setTimeout(function() {
+const urlHasHashRoute = window.location.hash;
+
+if (urlHasHashRoute) {
   page.style.display = "none";
-}, 3000);
+} else {
+  setTimeout(function() {
+  page.className += " fade-out"
+  }, 2000);
+  setTimeout(function() {
+    page.style.display = "none";
+  }, 3000);
+}
 
 </script>

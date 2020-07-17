@@ -31,13 +31,12 @@
   }
 
   .title {
-    padding: 20px;
+    padding: 0 20px;
     z-index: 1;
 
     h1 {
       font-size: 70px;
       font-weight: 100;
-      margin: 0;
 
       @media only screen and (max-width: $mediaQuery700) {
         font-size: 45px;

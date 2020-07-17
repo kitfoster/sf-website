@@ -14,10 +14,11 @@
     </button>
 
   <ul class="navbar-items" id="nav">
-    <li><a onclick="scrollToElement('services')">Services</a></li>
-    <li><a onclick="scrollToElement('our_team')">Our Team</a></li>
-    <li><a onclick="scrollToElement('safe_custody')">Safe Custody</a></li>
-    <li><a onclick="scrollToElement('contact')">Contact</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#our_team">Our Team</a></li>
+    <li><a href="/news-insights">News & Insights</a></li>
+    <li><a href="/#safe_custody">Safe Custody</a></li>
+    <li><a href="/#contact">Contact</a></li>
   </ul>
 </div>
 
@@ -36,6 +37,21 @@ if (pageForEmployee) {
       }, 700)
   }, 3000);
 }
+
+
+window.addEventListener('load', function () {
+  const hash = window.location.hash;
+  if (hash === '#services') {
+    scrollToElement('services')
+  } else if (hash === '#our_team') {
+    scrollToElement('our_team')
+  } else if (hash === '#safe_custody') {
+    scrollToElement('safe_custody')
+  } else if (hash === '#contact') {
+    scrollToElement('contact')
+  }
+})
+
 
 window.onscroll = function changeNav() {
     var navbar = document.getElementById("navbar");
