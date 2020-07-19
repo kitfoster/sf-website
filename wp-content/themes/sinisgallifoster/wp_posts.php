@@ -117,12 +117,36 @@
     $title = get_field("news_article_title");
     $date = get_field("news_article_date");
     $service = get_field("news_article_service");
-    $blurb = get_field("news_blurb");
+    $blurb = get_field("news_article_blurb");
     $link = get_field("news_article_link");
     $image = get_field("news_article_image");
 
     $newsArticle = new NewsArticle($title, $date, $service, $blurb, $link, $image);
     return $newsArticle;
+  }
+
+  class EmailSMPT {
+    public $host;
+    public $username;
+    public $password;
+    public $from;
+
+    public function __construct($host, $username, $password, $from) {
+      $this->host = $host;
+      $this->username = $username;
+      $this->password = $password;
+      $this->from = $from;
+    }
+  }
+
+  function newEmailSMPT() {
+    $host = get_field("email_smpt_host");
+    $username = get_field("email_smpt_username");
+    $password = get_field("email_smpt_password");
+    $from = get_field("email_smpt_from");
+
+    $emailSMPT = new EmailSMPT($host, $username, $password, $from);
+    return $emailSMPT;
   }
 
   // The variables
@@ -135,6 +159,7 @@
   $contact;
   $safeCustody;
   $pageForEmployee;
+  $email_smpt;
 
   $args = array(
     'orderby' => 'menu_order',
@@ -171,6 +196,9 @@
       elseif ($category->name == "News Article") {
         $newsArticle = newNewsArticle();
         array_push($newsArticles, $newsArticle);
+      }
+      elseif ($category->name == "Email SMPT") {
+        $email_smpt = newEmailSMPT();
       }
     }
   endwhile;

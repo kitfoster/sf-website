@@ -1,5 +1,5 @@
+<h1 class="screen-reader-text">Sinisgalli Foster Melbourne Law Firm</h1>
 <div class="navigation-top" id="navbar">
-  <h1 class="screen-reader-text">Sinisgalli Foster Melbourne Law Firm</h1>
   <?php if ($pageForEmployee): ?>
     <h2 class="screen-reader-text" id="page-for-employee"><?php echo $pageForEmployee->name . " Lawyer"; ?></h2>
   <?php endif; ?>
@@ -40,7 +40,7 @@ if (pageForEmployee) {
 
 
 window.addEventListener('load', function () {
-  const hash = window.location.hash;
+  let hash = window.location.hash;
   if (hash === '#services') {
     scrollToElement('services')
   } else if (hash === '#our_team') {

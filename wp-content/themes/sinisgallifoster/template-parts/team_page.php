@@ -4,8 +4,8 @@
   <!-- desktop -->
   <div class="desktop-view">
     <?php foreach($team as $key=>$value): ?>
-        <div class="bio-container" id="<?php echo "bio-container" . $key; ?>" onclick="toggleBio('<?php echo 'bio-expanded' . $key; ?>')" onmouseleave="removeImageEffects()">
-          <img class="bio-image" id="<?php echo "bio-image" . $key; ?>" onmouseover="imageEffect('<?php echo 'bio-image' . $key; ?>')" src="<?php echo $value->photo; ?>" alt="<?php echo $value->name; ?>" />
+        <div class="bio-container" id="<?php echo "bio-container" . $key; ?>" onclick="toggleBio('<?php echo 'bio-expanded' . $key; ?>')">
+          <div class="bio-image" id="<?php echo "bio-image" . $key; ?>" style="<?php echo 'background-image: url(' . $value->photo . ')' ?>" alt="<?php echo $value->name; ?>"></div>
           <span class="name" id="<?php echo "bio-name " . $value->name; ?>"><?php echo $value->name; ?></span>
           <span class="role"><?php echo $value->role; ?></span>
         </div>
@@ -17,7 +17,7 @@
     <div class="carousel-slider" id="carousel-slider" onscroll="carouselFunction(<?php echo count($team) ?>)">
       <?php foreach($team as $key=>$value): ?>
         <div class="carousel-slides" id=<?php echo "carousel-slides" . $key; ?> onclick="toggleBio('<?php echo 'bio-expanded' . $key; ?>')">
-          <img src=<?php echo $value->photo; ?> alt=<?php echo $value->name; ?>/>
+          <div class="bio-image" id="<?php echo "bio-image" . $key; ?>" style="<?php echo 'background-image: url(' . $value->photo . ')' ?>" alt="<?php echo $value->name; ?>"></div>
           <span class="name"><?php echo $value->name; ?></span>
           <span class="role"><?php echo $value->role; ?></span>
         </div>
@@ -57,7 +57,6 @@
 
 <script src="/wp-content/themes/sinisgallifoster/functions/team_page.js"></script>
 <script>
-  const dot = document.getElementById("carousel-dot0");
+  let dot = document.getElementById("carousel-dot0");
   dot.className += " active";
-  sr.reveal('.bio-container', { distance: '50px' });
 </script>

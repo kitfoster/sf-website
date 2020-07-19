@@ -1,3 +1,202 @@
-.news-articles {
-  height: 1500px;
+.news-articles-section {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+
+  @media only screen and (max-width: $desktopMediaQuery) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .news-article {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      width: 250px;
+
+      .news-article-service {
+        padding: 5px 10px;
+        background-color: $paleBlue;
+        color: $navyBlue;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+
+      .news-article-image {
+        width: 250px;
+        height: 250px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        flex-shrink: 0;
+      }
+
+      .news-article-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 250px;
+
+        .news-article-title {
+          padding: 0;
+          margin: 5px 0 10px 0;
+          font-size: 20px;
+          text-align: left;
+          width: 100%;
+        }
+
+        .news-article-date {
+          margin: 0 0 15px 0;
+          font-variant: all-small-caps;
+        }
+
+        .news-article-blurb {
+          margin: 0 0 15px 0;
+          width: 100%;
+        }
+
+        .news-article-link {
+          color: $navyBlue;
+        }
+      }
+    }
+  }
+
+  .subscribe-section {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 0 20px;
+
+    @media only screen and (max-width: $desktopMediaQuery) {
+      margin: 20px;
+    }
+
+    .subscribe-subheading {
+      margin-bottom: 20px;
+    }
+
+    .subscribe-button {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: none;
+      background-color: $paleBlue;
+      color: $navyBlue;
+      border-radius: 5px;
+      cursor: pointer;
+      outline-color: $navyBlue;
+
+      &:hover {
+        background-color: #c5d4ea;
+      }
+    }
+  }
+}
+
+.subscribe-modal-wrapper {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  &.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .subscribe-modal {
+    background-color: $paleBlue;
+    padding: 20px;
+    display: flex;
+    color: $navyBlue;
+    justify-content: space-between;
+
+    .subscribe-modal-form-container {
+      padding-left: 50px;
+
+      .subscribe-modal-heading {
+        margin: 13px 0 20px 0;
+      }
+
+      .subscribe-modal-form {
+        display: flex;
+        flex-direction: column;
+
+        .subscribe-modal-input {
+          outline-color: $navyBlue;
+          padding: 10px;
+          margin-bottom: 20px;
+        }
+
+        .subscribe-modal-button {
+          padding: 10px;
+          border: none;
+          background-color: $navyBlue;
+          color: white;
+          border-radius: 5px;
+          cursor: pointer;
+          outline-color: $navyBlue;
+          margin: 10px 0 20px 0;
+
+          &:hover {
+            background-color: black;
+          }
+        }
+      }
+    }
+
+    .close-subscribe-modal {
+      background-image: url("assets/images/close.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 25px;
+      width: 25px;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 40px 60px 20px 0;
+    }
+
+    .subscription-status {
+      width: 275px;
+      height: 70px;
+
+      .subscription-status-sending,
+      .subscription-status-error,
+      .subscription-status-successful {
+        display: none;
+      }
+
+      &.successful {
+        .subscription-status-successful {
+          display: block;
+        }
+      }
+
+      &.sending {
+        .subscription-status-sending {
+          display: block;
+        }
+      }
+
+      &.error {
+        .subscription-status-error {
+          display: block;
+        }
+      }
+    }
+  }
 }

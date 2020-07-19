@@ -27,39 +27,33 @@
 
   .heading_wrapper {
     display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
 
     &:hover {
       .safe-custody-heading {
-        text-decoration: underline;
+        color: $copperAccent;
+      }
+      .arrow-down {
+        border-bottom: 8px solid $copperAccent;
       }
     }
 
     .safe-custody-heading {
       padding-top: 0;
-      padding-bottom: 30px;
       margin: 0;
-      cursor: pointer;
     }
 
     .arrow-down {
       transition: all 0.4s;
-      align-self: center;
+      margin-left: 10px;
       width: 0;
       height: 0;
       border-left: 6px solid transparent;
       border-right: 6px solid transparent;
-      border-bottom: 8px solid #905c32;
-      cursor: pointer;
-      position: absolute;
-      margin-left: 160px;
-      margin-top: -11px;
-
-      &:hover {
-        border-bottom: 8px solid #633e20;
-      }
-      @media only screen and (max-width: $desktopMediaQuery) {
-        margin-left: 140px;
-      }
+      border-bottom: 8px solid $copper;
     }
   }
 
@@ -72,6 +66,7 @@
     overflow: hidden;
     transition: all 0.4s;
     cursor: pointer;
+    max-width: 1000px;
 
     @media only screen and (max-width: $mediumMediaQuery) {
       line-height: inherit;

@@ -7,8 +7,6 @@
 </div>
 
 <script>
-  sr.reveal('.heading_wrapper');
-
   function safeCustodyToggle() {
     var sc_div = document.getElementById("safe_custody");
     var sc_heading = document.getElementById("safe-custody-heading");

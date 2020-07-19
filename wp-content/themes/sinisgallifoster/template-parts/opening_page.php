@@ -5,9 +5,9 @@
 <script>
 
 var page = document.getElementById("opening-page");
-const urlHasHashRoute = window.location.hash;
+let urlHasHashRoute = window.location.hash;
 
-if (urlHasHashRoute) {
+if (urlHasHashRoute || isIE()) {
   page.style.display = "none";
 } else {
   setTimeout(function() {

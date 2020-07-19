@@ -61,6 +61,7 @@
     position: absolute;
     width: 100%;
     top: 0;
+    left: 0;
     height: 100vh;
     background: linear-gradient(
       to top,
@@ -71,7 +72,6 @@
 
     @media only screen and (max-width: $mediumMediaQuery) {
       height: 500px;
-      top: 0;
     }
   }
 
@@ -83,6 +83,7 @@
     max-width: 1530px;
     position: absolute;
     top: 0px;
+    left: 0px;
     height: 100vh;
 
     @media only screen and (max-width: $mediumMediaQuery) {

@@ -124,6 +124,7 @@
       line-height: 30px;
       transition: all 0.3s;
       opacity: 1;
+      padding: 0;
 
       @media only screen and (max-width: $navMediaQuery) {
         display: flex;

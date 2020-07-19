@@ -5,9 +5,3 @@
     <div class="border"></div>
   </div>
 </div>
-
-<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-<script>
-  window.sr = ScrollReveal({ duration: 1000 });
-  sr.reveal('.statement', {scale: 1, distance: '50px'});
-</script>
