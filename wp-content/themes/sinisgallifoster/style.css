@@ -113,7 +113,7 @@ h3 {
     display: none;
     margin-right: 27px;
     padding: 15px;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
     border: none;
     cursor: pointer;
     outline: none; }
@@ -198,7 +198,7 @@ h3 {
         opacity: 0; }
   .navigation-top.sticky {
     position: fixed;
-    background: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.9));
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9));
     height: 100px; }
     .navigation-top.sticky .nav-logo-wrapper {
       width: 140px;
@@ -471,8 +471,8 @@ h3 {
       margin-left: 10px;
       width: 0;
       height: 0;
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
+      border-left: 6px solid rgba(255, 255, 255, 0);
+      border-right: 6px solid rgba(255, 255, 255, 0);
       border-bottom: 8px solid #905c32; }
   .safe-custody-container .safe-custody-body {
     line-height: 23px;
@@ -665,7 +665,7 @@ h3 {
         height: 25px;
         width: 25px;
         padding: 0;
-        background-color: transparent;
+        background-color: rgba(255, 255, 255, 0);
         border: none;
         cursor: pointer;
         outline: none;
@@ -882,7 +882,7 @@ h3 {
     height: 50px;
     width: 50px;
     cursor: pointer;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
     border: none;
     outline: none; }
     .news-articles-section .news-articles .slider__arrow:after {
@@ -1009,7 +1009,7 @@ h3 {
       height: 25px;
       width: 25px;
       padding: 0;
-      background-color: transparent;
+      background-color: rgba(255, 255, 255, 0);
       border: none;
       cursor: pointer;
       outline: none;
