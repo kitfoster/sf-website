@@ -195,7 +195,11 @@
       }
       elseif ($category->name == "News Article") {
         $newsArticle = newNewsArticle();
-        array_push($newsArticles, $newsArticle);
+        if (array_key_exists($newsArticle->service, $newsArticles)) {
+          array_push($newsArticles[$newsArticle->service], $newsArticle);
+        } else {
+          $newsArticles[$newsArticle->service] = array($newsArticle);
+        }
       }
       elseif ($category->name == "Email SMPT") {
         $email_smpt = newEmailSMPT();

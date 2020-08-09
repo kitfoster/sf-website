@@ -198,6 +198,7 @@ h3 {
         opacity: 0; }
   .navigation-top.sticky {
     position: fixed;
+    background: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.9));
     height: 100px; }
     .navigation-top.sticky .nav-logo-wrapper {
       width: 140px;
@@ -213,7 +214,6 @@ h3 {
       height: 100px;
       transition: all 0.1s; }
       .navigation-top.sticky {
-        background: rgba(255, 255, 255, 0.9);
         height: 80px; }
         .navigation-top.sticky.grey {
           background: rgba(233, 233, 235, 0.9); }
@@ -852,77 +852,96 @@ h3 {
         .news-insights-top-banner .title h1 {
           font-size: 45px; } }
 
-.news-articles-section {
+.news-articles-section .news-articles {
   display: flex;
-  justify-content: center;
-  margin: 20px auto; }
+  flex-direction: column;
+  margin: 20px auto;
+  padding: 0 120px;
+  max-width: 1200px;
+  flex-basis: 1200px; }
+  @media only screen and (max-width: 1000) {
+    .news-articles-section .news-articles {
+      flex-basis: 1000px; } }
+  .news-articles-section .news-articles .news-articles-service-title {
+    align-self: flex-start;
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    color: #905c32;
+    border-top: 2px solid #905c32; }
+  .news-articles-section .news-articles .slider__arrow {
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none; }
+    .news-articles-section .news-articles .slider__arrow:after {
+      content: "";
+      border: solid #905c32;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 8px;
+      margin-top: 4px; }
+    .news-articles-section .news-articles .slider__arrow:hover {
+      background-color: #f4f4f4; }
+    .news-articles-section .news-articles .slider__arrow.slider__arrow--prev {
+      left: -100px; }
+      .news-articles-section .news-articles .slider__arrow.slider__arrow--prev:after {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        margin-left: 6px; }
+    .news-articles-section .news-articles .slider__arrow.slider__arrow--next {
+      right: -100px; }
+      .news-articles-section .news-articles .slider__arrow.slider__arrow--next:after {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        margin-right: 6px; }
+  .news-articles-section .news-articles .news-article .news-article-image {
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    flex-shrink: 0; }
+  .news-articles-section .news-articles .news-article .news-article-title {
+    padding: 0;
+    margin: 5px 0 10px 0;
+    font-size: 20px;
+    text-align: left;
+    width: 100%; }
+  .news-articles-section .news-articles .news-article .news-article-date {
+    margin: 0 0 15px 0;
+    font-variant: all-small-caps; }
+  .news-articles-section .news-articles .news-article .news-article-blurb {
+    margin: 0 0 15px 0; }
+  .news-articles-section .news-articles .news-article .news-article-link {
+    color: #1e1f38; }
+
+.news-articles-section .subscribe-section {
+  display: none;
+  flex-shrink: 0;
+  flex-direction: column;
+  width: 250px;
+  margin: 0 20px; }
   @media only screen and (max-width: 1000px) {
-    .news-articles-section {
-      flex-direction: column;
-      align-items: center; } }
-  .news-articles-section .news-articles {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; }
-    .news-articles-section .news-articles .news-article {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 20px;
-      width: 250px; }
-      .news-articles-section .news-articles .news-article .news-article-service {
-        padding: 5px 10px;
-        background-color: #dde5f4;
-        color: #1e1f38;
-        margin-bottom: 10px;
-        border-radius: 5px; }
-      .news-articles-section .news-articles .news-article .news-article-image {
-        width: 250px;
-        height: 250px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        flex-shrink: 0; }
-      .news-articles-section .news-articles .news-article .news-article-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 250px; }
-        .news-articles-section .news-articles .news-article .news-article-content .news-article-title {
-          padding: 0;
-          margin: 5px 0 10px 0;
-          font-size: 20px;
-          text-align: left;
-          width: 100%; }
-        .news-articles-section .news-articles .news-article .news-article-content .news-article-date {
-          margin: 0 0 15px 0;
-          font-variant: all-small-caps; }
-        .news-articles-section .news-articles .news-article .news-article-content .news-article-blurb {
-          margin: 0 0 15px 0;
-          width: 100%; }
-        .news-articles-section .news-articles .news-article .news-article-content .news-article-link {
-          color: #1e1f38; }
-  .news-articles-section .subscribe-section {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    margin: 0 20px; }
-    @media only screen and (max-width: 1000px) {
-      .news-articles-section .subscribe-section {
-        margin: 20px; } }
-    .news-articles-section .subscribe-section .subscribe-subheading {
-      margin-bottom: 20px; }
-    .news-articles-section .subscribe-section .subscribe-button {
-      margin-bottom: 10px;
-      padding: 10px;
-      border: none;
-      background-color: #dde5f4;
-      color: #1e1f38;
-      border-radius: 5px;
-      cursor: pointer;
-      outline-color: #1e1f38; }
-      .news-articles-section .subscribe-section .subscribe-button:hover {
-        background-color: #c5d4ea; }
+    .news-articles-section .subscribe-section {
+      margin: 20px; } }
+  .news-articles-section .subscribe-section .subscribe-subheading {
+    margin-bottom: 20px; }
+  .news-articles-section .subscribe-section .subscribe-button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #dde5f4;
+    color: #1e1f38;
+    border-radius: 5px;
+    cursor: pointer;
+    outline-color: #1e1f38; }
+    .news-articles-section .subscribe-section .subscribe-button:hover {
+      background-color: #c5d4ea; }
 
 .subscribe-modal-wrapper {
   display: none;

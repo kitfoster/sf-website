@@ -144,6 +144,7 @@
   // no matter what screen size, show the sticky past the landing screen image
   &.sticky {
     position: fixed;
+    background: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.9));;
     height: 100px;
 
     .nav-logo-wrapper {
@@ -169,7 +170,6 @@
     transition: all 0.1s;
 
     &.sticky {
-      background: rgba(255, 255, 255, 0.9);
       height: 80px;
 
       &.grey {

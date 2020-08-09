@@ -1,17 +1,27 @@
 <div class="news-articles-section" id="below-fold">
   <div class="news-articles">
-    <?php foreach($newsArticles as $key=>$value): ?>
-      <div class="news-article">
-        <span class="news-article-service"><?php echo $value->service; ?></span>
-        <div class="news-article-image" style="<?php echo 'background-image: url(' . $value->image . ')' ?>"></div>
-        <div class="news-article-content">
-          <h3 class="news-article-title"><?php echo $value->title; ?></h3>
-          <h4 class="news-article-date"><?php echo $value->date; ?></h4>
-          <span class="news-article-blurb"><?php echo $value->blurb; ?></span>
-          <a class="news-article-link" href="<?php echo $value->link; ?>">Read article</a>
+    <?php $index=0; foreach($newsArticles as $key=>$service): ?>
+      <div class="glide" id="glide-<?php echo $index; ?>" >
+        <h2 class="news-articles-service-title"><?php echo $key; ?></h2>
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <?php foreach($service as $key=>$article): ?>
+              <li class="news-article glide__slide">
+                <div class="news-article-image" style="<?php echo 'background-image: url(' . $article->image . ')' ?>"></div>
+                <h3 class="news-article-title"><?php echo $article->title; ?></h3>
+                <h4 class="news-article-date"><?php echo $article->date; ?></h4>
+                <span class="news-article-blurb"><?php echo $article->blurb; ?></span>
+                <a class="news-article-link" href="<?php echo $article->link; ?>">Read article</a>
+              </li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="slider__arrow slider__arrow--prev glide__arrow glide__arrow--prev" data-glide-dir="<" aria-label="previous"></button>
+          <button class="slider__arrow slider__arrow--next glide__arrow glide__arrow--next" data-glide-dir=">" aria-label="next"></button>
         </div>
       </div>
-    <?php endforeach; ?>
+    <?php $index++; endforeach; ?>
   </div>
   <div class="subscribe-section">
     <h2 class="subscribe-heading">Get our newsletter</h2>
@@ -41,9 +51,29 @@
   </div>
 </div>
 
-<script src="https://smtpjs.com/v3/smtp.js">
-</script>
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
+  var countNewsArticles = <?php echo count($newsArticles); ?>;
+  for(i = 0; i < countNewsArticles; i++) {
+    new Glide('#glide-' + i, {
+      perView: 4,
+      breakpoints: {
+        1200: {
+          perView: 3
+        },
+        800: {
+          perView: 2
+        },
+        600: {
+          perView: 1
+        }
+      },
+      gap: 20,
+      bound: true
+    }).mount();
+  }
+
   function toggleSubscribeModal() {
     var subscribe_modal = document.getElementById("subscribe-modal");
     if (subscribe_modal.className.includes("open")) {
