@@ -738,6 +738,9 @@ h3 {
 .news-articles-banner-container {
   width: 100%;
   margin: 100px 0; }
+  @media only screen and (max-width: 700px) {
+    .news-articles-banner-container {
+      margin: 50px 0; } }
   .news-articles-banner-container .news-articles-banner {
     max-width: 1000px;
     margin: 0 auto;
@@ -751,7 +754,8 @@ h3 {
       background-size: cover;
       background-position: right;
       background-repeat: no-repeat;
-      width: 1000px;
+      width: 100%;
+      max-width: 1000px;
       height: 500px;
       position: absolute;
       z-index: -1; }
@@ -759,17 +763,29 @@ h3 {
         content: "";
         height: 500px;
         width: 450px;
-        background-color: white;
-        opacity: 0.5;
+        background-color: rgba(255, 255, 255, 0.5);
         position: absolute;
         transform: skew(-10deg);
         margin-left: -50px; }
+        @media only screen and (max-width: 1000px) {
+          .news-articles-banner-container .news-articles-banner .news-articles-banner-background:after {
+            background-color: rgba(255, 255, 255, 0.8); } }
+        @media only screen and (max-width: 700px) {
+          .news-articles-banner-container .news-articles-banner .news-articles-banner-background:after {
+            transform: none;
+            width: 100%;
+            margin: 0; } }
     .news-articles-banner-container .news-articles-banner h3 {
       font-size: 80px;
-      width: 300px;
+      max-width: 300px;
       line-height: 80px;
-      padding: 30px 20px;
-      margin: 0; }
+      padding: 30px 50px;
+      margin: 0;
+      text-align: left; }
+      @media only screen and (max-width: 700px) {
+        .news-articles-banner-container .news-articles-banner h3 {
+          font-size: 60px;
+          line-height: 60px; } }
     .news-articles-banner-container .news-articles-banner span {
       padding-left: 50px;
       font-size: 20px; }
