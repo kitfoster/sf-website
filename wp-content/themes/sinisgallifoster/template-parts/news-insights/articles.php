@@ -17,6 +17,11 @@
             <?php endforeach; ?>
           </ul>
         </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <?php foreach($service as $key=>$article): ?>
+            <button class="glide__bullet" data-glide-dir="=<?php echo $key; ?>"></button>
+          <?php endforeach; ?>
+        </div>
         <div class="glide__arrows" data-glide-el="controls">
           <button class="slider__arrow slider__arrow--prev glide__arrow glide__arrow--prev" data-glide-dir="<" aria-label="previous"></button>
           <button class="slider__arrow slider__arrow--next glide__arrow glide__arrow--next" data-glide-dir=">" aria-label="next"></button>

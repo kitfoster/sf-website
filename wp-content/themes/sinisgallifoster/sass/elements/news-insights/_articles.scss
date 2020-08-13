@@ -1,4 +1,6 @@
 .news-articles-section {
+  padding-bottom: 100px;
+
   .news-articles {
     display: flex;
     flex-direction: column;
@@ -30,6 +32,25 @@
       border-radius: 5px;
       background-color: $paleBeige;
       color: $copper;
+    }
+
+    .glide__bullets {
+      text-align: center;
+
+      .glide__bullet {
+        background-color: $beige;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        cursor: pointer;
+        padding: 0;
+        outline: none;
+
+        &.glide__bullet--active {
+          background-color: $copper;
+        }
+      }
     }
 
     .slider__arrow {
