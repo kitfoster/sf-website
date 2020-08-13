@@ -19,6 +19,7 @@
 			<!-- All other pages -->
 			<?php include "template-parts/opening_page.php" ?>
 			<?php include "template-parts/homepage.php" ?>
+			<?php include "template-parts/covid_update.php" ?>
 			<?php include "template-parts/statement.php" ?>
 			<?php include "template-parts/services.php" ?>
 			<?php include "template-parts/team_page.php" ?>

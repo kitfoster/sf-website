@@ -1,0 +1,29 @@
+.covid-update-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+
+  @media only screen and (max-width: $mediaQuery700) {
+    padding-top: 0;
+  }
+
+  .covid-update {
+    background-color: $paleBlue;
+    flex-basis: 600px;
+    text-align: center;
+    padding: 0 50px 40px 50px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0.0625rem 0.1875rem 0px;
+
+    h3 {
+      padding-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 20px;
+      font-weight: normal;
+      margin-top: 0;
+    }
+  }
+}
