@@ -1,17 +1,18 @@
 <div class="news-articles-section" id="below-fold">
   <div class="news-articles">
     <?php $index=0; foreach($newsArticles as $key=>$service): ?>
+      <h2 class="news-articles-service-title"><?php echo $key; ?></h2>
       <div class="glide" id="glide-<?php echo $index; ?>" >
-        <h2 class="news-articles-service-title"><?php echo $key; ?></h2>
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
             <?php foreach($service as $key=>$article): ?>
               <li class="news-article glide__slide">
-                <div class="news-article-image" style="<?php echo 'background-image: url(' . $article->image . ')' ?>"></div>
-                <h3 class="news-article-title"><?php echo $article->title; ?></h3>
-                <h4 class="news-article-date"><?php echo $article->date; ?></h4>
-                <span class="news-article-blurb"><?php echo $article->blurb; ?></span>
-                <a class="news-article-link" href="<?php echo $article->link; ?>">Read article</a>
+                <a href="<?php echo $article->link; ?>" target=”_blank”>
+                  <div class="news-article-image" style="<?php echo 'background-image: url(' . $article->image . ')' ?>"></div>
+                  <h3 class="news-article-title"><?php echo $article->title; ?></h3>
+                  <h4 class="news-article-date"><?php echo $article->date; ?></h4>
+                  <span class="news-article-blurb"><?php echo $article->blurb; ?></span>
+                </a>
               </li>
             <?php endforeach; ?>
           </ul>

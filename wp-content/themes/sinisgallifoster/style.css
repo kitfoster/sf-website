@@ -895,11 +895,15 @@ h3 {
       padding: 0 50px; } }
   .news-articles-section .news-articles .news-articles-service-title {
     align-self: flex-start;
-    font-size: 20px;
+    font-size: 15px;
     font-family: "Open Sans", sans-serif;
     font-weight: normal;
-    color: #905c32;
-    border-top: 2px solid #905c32; }
+    color: black;
+    margin: 50px 0 10px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #905c32; }
   .news-articles-section .news-articles .slider__arrow {
     position: absolute;
     top: 50%;
@@ -943,25 +947,29 @@ h3 {
       @media only screen and (max-width: 600px) {
         .news-articles-section .news-articles .slider__arrow.slider__arrow--next {
           right: -50px; } }
-  .news-articles-section .news-articles .news-article .news-article-image {
-    height: 200px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    flex-shrink: 0; }
-  .news-articles-section .news-articles .news-article .news-article-title {
-    padding: 0;
-    margin: 5px 0 10px 0;
-    font-size: 20px;
-    text-align: left;
-    width: 100%; }
-  .news-articles-section .news-articles .news-article .news-article-date {
-    margin: 0 0 15px 0;
-    font-variant: all-small-caps; }
-  .news-articles-section .news-articles .news-article .news-article-blurb {
-    margin: 0 0 15px 0; }
-  .news-articles-section .news-articles .news-article .news-article-link {
-    color: #1e1f38; }
+  .news-articles-section .news-articles .news-article {
+    display: flex; }
+    .news-articles-section .news-articles .news-article a {
+      text-decoration: none; }
+      .news-articles-section .news-articles .news-article a .news-article-image {
+        height: 200px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        flex-shrink: 0; }
+      .news-articles-section .news-articles .news-article a .news-article-title {
+        padding: 0;
+        margin: 5px 0 10px 0;
+        font-size: 20px;
+        text-align: left;
+        width: 100%;
+        color: #905c32; }
+      .news-articles-section .news-articles .news-article a .news-article-date {
+        margin: 0 0 15px 0;
+        font-variant: all-small-caps;
+        color: #905c32; }
+      .news-articles-section .news-articles .news-article a .news-article-blurb {
+        margin: 0 0 15px 0; }
 
 .news-articles-section .subscribe-section {
   display: none;
