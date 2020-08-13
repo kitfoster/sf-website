@@ -15,9 +15,6 @@
 			<!-- News and Insights page -->
 			<?php include "template-parts/news-insights/top_banner.php" ?>
 			<?php include "template-parts/news-insights/articles.php" ?>
-			<script>
-				document.title = "Sinisgalli Foster | News & Insights" // TODO fix properly
-			</script>
 		<?php else: ?>
 			<!-- All other pages -->
 			<?php include "template-parts/opening_page.php" ?>
