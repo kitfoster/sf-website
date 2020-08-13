@@ -1,11 +1,11 @@
 <div class="news-articles-section" id="below-fold">
   <div class="news-articles">
-    <?php $index=0; foreach($newsArticles as $key=>$service): ?>
+    <?php $index=0; foreach($newsArticles as $key=>$articlesForService): ?>
       <h2 class="news-articles-service-title"><?php echo $key; ?></h2>
       <div class="glide" id="glide-<?php echo $index; ?>" >
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
-            <?php foreach($service as $key=>$article): ?>
+            <?php foreach($articlesForService as $key=>$article): ?>
               <li class="news-article glide__slide">
                 <a href="<?php echo $article->link; ?>" target=”_blank”>
                   <div class="news-article-image" style="<?php echo 'background-image: url(' . $article->image . ')' ?>"></div>
@@ -18,7 +18,7 @@
           </ul>
         </div>
         <div class="glide__bullets" data-glide-el="controls[nav]">
-          <?php foreach($service as $key=>$article): ?>
+          <?php foreach($articlesForService as $key=>$article): ?>
             <button class="glide__bullet" data-glide-dir="=<?php echo $key; ?>"></button>
           <?php endforeach; ?>
         </div>

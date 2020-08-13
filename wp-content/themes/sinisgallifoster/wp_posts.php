@@ -207,6 +207,14 @@
     }
   endwhile;
 
+  // Sort articles
+  foreach($newsArticles as $key=>$articlesForService) {
+    usort($articlesForService, function ($a, $b) {
+      return strtotime($b->date) - strtotime($a->date);
+    });
+    $newsArticles[$key] = $articlesForService;
+  }
+
   $page = preg_replace("/[^a-zA-Z0-9]/", "", $_SERVER['REQUEST_URI']);
   foreach($team as $employee) {
     $employeePage = strtolower(preg_replace("/[^a-zA-Z0-9]/", "", $employee->name));
