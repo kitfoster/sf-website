@@ -375,6 +375,15 @@ h3 {
         font-size: 18px;
         font-weight: 100;
         margin: 10px 0; }
+      .services-container .inner .service ul {
+        margin: 0;
+        padding-left: 30px;
+        font-size: 12px;
+        line-height: 8px;
+        color: black;
+        font-family: "Open Sans", sans-serif; }
+        .services-container .inner .service ul li {
+          line-height: 16px; }
 
 .contact-container {
   display: flex;

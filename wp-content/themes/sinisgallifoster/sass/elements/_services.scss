@@ -46,6 +46,20 @@
         font-weight: 100;
         margin: 10px 0;
       }
+
+      // list can be added in post
+      ul {
+        margin: 0;
+        padding-left: 30px;
+        font-size: 12px;
+        line-height: 8px;
+        color: black;
+        font-family: "Open Sans", sans-serif;
+
+        li {
+          line-height: 16px;
+        }
+      }
     }
   }
 }
