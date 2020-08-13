@@ -243,31 +243,19 @@ h3 {
   display: flex;
   justify-content: center;
   overflow: hidden; }
-  .homepage-background.compat-object-fit {
-    background-size: cover;
-    background-position: center center; }
-    .homepage-background.compat-object-fit img {
-      opacity: 0; }
   @media only screen and (max-width: 500px) {
     .homepage-background {
       align-items: flex-start;
       flex-direction: column;
       justify-content: flex-end; } }
-  @media only screen and (max-width: 500px) {
-    .homepage-background .image-wrapper {
-      position: absolute;
-      overflow: hidden;
-      height: 100vh;
-      top: 0;
-      width: 100%; } }
-  .homepage-background .image-wrapper img {
+  .homepage-background .image-wrapper {
+    width: 100vw;
     height: 100vh;
-    width: 100%;
-    object-fit: cover; }
+    background-size: cover;
+    background-position: center; }
     @media only screen and (max-width: 500px) {
-      .homepage-background .image-wrapper img {
-        position: absolute;
-        top: 0; } }
+      .homepage-background .image-wrapper {
+        position: absolute; } }
   .homepage-background .homepage-image-overlay {
     position: absolute;
     width: 100%;
@@ -282,7 +270,8 @@ h3 {
     width: 100%;
     max-width: 1530px;
     position: absolute;
-    height: 100vh; }
+    height: 100vh;
+    left: 0; }
     @media only screen and (max-width: 500px) {
       .homepage-background .homepage-container {
         align-items: center;
@@ -421,11 +410,9 @@ h3 {
       height: 10px; }
 
 .safe-custody-container {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  padding: 150px 0; }
-  @media only screen and (max-width: 500px) {
+  padding: 150px 0;
+  width: 100%; }
+  @media only screen and (max-width: 700px) {
     .safe-custody-container {
       padding: 50px 0 0 0; } }
   .safe-custody-container .safe-custody {
@@ -434,16 +421,18 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 700px; }
-    @media only screen and (max-width: 500px) {
+    max-width: 700px;
+    margin: 0 auto; }
+    @media only screen and (max-width: 700px) {
       .safe-custody-container .safe-custody {
         box-shadow: none; } }
     .safe-custody-container .safe-custody .safe-custody-heading {
       padding: 40px 0 0 0; }
     .safe-custody-container .safe-custody .safe-custody-body {
       line-height: 23px;
-      padding: 0 50px 40px 50px; }
-      @media only screen and (max-width: 500px) {
+      padding: 0 50px 40px 50px;
+      max-width: 600px; }
+      @media only screen and (max-width: 700px) {
         .safe-custody-container .safe-custody .safe-custody-body {
           line-height: inherit;
           font-size: 12px;

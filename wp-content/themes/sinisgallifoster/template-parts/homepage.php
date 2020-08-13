@@ -1,7 +1,5 @@
 <div class="homepage-background" id="top-banner">
-  <div class="image-wrapper" id="homepage-image">
-    <img class="image" src=<?php echo $homepageImage ?> id="background-image" alt="John Sinisgalli and Alan Foster"/>
-  </div>
+  <div class="image-wrapper" id="homepage-image" style="<?php echo 'background-image: url(' . $homepageImage . ')' ?>"></div>
   <div class="homepage-image-overlay"></div>
   <div class="homepage-container">
     <h2>
