@@ -22,6 +22,7 @@
 			<?php include "template-parts/covid_update.php" ?>
 			<?php include "template-parts/statement.php" ?>
 			<?php include "template-parts/services.php" ?>
+			<?php include "template-parts/news_insights_banner.php" ?>
 			<?php include "template-parts/team_page.php" ?>
 			<?php include "template-parts/safe_custody.php" ?>
 			<?php include "template-parts/contact.php" ?>

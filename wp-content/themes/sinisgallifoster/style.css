@@ -735,6 +735,56 @@ h3 {
       font-weight: normal;
       margin-top: 0; }
 
+.news-articles-banner-container {
+  width: 100%;
+  margin: 100px 0; }
+  .news-articles-banner-container .news-articles-banner {
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .news-articles-banner-container .news-articles-banner .news-articles-banner-background {
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 0.0625rem 0.1875rem 0px;
+      background-image: url("assets/images/news-articles-banner-image.png");
+      background-size: cover;
+      background-position: right;
+      background-repeat: no-repeat;
+      width: 1000px;
+      height: 500px;
+      position: absolute;
+      z-index: -1; }
+      .news-articles-banner-container .news-articles-banner .news-articles-banner-background:after {
+        content: "";
+        height: 500px;
+        width: 450px;
+        background-color: white;
+        opacity: 0.5;
+        position: absolute;
+        transform: skew(-10deg);
+        margin-left: -50px; }
+    .news-articles-banner-container .news-articles-banner h3 {
+      font-size: 80px;
+      width: 300px;
+      line-height: 80px;
+      padding: 30px 20px;
+      margin: 0; }
+    .news-articles-banner-container .news-articles-banner span {
+      padding-left: 50px;
+      font-size: 20px; }
+    .news-articles-banner-container .news-articles-banner a {
+      margin: 30px 50px;
+      background-color: #dde5f4;
+      padding: 10px 15px;
+      border-radius: 4px;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 0.0625rem 0.1875rem 0px;
+      text-decoration: none;
+      color: black;
+      font-family: "Open Sans", sans-serif; }
+      .news-articles-banner-container .news-articles-banner a:hover {
+        background-color: #ccd6ea; }
+
 @keyframes downup {
   0% {
     transform: translateY(0); }
