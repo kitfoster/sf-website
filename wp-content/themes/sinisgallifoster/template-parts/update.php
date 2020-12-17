@@ -1,5 +1,5 @@
-<div class="covid-update-container" id="below-fold">
-  <div class="covid-update">
+<div class="update-container" id="below-fold">
+  <div class="update">
     <h3>COVID-19 FIRM UPDATE</h3>
     <h4 class="subtitle">Stage 4 Restrictions</h4>
     <p>
