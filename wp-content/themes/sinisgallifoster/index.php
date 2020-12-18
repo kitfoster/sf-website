@@ -19,7 +19,6 @@
 			<!-- All other pages -->
 			<?php include "template-parts/opening_page.php" ?>
 			<?php include "template-parts/homepage.php" ?>
-			<?php include "template-parts/update.php" ?>
 			<?php include "template-parts/statement.php" ?>
 			<?php include "template-parts/services.php" ?>
 			<?php include "template-parts/news_insights_banner.php" ?>

@@ -1,4 +1,4 @@
-<!-- <div id="below-fold"> -->
+<div id="below-fold">
 <div>
   <div class="statement-container" id="statement">
     <div class="border"></div>
